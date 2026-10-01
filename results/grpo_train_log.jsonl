@@ -1,0 +1,12 @@
+{"round": 0, "avg_reward": 0.75, "avg_loss": -0.06441419819990794, "n_updated": 12}
+{"round": 1, "avg_reward": 0.6875, "avg_loss": -0.2098012020190557, "n_updated": 12}
+{"round": 2, "avg_reward": 0.4375, "avg_loss": 0.04649893939495087, "n_updated": 4}
+{"round": 3, "avg_reward": 0.75, "avg_loss": -0.010755401104688644, "n_updated": 8}
+{"round": 4, "avg_reward": 0.5625, "avg_loss": -0.10907487571239471, "n_updated": 4}
+{"round": 5, "avg_reward": 0.5625, "avg_loss": -0.06928656995296478, "n_updated": 12}
+{"round": 6, "avg_reward": 0.9375, "avg_loss": -0.1284959763288498, "n_updated": 4}
+{"round": 7, "avg_reward": 0.8125, "avg_loss": -0.07497280091047287, "n_updated": 4}
+{"round": 8, "avg_reward": 1.0, "avg_loss": 0.0, "n_updated": 0}
+{"round": 9, "avg_reward": 0.6875, "avg_loss": -0.03116796910762787, "n_updated": 4}
+{"round": 10, "avg_reward": 0.5, "avg_loss": -0.010395415127277374, "n_updated": 8}
+{"round": 11, "avg_reward": 0.75, "avg_loss": 0.0, "n_updated": 0}

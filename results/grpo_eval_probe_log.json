@@ -1,0 +1,38 @@
+[
+ {
+  "round": 0,
+  "probe_avg_reward": 0.55,
+  "n_tasks": 20,
+  "run": "original"
+ },
+ {
+  "round": 5,
+  "probe_avg_reward": 0.35,
+  "n_tasks": 20,
+  "run": "original"
+ },
+ {
+  "round": 10,
+  "probe_avg_reward": 0.3,
+  "n_tasks": 20,
+  "run": "original"
+ },
+ {
+  "round": 0,
+  "probe_avg_reward": 0.5,
+  "n_tasks": 20,
+  "run": "rerun_with_transcripts"
+ },
+ {
+  "round": 5,
+  "probe_avg_reward": 0.35,
+  "n_tasks": 20,
+  "run": "rerun_with_transcripts"
+ },
+ {
+  "round": 10,
+  "probe_avg_reward": 0.35,
+  "n_tasks": 20,
+  "run": "rerun_with_transcripts"
+ }
+]
