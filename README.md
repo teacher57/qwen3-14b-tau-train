@@ -8,8 +8,18 @@ function at message #4" — from a training set where 98% of examples had that e
 same conversational shape. It fires that habit regardless of whether the user has
 actually provided the info yet, with fabricated placeholder values when it hasn't.
 
-This repo has the eval results, the training data, the training curves, and the
-diagnosis, in case any of it's useful to someone else hitting the same wall.
+Fixing the data (section 6) and then pivoting to RL entirely (section 7, GRPO with
+τ-bench's own reward — no custom scoring) were both reasonable next moves. **Neither
+one produced a model better than the lightly-trained starting point** — the GRPO run's
+own objective eval probe shows pass rate *declining* with more training (0.55 → 0.35 →
+0.30 across checkpoints), confirmed on an independent rerun. This repo documents all
+three attempts, including the two that didn't pan out, with full transcripts and the
+root-cause diagnosis for the one that did.
+
+LoRA checkpoint weights (~250MB each, too large for plain git) are on
+[Hugging Face](https://huggingface.co/teacher57/qwen3-14b-tau-grpo-checkpoints).
+Everything else — eval results, training data, training curves, and full
+conversation transcripts — is in this repo.
 
 ## The benchmark
 
@@ -109,6 +119,88 @@ Not yet tried (see Open Questions), but follows directly from the diagnosis:
 3. **Oversampling the few minority-shaped examples** (4 of 422 have auth at a different
    turn) — free, quick to test, but too little real diversity to expect much from.
 
+### 6. Data-level fix: an augmented dataset grounded in the real DB
+
+Instead of chasing the positional shortcut with hyperparameters, split the 422
+rollouts into three parts and rebuilt the homogeneous ones:
+
+1. **Unchanged** (140) — real passing rollouts, kept as-is.
+2. **Zip/email withheld, negative examples** (139) — same real tasks, but the
+   auth info is withheld at the point it would normally be given, so the
+   *target* becomes "ask again" rather than "assume and proceed" — directly
+   breaking the turn-4 positional habit by teaching a real precondition check
+   instead.
+3. **New synthetic policy-refusal / nonexistent-lookup / out-of-stock examples**
+   (141) — built from *real* extracted specifics (names, zips, order IDs,
+   payment methods, product variants — all pulled from τ-bench's own
+   `orders.json`/`users.json`/`products.json`, never invented placeholders),
+   covering requests that are genuinely impossible per the real retail policy
+   (cancel an already-delivered order, exchange to a different product type,
+   act on someone else's account, etc.) where the correct target is to refuse
+   or first verify via a real tool call before refusing — not simply
+   pattern-match a refusal from the request text.
+
+420 examples total, rendered in full (instruction + target tool-calls-or-absence
++ connected data, no raw dialogue) in `renders/augmented_dataset_structure.html`.
+
+### 7. Pivot to RL: GRPO with τ-bench's own reward
+
+SFT — on any of the above data — still only teaches "reproduce this one
+correct trajectory." Pivoted to RL, which only needs a pass/fail signal and
+lets the model find its own correct trajectories, using **tau-bench's own
+`calculate_reward()`** untouched (replay ground-truth actions on a fresh DB
+copy, hash it, compare to the hash from the agent's actual trajectory — no
+custom scoring). Setup:
+
+- `unsloth/Qwen3-14B-unsloth-bnb-4bit`, QLoRA r=16, served from vLLM
+  (`--quantization bitsandbytes --enable-lora`) **and** loaded separately via
+  Unsloth for the gradient updates — one base checkpoint, two roles, to avoid
+  juggling two quantization formats on a 30GB pod disk.
+- Rollouts: τ-bench's own `ToolCallingAgent.solve()` reused unmodified against
+  the live vLLM server (via litellm's `hosted_vllm` provider, isolated from
+  `OPENAI_API_BASE` so the GPT-4o user-simulator keeps hitting the real OpenAI
+  API on the same pod). G=4 rollouts/task, temperature=1.0.
+- Advantage: standard GRPO group-relative normalization; groups that scored
+  identically (all-0 or all-1) carry no gradient signal and are skipped.
+- Update: vLLM did the generation, so logprobs of the exact assistant token
+  spans are recomputed via a teacher-forced forward pass on the Unsloth-side
+  model (same response-only masking as the SFT runs), loss =
+  `-advantage * mean(logprob(assistant tokens))`. Adapter saved + hot-reloaded
+  into vLLM every round.
+- Objective signal, separate from the noisy small-batch training reward: every
+  5 rounds, the saved checkpoint is loaded into vLLM under its own adapter
+  name (training's live adapter untouched) and probed at temperature=0 against
+  20 fixed real τ-bench **test**-split tasks.
+
+**Three real bugs found and fixed along the way** (all in `code/grpo_train.py`):
+the LoRA adapter wasn't registered with vLLM before the first round's rollouts
+(every early rollout 404'd silently); vLLM's dynamic LoRA-reload endpoints need
+`VLLM_ALLOW_RUNTIME_LORA_UPDATING=True` or they don't exist; and the same
+`content: null` chat-template crash from section 5 above, this time inside the
+training loop's logprob-recompute step, not just at eval time.
+
+**Result — it didn't help:**
+
+| Checkpoint | Eval probe (20 fixed real test tasks, temp=0) |
+|---|---|
+| round 0 (1 round of training) | 0.55 (0.50 on rerun) |
+| round 5 | 0.35 |
+| round 10 | 0.30 (0.35 on rerun) |
+
+A clean, monotonic-ish decline confirmed by an independent rerun (with full
+dialogues saved this time, in `results/probe_transcripts/`) — not noise. Training
+was stopped at round 12 once the trend was confirmed. Full dialogues for all
+60 probed conversations (3 checkpoints × 20 tasks) are in
+`renders/grpo_probe_dialogues.html`. Checkpoint weights (LoRA adapters, ~250MB
+each) are on
+[Hugging Face](https://huggingface.co/teacher57/qwen3-14b-tau-grpo-checkpoints).
+
+Likely candidates, none confirmed: batch size too small (4 tasks/round, only
+4-12 of 16 rollouts contributing gradient per round — high-variance updates on
+a 14B model), `lr=1e-5` never tuned, or genuinely too few rounds (12) for noisy
+RL to show net-positive movement. This specific run doesn't indict GRPO as a
+method, just this configuration of it.
+
 ## Repo contents
 
 ```
@@ -121,12 +213,32 @@ results/
                                      mutating-action retail tasks)
   32b_airline_full_50.json          Qwen3-32B-AWQ airline baseline, for reference
   tau_eval_comparison.json          summary pass-rate table used for the bar chart
+  grpo_train_log.jsonl              per-round GRPO training reward/loss
+  grpo_eval_probe_log.json          per-checkpoint eval-probe pass rate (original + rerun)
+  probe_transcripts/                full 60-conversation transcripts backing the probe
 dataset/
-  qwen3_14b_retail_train_rollout_sft.json   the 422 genuine passing multi-turn
-                                             rollouts used for fine-tuning attempt #2
+  qwen3_14b_retail_train_rollout_sft.json      the 422 genuine passing multi-turn
+                                                rollouts used for fine-tuning attempt #2
+  qwen3_14b_retail_train_augmented.json        the 420-example data-level fix (section 6)
 notebooks/
   qwen3_14b_training_and_rollouts.ipynb     all training-loss curves, rollout-generation
-                                             progress, and the eval comparison chart
+                                             progress, eval comparison chart, and the
+                                             GRPO training + eval-probe charts
+code/
+  grpo_train.py        the GRPO training loop (section 7)
+  eval_checkpoint.py    loads a checkpoint into vLLM under its own adapter name and
+                         probes it against real test-split tasks, without touching
+                         the live training adapter
+  launch_vllm.sh, remote_setup.sh, autowatch.sh    pod setup / vLLM launch / the
+                         30-min watch loop that syncs logs and downloads+verifies
+                         new checkpoints as they save
+renders/
+  augmented_dataset_structure.html   all 420 augmented-dataset examples, structure only
+  grpo_probe_dialogues.html          all 60 full eval-probe conversations (3 checkpoints
+                                      × 20 tasks), system message, instruction, every
+                                      user/agent/tool turn, reasoning, tool calls+results
+  retail_full_115.html, retail_train_rollouts_422.html, runpod_*.html, a100_*.html
+                                      earlier full-eval and rollout-generation transcripts
 ```
 
 ## Setup notes (for anyone reproducing this)
