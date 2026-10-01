@@ -294,6 +294,16 @@ dataset/
   qwen3_14b_retail_train_rollout_sft.json      the 422 genuine passing multi-turn
                                                 rollouts used for fine-tuning attempt #2
   qwen3_14b_retail_train_augmented.json        the 420-example data-level fix (section 6)
+  combo_pool.json                              the 56 task indices GRPO trained on in section 8
+                                                (copy to /root/combo_pool.json for code/grpo_combo_train.py)
+  combo_pool_56_mixed.json                     the same 56 tasks with instruction, target tool
+                                                calls and their diagnostic rewards / pass rate
+  combo_tasks_test_64.json                     the 64 combo tasks of the test split (instruction +
+                                                target tool calls)
+  combo_tasks_grpo_16.json                     the 16 combo tasks among the 52 task slots GRPO drew
+                                                in section 7 (with the rounds they were drawn in)
+  (the 153 combo train tasks are in results/combo_tasks.json, with pass rates in results/combo_passrate.json;
+   these are task definitions, not training conversations: no combo-augmented SFT set has been generated)
 notebooks/
   qwen3_14b_training_and_rollouts.ipynb     all training-loss curves, rollout-generation
                                              progress, eval comparison chart, and the
