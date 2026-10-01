@@ -16,6 +16,11 @@ own objective eval probe shows pass rate *declining* with more training (0.55 �
 three attempts, including the two that didn't pan out, with full transcripts and the
 root-cause diagnosis for the one that did.
 
+**Follow-up (section 8):** test tasks are far more "combo" (several actions in one
+conversation) than our training data, so we re-ran GRPO on only the combo tasks the
+model solves some of the time. The held-out probe fell the same way (0.45 → 0.20 by
+round 5), and training stopped itself.
+
 LoRA checkpoint weights (~250MB each, too large for plain git) are on
 [Hugging Face](https://huggingface.co/teacher57/qwen3-14b-tau-grpo-checkpoints).
 Everything else — eval results, training data, training curves, and full
@@ -201,6 +206,69 @@ a 14B model), `lr=1e-5` never tuned, or genuinely too few rounds (12) for noisy
 RL to show net-positive movement. This specific run doesn't indict GRPO as a
 method, just this configuration of it.
 
+### 8. Combo tasks: where the test split differs, and a second GRPO run
+
+A *combo* task asks for 2+ distinct actions (return / exchange / cancel / modify /
+change payment) in one conversation. Combos are far more common in the test split than
+in what we trained on:
+
+| source | combo share |
+|---|---|
+| test split | 64 / 115 (55.7%) |
+| train split (500 tasks) | 153 / 500 (30.6%) |
+| the 422 passing rollouts (those with a task id) | 73 / 296 (24.7%) |
+| GRPO task slots, rounds 0-12 of section 7 (rebuilt from the `random.seed(0)` draw) | 16 / 52 (30.8%) |
+
+Rejection sampling keeps only passing rollouts, so harder multi-action tasks were
+filtered out of the SFT data (80 of 153 combo train tasks never produced a pass).
+
+**Which combo tasks can GRPO learn from?** GRPO learns from the difference between
+winning and losing rollouts of the same task, so tasks the model always passes or
+always fails give no signal, and the old rejection-sampling run never recorded
+per-task pass rates. We measured them: each of the 153 combo train tasks got 4 or more
+rollouts (640 in total, temperature 1.0) with the round-0 adapter against the real
+env and GPT-4o as the user. Result (mean reward 0.42): **58 tasks never pass, 56 are
+mixed, 39 always pass**. The 56 mixed tasks became the training pool. Per-task
+results, with the instruction and ground-truth tool calls, are in
+`results/combo_passrate.json`; the 153 task definitions are in `results/combo_tasks.json`.
+
+**Combo-pool GRPO run.** Same start (round-0 adapter), the 56-task pool, lr 1e-5,
+4 tasks x 4 rollouts per round, probe on the same 20 held-out test tasks at
+temperature 0, with an automatic stop if a probe falls more than 0.10 below the best:
+
+| checkpoint | probe (20 held-out test tasks) |
+|---|---|
+| baseline (the starting round-0 adapter) | 0.40 |
+| round 0 (one update) | 0.45 |
+| round 5 | **0.20** |
+
+Training stopped itself during round 7. The training reward over rounds 0-6 stayed
+between 0.31 and 0.69 with no trend, so it gave no warning; only the held-out probe
+showed the drop. About a third of the tasks drawn (7 of the first 20) came out all-pass
+or all-fail in training, so the "mixed" label from 4 rollouts is only partly reliable.
+Dialogues for the three probes are in `results/probe_transcripts/combo_*.json`.
+
+**Caveats.** The probe has 20 tasks and is noisy (about +/-0.1 per run). The same
+starting adapter scored 0.55 and 0.50 in section 7's setup and 0.40 here (different
+parallelism and vLLM settings), so absolute numbers should not be compared across runs,
+and the 0.20 vs 0.40-0.45 gap is suggestive rather than conclusive on its own. Two GRPO
+runs falling the same way is the stronger evidence. Checkpoints were saved only at
+rounds 0 and 5, so the decline cannot be located between them.
+
+**Infrastructure lessons** (each of these silently wasted a run at first):
+- vLLM 0.30 dropped bitsandbytes quantization; vLLM 0.11.0 in its own virtualenv still
+  serves the 4-bit model with LoRA adapters.
+- With two LoRA adapters live (the training policy and a probe), vLLM needs
+  `--max-loras 3`. At the default of 1 the adapters take turns, calls queue past
+  litellm's 600 s timeout, and every rollout is silently scored 0.
+- The update step ran out of GPU memory from a float32 log-softmax over the whole
+  sequence; computing it only at assistant-token positions fixed that.
+- 4-bit decoding is slow (about 300 tokens/s in total), so a round of 16 rollouts takes
+  about 20 minutes and the 612-rollout diagnostic took about 4.5 hours.
+
+**Gentle follow-up (lr 1e-6, same pool): running at the time of writing; results will be
+added here.**
+
 ## Repo contents
 
 ```
@@ -216,6 +284,12 @@ results/
   grpo_train_log.jsonl              per-round GRPO training reward/loss
   grpo_eval_probe_log.json          per-checkpoint eval-probe pass rate (original + rerun)
   probe_transcripts/                full 60-conversation transcripts backing the probe
+                                     (round_*.json: section 7; combo_*.json: section 8)
+  combo_passrate.json               section 8 diagnostic: per-task pass rates (instruction,
+                                     target tool calls, rewards) + all 640 rollouts
+  combo_tasks.json                  the 153 combo train tasks (instruction + target actions)
+  combo_grpo_run.json               combo-pool GRPO run: per-round rewards, probes, timings
+  combo_grpo_train_log.jsonl, combo_grpo_stdout.log    raw logs of that run
 dataset/
   qwen3_14b_retail_train_rollout_sft.json      the 422 genuine passing multi-turn
                                                 rollouts used for fine-tuning attempt #2
@@ -232,7 +306,17 @@ code/
   launch_vllm.sh, remote_setup.sh, autowatch.sh    pod setup / vLLM launch / the
                          30-min watch loop that syncs logs and downloads+verifies
                          new checkpoints as they save
+  combo_passrate.py     section 8 diagnostic: N rollouts per combo task, resumable
+  grpo_combo_train.py   section 8 GRPO loop (combo pool, memory-lean loss, parallel rollouts)
+  grpo_gentle_train.py  same with lr 1e-6 (the gentle follow-up)
+  eval_parallel.py, probe_watcher*.sh, disk_guard*.sh    parallel probe, the watcher that
+                         probes new checkpoints and stops training on a decline, disk guard
+  update_notebook.py, live_grpo_section.py, live_gentle_section.py, sync_checkpoints.py
+                         laptop-side helpers that keep the notebook, a live HTML page and
+                         local checkpoint copies current (pod address/paths are defaults)
 renders/
+  combo_task_comparison.html         the combo tasks of the test split, train split, passing
+                                      rollouts and GRPO draws, with instruction + target tool calls
   augmented_dataset_structure.html   all 420 augmented-dataset examples, structure only
   grpo_probe_dialogues.html          all 60 full eval-probe conversations (3 checkpoints
                                       × 20 tasks), system message, instruction, every
