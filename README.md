@@ -319,6 +319,52 @@ by more than the measurement noise (about 4 points on 115 tasks). Untried: promp
 scaffolding changes, distillation from a stronger teacher with mixed conversation shapes,
 offline rejection-sampling fine-tuning on the combo pool, a larger base model.
 
+### 10. Distillation from a stronger teacher: Qwen3-32B-AWQ plays the hard combo tasks, the 14B learns from the wins
+
+Idea: the 14B cannot reliably solve many combo train tasks, so RL finds little to learn from. A 32B teacher
+(Qwen3-32B-AWQ, vLLM, hermes tool parser, qwen3 reasoning parser, same agent and GPT-4o user) plays those tasks, and
+only its **passing** conversations are used to fine-tune the 14B.
+
+**Stage 1, teacher rollouts.** 114 hard train tasks (the ones the 14B solved rarely or never, plus mixed ones), up to 4
+samples each, sampling of a task stopped after 2 passes. The teacher solved **86 of 114 tasks** and produced **180 passing
+conversations** (all teacher conversations, passed or not: `dataset/distill/teacher_rollouts_raw.jsonl`).
+
+**Stage 2, SFT.** One example per assistant turn (prompt = chat template of the messages so far; completion = the
+`<think>` reasoning, the tool call or reply and `<|im_end|>`), loss on the completion only. QLoRA r=16 on
+`unsloth/Qwen3-14B-unsloth-bnb-4bit`, lr 5e-5, batch 8, 1 epoch = 384 steps (3 h 13 min on one A100); loss 0.53 (first 10 steps)
+to 0.35 (last 10). Data: `dataset/distill/teacher32b_passed_sft*.json`.
+
+**Stage 3, test.** Full retail test split (115 tasks), **4 trials per task**, temperature 0.7, GPT-4o user, 25 steps, for
+the new adapter and for the starting adapter as a control **re-run on the same pod with identical settings** (vLLM 0.11.0,
+LoRA adapters via `--enable-lora --max-loras 3`). pass^k per task = C(c,k)/C(n,k); standard errors are over tasks.
+
+| retail test, 115 tasks | new model | starting adapter, same-pod re-run | starting adapter, earlier test (2 trials, other pod) |
+|---|---|---|---|
+| pass^1 | **45.7% ± 3.4** | 41.7% ± 3.4 | 37.8% |
+| pass^2 | 29.9% | 27.1% | 21.7% |
+| pass^3 | 22.0% | 20.2% | n/a |
+| pass^4 | 16.5% | 16.5% | n/a |
+| consistency (pass^2 / pass^1) | 0.65 | 0.65 | 0.57 |
+
+By task type, pass^1: combo tasks (64) 34.8% vs 33.6% (control); other tasks (51) 59.3% vs 52.0%. The gain, such as it is,
+is on the non-combo tasks, although training used only combo conversations.
+
+**Is it significant? No.** Paired by task over all 4 trials, the new model is **+3.9 points pass^1** over the same-pod control
+(standard error 2.6, paired t = 1.53, 95% bootstrap interval -1.1 to +8.9, permutation p = 0.15). The sign test on pass^2
+(new higher on 31 tasks, control higher on 23, 61 ties) gives p = 0.34. pass^4 is identical. The first 2-trial comparison looked
+like +6.5 points (and +9 against the earlier test), but re-running the *same* starting adapter on the same pod scored 41.7%
+instead of 37.8%: part of the early "gain" was run-to-run drift of the baseline (the control also beats the earlier test, p = 0.005).
+Honest summary: a small positive effect (about +4 points) that is plausible but not established. Per-trial pass rates:
+new 43.5 / 49.6 / 41.7 / 47.8%; control 40.9 / 39.1 / 41.7 / 45.2%.
+
+The airline test (2 trials, 50 tasks) was started but stopped after 10 rollouts, so there is no airline comparison.
+
+Files: all 460 conversations per model (`dataset/distill/retail_eval_conversations/`), per-rollout results,
+`results/distill/distill_run.json` (everything the notebook's Section 12 plots), `results/distill/teacher_run.json`,
+`results/distill/new_solves_analysis.json` (which tasks the new model solves that the control does not),
+`renders/retail_test_new_solves.html`. The conversations of the *earliest* baseline test (37.8%) were not kept, only its
+rewards (`results/passk_run.json`). The trained adapter (`distill-epoch-1`, 257 MB) is not in this repo.
+
 ## Repo contents
 
 ```
@@ -342,6 +388,8 @@ results/
   combo_grpo_train_log.jsonl, combo_grpo_stdout.log    raw logs of that run
   gentle_grpo_run.json, gentle_grpo_train_log.jsonl, gentle_grpo_stdout.log
                                     the gentle (lr 1e-6) run: per-round rewards, probes, logs
+  distill/                          section 10: distill_run.json (4-trial retail test, per-trial and per-type
+                                     stats, comparisons), teacher_run.json, new_solves_analysis.json
   passk_run.json                    section 9 pass^2 test: per-rollout results, pass^1/pass^2,
                                      paired comparison (conversations were lost with the pod)
 dataset/
@@ -358,6 +406,12 @@ dataset/
                                                 in section 7 (with the rounds they were drawn in)
   (the 153 combo train tasks are in results/combo_tasks.json, with pass rates in results/combo_passrate.json;
    these are task definitions, not training conversations: no combo-augmented SFT set has been generated)
+  distill/
+    teacher_rollouts_raw.jsonl, teacher32b_passed_sft(_reasoning).json, teacher32b_passed_meta.json
+                                     section 10: all teacher conversations, the passing ones as SFT data
+    retail_eval_conversations/       all 4-trial retail test conversations (new model and same-pod control),
+                                     per-rollout results, GRPO probe conversations, early benchmark transcripts
+    groups.json, tools.json, *_tasks lists, retail_test_tasks.json   task lists and task definitions used
 notebooks/
   qwen3_14b_training_and_rollouts.ipynb     all training-loss curves, rollout-generation
                                              progress, eval comparison chart, and the
@@ -382,7 +436,12 @@ code/
   update_notebook.py, live_grpo_section.py, live_gentle_section.py, sync_checkpoints.py
                          laptop-side helpers that keep the notebook, a live HTML page and
                          local checkpoint copies current (pod address/paths are defaults)
+  distill/               section 10: teacher rollouts (teacher_rollouts.py), SFT export and training (export_sft.py,
+                         sft_samples.py, train_sft.py), pod setup and eval chains, and the JSON writer and notebook
+                         Section 11/12 builders (update_distill_json.py, add_distill_section.py); full_passk.py above
+                         now takes env and task count arguments
 renders/
+  retail_test_new_solves.html        tasks the distilled model solves that the control does not
   combo_task_comparison.html         the combo tasks of the test split, train split, passing
                                       rollouts and GRPO draws, with instruction + target tool calls
   augmented_dataset_structure.html   all 420 augmented-dataset examples, structure only
