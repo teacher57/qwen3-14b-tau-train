@@ -1,5 +1,7 @@
 # Qwen3-14B on τ-bench: a fine-tuning attempt that quietly broke everything
 
+AI friendly
+
 **TL;DR:** Fine-tuning Qwen3-14B on 422 real, passing multi-turn τ-bench conversations
 took a model that solved 45% of retail tasks and made it solve *2.6%* — while training
 loss looked fine. The cause wasn't the usual suspects (bad data format, wrong learning
