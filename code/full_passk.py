@@ -5,7 +5,8 @@ pass^k for a task = C(c,k)/C(n,k) where c of n trials passed; with n = k = 2 tha
 Resumable: one JSON line per finished (task, trial) in /root/passk_<name>.jsonl, full conversations in
 /root/passk_<name>_transcripts.jsonl.
 
-Usage: python3 full_passk.py <name> <adapter_dir> [trials=2] [temperature=0.7] [workers=48]
+Usage: python3 full_passk.py <name> <adapter_dir> [trials=2] [temperature=0.7] [workers=48] [env=retail] [n_tasks=115]
+(env "airline" has 50 test tasks.)
 """
 import json, os, sys, time, threading, requests
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -22,10 +23,12 @@ name, ckpt = sys.argv[1], sys.argv[2]
 trials = int(sys.argv[3]) if len(sys.argv) > 3 else 2
 temperature = float(sys.argv[4]) if len(sys.argv) > 4 else 0.7
 workers = int(sys.argv[5]) if len(sys.argv) > 5 else 48
+env_name = sys.argv[6] if len(sys.argv) > 6 else "retail"
+n_tasks = int(sys.argv[7]) if len(sys.argv) > 7 else 115
 adapter = f"passk-{name}"
 OUT = f"/root/passk_{name}.jsonl"
 TR = f"/root/passk_{name}_transcripts.jsonl"
-N_TASKS, MAX_STEPS, TASK_DEADLINE = 115, 25, 45 * 60
+N_TASKS, MAX_STEPS, TASK_DEADLINE = n_tasks, 25, 45 * 60
 
 done = set()
 if os.path.exists(OUT):
@@ -43,7 +46,7 @@ start = time.time()
 def one(job):
     tid, k = job
     t0 = time.time()
-    env = get_env("retail", user_strategy="llm", user_model="gpt-4o", user_provider="openai",
+    env = get_env(env_name, user_strategy="llm", user_model="gpt-4o", user_provider="openai",
                   task_split="test", task_index=tid)
     agent = ToolCallingAgent(tools_info=env.tools_info, wiki=env.wiki,
                              model=f"hosted_vllm/{adapter}", provider="hosted_vllm", temperature=temperature)

@@ -1,0 +1,5856 @@
+{
+ "baseline_trials_per_task": 4,
+ "overall": {
+  "tasks": 115,
+  "new_rate": 0.4652173913043478,
+  "base_rate": 0.38913043478260867,
+  "gained": 24,
+  "lost": 8,
+  "newly_solved": 2
+ },
+ "by_scenario": {
+  "cancel only": {
+   "tasks": 8,
+   "new_rate": 0.5625,
+   "base_rate": 0.4375,
+   "gained": 2,
+   "lost": 1,
+   "newly_solved": 0
+  },
+  "change order address only": {
+   "tasks": 2,
+   "new_rate": 0.5,
+   "base_rate": 0.5,
+   "gained": 0,
+   "lost": 0,
+   "newly_solved": 0
+  },
+  "change payment only": {
+   "tasks": 1,
+   "new_rate": 1.0,
+   "base_rate": 0.75,
+   "gained": 0,
+   "lost": 0,
+   "newly_solved": 0
+  },
+  "change profile address only": {
+   "tasks": 3,
+   "new_rate": 0.3333333333333333,
+   "base_rate": 0.6666666666666666,
+   "gained": 0,
+   "lost": 1,
+   "newly_solved": 0
+  },
+  "combo: 2+ action types": {
+   "tasks": 32,
+   "new_rate": 0.234375,
+   "base_rate": 0.1875,
+   "gained": 3,
+   "lost": 0,
+   "newly_solved": 0
+  },
+  "exchange only": {
+   "tasks": 25,
+   "new_rate": 0.52,
+   "base_rate": 0.39,
+   "gained": 8,
+   "lost": 3,
+   "newly_solved": 1
+  },
+  "modify items only": {
+   "tasks": 14,
+   "new_rate": 0.42857142857142855,
+   "base_rate": 0.35714285714285715,
+   "gained": 3,
+   "lost": 0,
+   "newly_solved": 0
+  },
+  "no write action (lookup or transfer)": {
+   "tasks": 9,
+   "new_rate": 0.7777777777777778,
+   "base_rate": 0.6111111111111112,
+   "gained": 3,
+   "lost": 0,
+   "newly_solved": 0
+  },
+  "return only": {
+   "tasks": 21,
+   "new_rate": 0.5952380952380952,
+   "base_rate": 0.5357142857142857,
+   "gained": 5,
+   "lost": 3,
+   "newly_solved": 1
+  }
+ },
+ "by_combo_pair": {
+  "cancel + return": {
+   "tasks": 6,
+   "new_rate": 0.25,
+   "base_rate": 0.20833333333333334,
+   "gained": 1,
+   "lost": 0,
+   "newly_solved": 0
+  },
+  "change order address + change profile address": {
+   "tasks": 2,
+   "new_rate": 0.5,
+   "base_rate": 0.375,
+   "gained": 1,
+   "lost": 0,
+   "newly_solved": 0
+  },
+  "exchange + modify items": {
+   "tasks": 2,
+   "new_rate": 0.5,
+   "base_rate": 0.125,
+   "gained": 1,
+   "lost": 0,
+   "newly_solved": 0
+  },
+  "modify items + return": {
+   "tasks": 2,
+   "new_rate": 0.0,
+   "base_rate": 0.0,
+   "gained": 0,
+   "lost": 0,
+   "newly_solved": 0
+  },
+  "change order address + change profile address + modify items": {
+   "tasks": 4,
+   "new_rate": 0.25,
+   "base_rate": 0.1875,
+   "gained": 0,
+   "lost": 0,
+   "newly_solved": 0
+  },
+  "cancel + change order address": {
+   "tasks": 1,
+   "new_rate": 0.5,
+   "base_rate": 0.5,
+   "gained": 0,
+   "lost": 0,
+   "newly_solved": 0
+  },
+  "change order address + modify items": {
+   "tasks": 7,
+   "new_rate": 0.07142857142857142,
+   "base_rate": 0.07142857142857142,
+   "gained": 0,
+   "lost": 0,
+   "newly_solved": 0
+  },
+  "cancel + modify items": {
+   "tasks": 1,
+   "new_rate": 0.0,
+   "base_rate": 0.25,
+   "gained": 0,
+   "lost": 0,
+   "newly_solved": 0
+  },
+  "cancel + change order address + modify items": {
+   "tasks": 1,
+   "new_rate": 1.0,
+   "base_rate": 0.75,
+   "gained": 0,
+   "lost": 0,
+   "newly_solved": 0
+  },
+  "change profile address + modify items": {
+   "tasks": 1,
+   "new_rate": 1.0,
+   "base_rate": 1.0,
+   "gained": 0,
+   "lost": 0,
+   "newly_solved": 0
+  },
+  "exchange + return": {
+   "tasks": 1,
+   "new_rate": 0.0,
+   "base_rate": 0.0,
+   "gained": 0,
+   "lost": 0,
+   "newly_solved": 0
+  },
+  "cancel + exchange": {
+   "tasks": 1,
+   "new_rate": 0.0,
+   "base_rate": 0.0,
+   "gained": 0,
+   "lost": 0,
+   "newly_solved": 0
+  },
+  "change order address + exchange + modify items": {
+   "tasks": 1,
+   "new_rate": 0.0,
+   "base_rate": 0.0,
+   "gained": 0,
+   "lost": 0,
+   "newly_solved": 0
+  },
+  "change order address + modify items + return": {
+   "tasks": 2,
+   "new_rate": 0.0,
+   "base_rate": 0.0,
+   "gained": 0,
+   "lost": 0,
+   "newly_solved": 0
+  }
+ },
+ "by_cluster": {
+  "0": {
+   "tasks": 7,
+   "new_rate": 0.6428571428571429,
+   "base_rate": 0.6071428571428571,
+   "gained": 2,
+   "lost": 1,
+   "newly_solved": 0,
+   "top_terms": [
+    "desk lamp",
+    "desk",
+    "lamp",
+    "water",
+    "exchange water",
+    "bottle"
+   ]
+  },
+  "1": {
+   "tasks": 31,
+   "new_rate": 0.4032258064516129,
+   "base_rate": 0.4112903225806452,
+   "gained": 5,
+   "lost": 4,
+   "newly_solved": 1,
+   "top_terms": [
+    "return",
+    "want return",
+    "refund",
+    "received",
+    "laptop",
+    "just"
+   ]
+  },
+  "2": {
+   "tasks": 15,
+   "new_rate": 0.6333333333333333,
+   "base_rate": 0.5166666666666667,
+   "gained": 2,
+   "lost": 1,
+   "newly_solved": 1,
+   "top_terms": [
+    "ask",
+    "agent",
+    "ask agent",
+    "price",
+    "camera",
+    "provide"
+   ]
+  },
+  "3": {
+   "tasks": 18,
+   "new_rate": 0.6111111111111112,
+   "base_rate": 0.3611111111111111,
+   "gained": 8,
+   "lost": 0,
+   "newly_solved": 0,
+   "top_terms": [
+    "want know",
+    "know",
+    "person",
+    "private person",
+    "private",
+    "available"
+   ]
+  },
+  "4": {
+   "tasks": 33,
+   "new_rate": 0.36363636363636365,
+   "base_rate": 0.30303030303030304,
+   "gained": 5,
+   "lost": 1,
+   "newly_solved": 0,
+   "top_terms": [
+    "address",
+    "exchange",
+    "want exchange",
+    "user",
+    "size",
+    "zip"
+   ]
+  },
+  "5": {
+   "tasks": 11,
+   "new_rate": 0.36363636363636365,
+   "base_rate": 0.3181818181818182,
+   "gained": 2,
+   "lost": 1,
+   "newly_solved": 0,
+   "top_terms": [
+    "wonder",
+    "example",
+    "example com",
+    "com",
+    "just",
+    "gaming"
+   ]
+  }
+ },
+ "by_trait": {
+  "has a fallback / conditional ('if X is not possible, do Y')": {
+   "tasks": 48,
+   "new_rate": 0.4166666666666667,
+   "base_rate": 0.34375,
+   "gained": 9,
+   "lost": 2,
+   "newly_solved": 2
+  },
+  "customer changes their mind": {
+   "tasks": 5,
+   "new_rate": 0.4,
+   "base_rate": 0.25,
+   "gained": 1,
+   "lost": 0,
+   "newly_solved": 0
+  },
+  "withholds or does not know info": {
+   "tasks": 35,
+   "new_rate": 0.4857142857142857,
+   "base_rate": 0.4357142857142857,
+   "gained": 6,
+   "lost": 3,
+   "newly_solved": 1
+  },
+  "difficult persona (angry, impatient, anxious, rude...)": {
+   "tasks": 38,
+   "new_rate": 0.32894736842105265,
+   "base_rate": 0.3157894736842105,
+   "gained": 5,
+   "lost": 4,
+   "newly_solved": 1
+  },
+  "asks for info (price, total, tracking, options)": {
+   "tasks": 51,
+   "new_rate": 0.4411764705882353,
+   "base_rate": 0.39215686274509803,
+   "gained": 11,
+   "lost": 5,
+   "newly_solved": 1
+  },
+  "several orders involved": {
+   "tasks": 10,
+   "new_rate": 0.45,
+   "base_rate": 0.3,
+   "gained": 3,
+   "lost": 0,
+   "newly_solved": 0
+  },
+  "(none of these traits)": {
+   "tasks": 15,
+   "new_rate": 0.7333333333333333,
+   "base_rate": 0.5666666666666667,
+   "gained": 6,
+   "lost": 2,
+   "newly_solved": 0
+  }
+ },
+ "by_number_of_write_actions": {
+  "0": {
+   "tasks": 9,
+   "new_rate": 0.7777777777777778,
+   "base_rate": 0.6111111111111112,
+   "gained": 3,
+   "lost": 0,
+   "newly_solved": 0
+  },
+  "1": {
+   "tasks": 61,
+   "new_rate": 0.5327868852459017,
+   "base_rate": 0.4918032786885246,
+   "gained": 13,
+   "lost": 8,
+   "newly_solved": 2
+  },
+  "2": {
+   "tasks": 24,
+   "new_rate": 0.3958333333333333,
+   "base_rate": 0.25,
+   "gained": 5,
+   "lost": 0,
+   "newly_solved": 0
+  },
+  "3": {
+   "tasks": 21,
+   "new_rate": 0.21428571428571427,
+   "base_rate": 0.15476190476190477,
+   "gained": 3,
+   "lost": 0,
+   "newly_solved": 0
+  }
+ },
+ "tasks": [
+  {
+   "task": 0,
+   "coarse": "exchange only",
+   "types": [
+    "exchange"
+   ],
+   "n_writes": 1,
+   "new": 0.0,
+   "base": 0.25,
+   "delta": -0.25,
+   "status": "same",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "exchange_delivered_order_items",
+     "kwargs": {
+      "order_id": "#W2378156",
+      "item_ids": [
+       "1151293680",
+       "4983901480"
+      ],
+      "new_item_ids": [
+       "7706410293",
+       "7747408585"
+      ],
+      "payment_method_id": "credit_card_9513926"
+     }
+    }
+   ],
+   "new_trials": [
+    0,
+    0
+   ],
+   "base_trials": [
+    1,
+    0,
+    0,
+    0
+   ],
+   "features": [
+    "has a fallback / conditional ('if X is not possible, do Y')"
+   ],
+   "cluster": 1
+  },
+  {
+   "task": 1,
+   "coarse": "exchange only",
+   "types": [
+    "exchange"
+   ],
+   "n_writes": 1,
+   "new": 0.5,
+   "base": 0.5,
+   "delta": 0.0,
+   "status": "same",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "exchange_delivered_order_items",
+     "kwargs": {
+      "order_id": "#W2378156",
+      "item_ids": [
+       "4983901480"
+      ],
+      "new_item_ids": [
+       "7747408585"
+      ],
+      "payment_method_id": "credit_card_9513926"
+     }
+    }
+   ],
+   "new_trials": [
+    1,
+    0
+   ],
+   "base_trials": [
+    0,
+    0,
+    1,
+    1
+   ],
+   "features": [
+    "has a fallback / conditional ('if X is not possible, do Y')"
+   ],
+   "cluster": 1
+  },
+  {
+   "task": 2,
+   "coarse": "return only",
+   "types": [
+    "return"
+   ],
+   "n_writes": 1,
+   "new": 1.0,
+   "base": 0.25,
+   "delta": 0.75,
+   "status": "gained",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "return_delivered_order_items",
+     "kwargs": {
+      "order_id": "#W2378156",
+      "item_ids": [
+       "4602305039",
+       "4202497723",
+       "9408160950"
+      ],
+      "payment_method_id": "credit_card_9513926"
+     }
+    }
+   ],
+   "new_trials": [
+    1,
+    1
+   ],
+   "base_trials": [
+    0,
+    0,
+    0,
+    1
+   ],
+   "features": [
+    "asks for info (price, total, tracking, options)"
+   ],
+   "cluster": 3
+  },
+  {
+   "task": 3,
+   "coarse": "modify items only",
+   "types": [
+    "modify items"
+   ],
+   "n_writes": 1,
+   "new": 0.0,
+   "base": 0.25,
+   "delta": -0.25,
+   "status": "same",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "modify_pending_order_items",
+     "kwargs": {
+      "order_id": "#W4776164",
+      "item_ids": [
+       "8349118980"
+      ],
+      "new_item_ids": [
+       "9647292434"
+      ],
+      "payment_method_id": "credit_card_9513926"
+     }
+    }
+   ],
+   "new_trials": [
+    0,
+    0
+   ],
+   "base_trials": [
+    0,
+    0,
+    0,
+    1
+   ],
+   "features": [
+    "asks for info (price, total, tracking, options)"
+   ],
+   "cluster": 3
+  },
+  {
+   "task": 4,
+   "coarse": "modify items only",
+   "types": [
+    "modify items"
+   ],
+   "n_writes": 2,
+   "new": 1.0,
+   "base": 0.5,
+   "delta": 0.5,
+   "status": "gained",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "modify_pending_order_items",
+     "kwargs": {
+      "order_id": "#W6247578",
+      "item_ids": [
+       "3799046073"
+      ],
+      "new_item_ids": [
+       "9647292434"
+      ],
+      "payment_method_id": "credit_card_9513926"
+     }
+    },
+    {
+     "name": "modify_pending_order_items",
+     "kwargs": {
+      "order_id": "#W4776164",
+      "item_ids": [
+       "8349118980"
+      ],
+      "new_item_ids": [
+       "9647292434"
+      ],
+      "payment_method_id": "credit_card_9513926"
+     }
+    }
+   ],
+   "new_trials": [
+    1,
+    1
+   ],
+   "base_trials": [
+    0,
+    1,
+    1,
+    0
+   ],
+   "features": [
+    "asks for info (price, total, tracking, options)"
+   ],
+   "cluster": 3
+  },
+  {
+   "task": 5,
+   "coarse": "return only",
+   "types": [
+    "return"
+   ],
+   "n_writes": 1,
+   "new": 0.0,
+   "base": 0.25,
+   "delta": -0.25,
+   "status": "same",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "return_delivered_order_items",
+     "kwargs": {
+      "order_id": "#W6390527",
+      "item_ids": [
+       "8538875209"
+      ],
+      "payment_method_id": "paypal_7644869"
+     }
+    }
+   ],
+   "new_trials": [
+    0,
+    0
+   ],
+   "base_trials": [
+    1,
+    0,
+    0,
+    0
+   ],
+   "features": [
+    "has a fallback / conditional ('if X is not possible, do Y')"
+   ],
+   "cluster": 0
+  },
+  {
+   "task": 6,
+   "coarse": "exchange only",
+   "types": [
+    "exchange"
+   ],
+   "n_writes": 1,
+   "new": 1.0,
+   "base": 1.0,
+   "delta": 0.0,
+   "status": "same",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "exchange_delivered_order_items",
+     "kwargs": {
+      "order_id": "#W6390527",
+      "item_ids": [
+       "8384507844"
+      ],
+      "new_item_ids": [
+       "7453605304"
+      ],
+      "payment_method_id": "paypal_7644869"
+     }
+    }
+   ],
+   "new_trials": [
+    1,
+    1
+   ],
+   "base_trials": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "features": [],
+   "cluster": 0
+  },
+  {
+   "task": 7,
+   "coarse": "exchange only",
+   "types": [
+    "exchange"
+   ],
+   "n_writes": 1,
+   "new": 1.0,
+   "base": 0.5,
+   "delta": 0.5,
+   "status": "gained",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "exchange_delivered_order_items",
+     "kwargs": {
+      "order_id": "#W6390527",
+      "item_ids": [
+       "8384507844"
+      ],
+      "new_item_ids": [
+       "1569765161"
+      ],
+      "payment_method_id": "paypal_7644869"
+     }
+    }
+   ],
+   "new_trials": [
+    1,
+    1
+   ],
+   "base_trials": [
+    0,
+    1,
+    1,
+    0
+   ],
+   "features": [],
+   "cluster": 0
+  },
+  {
+   "task": 8,
+   "coarse": "exchange only",
+   "types": [
+    "exchange"
+   ],
+   "n_writes": 1,
+   "new": 0.5,
+   "base": 0.0,
+   "delta": 0.5,
+   "status": "gained",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "exchange_delivered_order_items",
+     "kwargs": {
+      "order_id": "#W6390527",
+      "item_ids": [
+       "8384507844"
+      ],
+      "new_item_ids": [
+       "9083642334"
+      ],
+      "payment_method_id": "paypal_7644869"
+     }
+    }
+   ],
+   "new_trials": [
+    1,
+    0
+   ],
+   "base_trials": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "features": [],
+   "cluster": 0
+  },
+  {
+   "task": 9,
+   "coarse": "exchange only",
+   "types": [
+    "exchange"
+   ],
+   "n_writes": 1,
+   "new": 0.5,
+   "base": 1.0,
+   "delta": -0.5,
+   "status": "lost",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "exchange_delivered_order_items",
+     "kwargs": {
+      "order_id": "#W6390527",
+      "item_ids": [
+       "8384507844"
+      ],
+      "new_item_ids": [
+       "7624783998"
+      ],
+      "payment_method_id": "paypal_7644869"
+     }
+    }
+   ],
+   "new_trials": [
+    0,
+    1
+   ],
+   "base_trials": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "features": [],
+   "cluster": 0
+  },
+  {
+   "task": 10,
+   "coarse": "no write action (lookup or transfer)",
+   "types": [],
+   "n_writes": 0,
+   "new": 1.0,
+   "base": 1.0,
+   "delta": 0.0,
+   "status": "same",
+   "newly_solved": false,
+   "actions": [],
+   "new_trials": [
+    1,
+    1
+   ],
+   "base_trials": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "features": [
+    "has a fallback / conditional ('if X is not possible, do Y')",
+    "withholds or does not know info",
+    "difficult persona (angry, impatient, anxious, rude...)",
+    "several orders involved"
+   ],
+   "cluster": 1
+  },
+  {
+   "task": 11,
+   "coarse": "return only",
+   "types": [
+    "return"
+   ],
+   "n_writes": 2,
+   "new": 0.5,
+   "base": 0.5,
+   "delta": 0.0,
+   "status": "same",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "return_delivered_order_items",
+     "kwargs": {
+      "order_id": "#W5490111",
+      "item_ids": [
+       "4579334072",
+       "1421289881",
+       "6117189161",
+       "4947717507"
+      ],
+      "payment_method_id": "credit_card_3124723"
+     }
+    },
+    {
+     "name": "return_delivered_order_items",
+     "kwargs": {
+      "order_id": "#W7387996",
+      "item_ids": [
+       "5796612084"
+      ],
+      "payment_method_id": "paypal_9497703"
+     }
+    }
+   ],
+   "new_trials": [
+    0,
+    1
+   ],
+   "base_trials": [
+    0,
+    1,
+    0,
+    1
+   ],
+   "features": [
+    "has a fallback / conditional ('if X is not possible, do Y')",
+    "withholds or does not know info",
+    "difficult persona (angry, impatient, anxious, rude...)",
+    "several orders involved"
+   ],
+   "cluster": 1
+  },
+  {
+   "task": 12,
+   "coarse": "return only",
+   "types": [
+    "return"
+   ],
+   "n_writes": 1,
+   "new": 1.0,
+   "base": 0.5,
+   "delta": 0.5,
+   "status": "gained",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "return_delivered_order_items",
+     "kwargs": {
+      "order_id": "#W5490111",
+      "item_ids": [
+       "4579334072",
+       "6117189161",
+       "4947717507"
+      ],
+      "payment_method_id": "paypal_9497703"
+     }
+    }
+   ],
+   "new_trials": [
+    1,
+    1
+   ],
+   "base_trials": [
+    1,
+    1,
+    0,
+    0
+   ],
+   "features": [
+    "has a fallback / conditional ('if X is not possible, do Y')",
+    "withholds or does not know info",
+    "difficult persona (angry, impatient, anxious, rude...)"
+   ],
+   "cluster": 5
+  },
+  {
+   "task": 13,
+   "coarse": "return only",
+   "types": [
+    "return"
+   ],
+   "n_writes": 2,
+   "new": 1.0,
+   "base": 0.75,
+   "delta": 0.25,
+   "status": "same",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "return_delivered_order_items",
+     "kwargs": {
+      "order_id": "#W5490111",
+      "item_ids": [
+       "4579334072",
+       "6117189161",
+       "4947717507"
+      ],
+      "payment_method_id": "paypal_9497703"
+     }
+    },
+    {
+     "name": "return_delivered_order_items",
+     "kwargs": {
+      "order_id": "#W5490111",
+      "item_ids": [
+       "4579334072",
+       "6117189161",
+       "4947717507"
+      ],
+      "payment_method_id": "credit_card_3124723"
+     }
+    }
+   ],
+   "new_trials": [
+    1,
+    1
+   ],
+   "base_trials": [
+    1,
+    1,
+    0,
+    1
+   ],
+   "features": [
+    "has a fallback / conditional ('if X is not possible, do Y')",
+    "withholds or does not know info"
+   ],
+   "cluster": 5
+  },
+  {
+   "task": 14,
+   "coarse": "return only",
+   "types": [
+    "return"
+   ],
+   "n_writes": 2,
+   "new": 0.5,
+   "base": 0.5,
+   "delta": 0.0,
+   "status": "same",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "return_delivered_order_items",
+     "kwargs": {
+      "order_id": "#W5490111",
+      "item_ids": [
+       "1421289881"
+      ],
+      "payment_method_id": "credit_card_3124723"
+     }
+    },
+    {
+     "name": "return_delivered_order_items",
+     "kwargs": {
+      "order_id": "#W7387996",
+      "item_ids": [
+       "5796612084"
+      ],
+      "payment_method_id": "paypal_9497703"
+     }
+    }
+   ],
+   "new_trials": [
+    0,
+    1
+   ],
+   "base_trials": [
+    1,
+    1,
+    0,
+    0
+   ],
+   "features": [
+    "withholds or does not know info"
+   ],
+   "cluster": 5
+  },
+  {
+   "task": 15,
+   "coarse": "modify items only",
+   "types": [
+    "modify items"
+   ],
+   "n_writes": 1,
+   "new": 1.0,
+   "base": 0.5,
+   "delta": 0.5,
+   "status": "gained",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "modify_pending_order_items",
+     "kwargs": {
+      "order_id": "#W5199551",
+      "item_ids": [
+       "1615379700"
+      ],
+      "new_item_ids": [
+       "3613716226"
+      ],
+      "payment_method_id": "paypal_5364164"
+     }
+    }
+   ],
+   "new_trials": [
+    1,
+    1
+   ],
+   "base_trials": [
+    1,
+    1,
+    0,
+    0
+   ],
+   "features": [],
+   "cluster": 3
+  },
+  {
+   "task": 16,
+   "coarse": "combo: 2+ action types",
+   "types": [
+    "cancel",
+    "return"
+   ],
+   "n_writes": 3,
+   "new": 0.5,
+   "base": 0.5,
+   "delta": 0.0,
+   "status": "same",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "cancel_pending_order",
+     "kwargs": {
+      "order_id": "#W5199551",
+      "reason": "no longer needed"
+     }
+    },
+    {
+     "name": "cancel_pending_order",
+     "kwargs": {
+      "order_id": "#W8665881",
+      "reason": "no longer needed"
+     }
+    },
+    {
+     "name": "return_delivered_order_items",
+     "kwargs": {
+      "order_id": "#W9389413",
+      "item_ids": [
+       "2554056026"
+      ],
+      "payment_method_id": "paypal_5364164"
+     }
+    }
+   ],
+   "new_trials": [
+    0,
+    1
+   ],
+   "base_trials": [
+    0,
+    1,
+    0,
+    1
+   ],
+   "features": [
+    "asks for info (price, total, tracking, options)"
+   ],
+   "cluster": 3
+  },
+  {
+   "task": 17,
+   "coarse": "change order address only",
+   "types": [
+    "change order address"
+   ],
+   "n_writes": 1,
+   "new": 1.0,
+   "base": 1.0,
+   "delta": 0.0,
+   "status": "same",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "modify_pending_order_address",
+     "kwargs": {
+      "order_id": "#W8665881",
+      "address1": "123 Elm Street",
+      "address2": "Suite 641",
+      "city": "Austin",
+      "state": "TX",
+      "country": "USA",
+      "zip": "78712"
+     }
+    }
+   ],
+   "new_trials": [
+    1,
+    1
+   ],
+   "base_trials": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "features": [
+    "has a fallback / conditional ('if X is not possible, do Y')"
+   ],
+   "cluster": 3
+  },
+  {
+   "task": 18,
+   "coarse": "exchange only",
+   "types": [
+    "exchange"
+   ],
+   "n_writes": 1,
+   "new": 0.0,
+   "base": 0.25,
+   "delta": -0.25,
+   "status": "same",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "exchange_delivered_order_items",
+     "kwargs": {
+      "order_id": "#W2890441",
+      "item_ids": [
+       "8069050545"
+      ],
+      "new_item_ids": [
+       "8069050545"
+      ],
+      "payment_method_id": "credit_card_1061405"
+     }
+    }
+   ],
+   "new_trials": [
+    0,
+    0
+   ],
+   "base_trials": [
+    0,
+    0,
+    1,
+    0
+   ],
+   "features": [
+    "has a fallback / conditional ('if X is not possible, do Y')",
+    "customer changes their mind"
+   ],
+   "cluster": 1
+  },
+  {
+   "task": 19,
+   "coarse": "return only",
+   "types": [
+    "return"
+   ],
+   "n_writes": 1,
+   "new": 0.0,
+   "base": 0.25,
+   "delta": -0.25,
+   "status": "same",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "return_delivered_order_items",
+     "kwargs": {
+      "order_id": "#W2890441",
+      "item_ids": [
+       "2366567022"
+      ],
+      "payment_method_id": "credit_card_1061405"
+     }
+    }
+   ],
+   "new_trials": [
+    0,
+    0
+   ],
+   "base_trials": [
+    0,
+    1,
+    0,
+    0
+   ],
+   "features": [],
+   "cluster": 1
+  },
+  {
+   "task": 20,
+   "coarse": "modify items only",
+   "types": [
+    "modify items"
+   ],
+   "n_writes": 1,
+   "new": 0.0,
+   "base": 0.25,
+   "delta": -0.25,
+   "status": "same",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "modify_pending_order_items",
+     "kwargs": {
+      "order_id": "#W9911714",
+      "item_ids": [
+       "2366567022",
+       "1340995114",
+       "9791469541",
+       "1763705424"
+      ],
+      "new_item_ids": [
+       "4579334072",
+       "1151293680",
+       "4107812777",
+       "2882812427"
+      ],
+      "payment_method_id": "gift_card_4332117"
+     }
+    }
+   ],
+   "new_trials": [
+    0,
+    0
+   ],
+   "base_trials": [
+    0,
+    0,
+    0,
+    1
+   ],
+   "features": [
+    "has a fallback / conditional ('if X is not possible, do Y')",
+    "withholds or does not know info",
+    "asks for info (price, total, tracking, options)"
+   ],
+   "cluster": 4
+  },
+  {
+   "task": 21,
+   "coarse": "modify items only",
+   "types": [
+    "modify items"
+   ],
+   "n_writes": 1,
+   "new": 0.0,
+   "base": 0.0,
+   "delta": 0.0,
+   "status": "same",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "modify_pending_order_items",
+     "kwargs": {
+      "order_id": "#W9911714",
+      "item_ids": [
+       "9791469541",
+       "1340995114"
+      ],
+      "new_item_ids": [
+       "4107812777",
+       "1421289881"
+      ],
+      "payment_method_id": "gift_card_4332117"
+     }
+    }
+   ],
+   "new_trials": [
+    0,
+    0
+   ],
+   "base_trials": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "features": [
+    "has a fallback / conditional ('if X is not possible, do Y')",
+    "withholds or does not know info"
+   ],
+   "cluster": 2
+  },
+  {
+   "task": 22,
+   "coarse": "combo: 2+ action types",
+   "types": [
+    "change order address",
+    "change profile address"
+   ],
+   "n_writes": 3,
+   "new": 1.0,
+   "base": 0.5,
+   "delta": 0.5,
+   "status": "gained",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "modify_user_address",
+     "kwargs": {
+      "user_id": "ethan_garcia_1261",
+      "address1": "101 Highway",
+      "address2": "",
+      "city": "New York",
+      "state": "NY",
+      "country": "USA",
+      "zip": "10001"
+     }
+    },
+    {
+     "name": "modify_pending_order_address",
+     "kwargs": {
+      "order_id": "#W9911714",
+      "address1": "101 Highway",
+      "address2": "",
+      "city": "New York",
+      "state": "NY",
+      "country": "USA",
+      "zip": "10001"
+     }
+    },
+    {
+     "name": "modify_user_address",
+     "kwargs": {
+      "user_id": "ethan_garcia_1261",
+      "address1": "667 Highland Drive",
+      "address2": "Suite 865",
+      "city": "Denver",
+      "state": "CO",
+      "country": "USA",
+      "zip": "80280"
+     }
+    }
+   ],
+   "new_trials": [
+    1,
+    1
+   ],
+   "base_trials": [
+    0,
+    0,
+    1,
+    1
+   ],
+   "features": [
+    "withholds or does not know info"
+   ],
+   "cluster": 4
+  },
+  {
+   "task": 23,
+   "coarse": "combo: 2+ action types",
+   "types": [
+    "exchange",
+    "modify items"
+   ],
+   "n_writes": 3,
+   "new": 0.5,
+   "base": 0.0,
+   "delta": 0.5,
+   "status": "gained",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "exchange_delivered_order_items",
+     "kwargs": {
+      "order_id": "#W3947049",
+      "item_ids": [
+       "3358616356"
+      ],
+      "new_item_ids": [
+       "8573379326"
+      ],
+      "payment_method_id": "credit_card_7901829"
+     }
+    },
+    {
+     "name": "exchange_delivered_order_items",
+     "kwargs": {
+      "order_id": "#W6876713",
+      "item_ids": [
+       "6301799585"
+      ],
+      "new_item_ids": [
+       "8926329222"
+      ],
+      "payment_method_id": "credit_card_7901829"
+     }
+    },
+    {
+     "name": "modify_pending_order_items",
+     "kwargs": {
+      "order_id": "#W3561391",
+      "item_ids": [
+       "5946177616"
+      ],
+      "new_item_ids": [
+       "7082455361"
+      ],
+      "payment_method_id": "credit_card_7901829"
+     }
+    }
+   ],
+   "new_trials": [
+    1,
+    0
+   ],
+   "base_trials": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "features": [
+    "several orders involved"
+   ],
+   "cluster": 4
+  },
+  {
+   "task": 24,
+   "coarse": "no write action (lookup or transfer)",
+   "types": [],
+   "n_writes": 0,
+   "new": 1.0,
+   "base": 0.5,
+   "delta": 0.5,
+   "status": "gained",
+   "newly_solved": false,
+   "actions": [],
+   "new_trials": [
+    1,
+    1
+   ],
+   "base_trials": [
+    1,
+    0,
+    0,
+    1
+   ],
+   "features": [
+    "has a fallback / conditional ('if X is not possible, do Y')",
+    "several orders involved"
+   ],
+   "cluster": 2
+  },
+  {
+   "task": 25,
+   "coarse": "no write action (lookup or transfer)",
+   "types": [],
+   "n_writes": 0,
+   "new": 1.0,
+   "base": 0.25,
+   "delta": 0.75,
+   "status": "gained",
+   "newly_solved": false,
+   "actions": [],
+   "new_trials": [
+    1,
+    1
+   ],
+   "base_trials": [
+    1,
+    0,
+    0,
+    0
+   ],
+   "features": [
+    "has a fallback / conditional ('if X is not possible, do Y')",
+    "withholds or does not know info",
+    "asks for info (price, total, tracking, options)"
+   ],
+   "cluster": 1
+  },
+  {
+   "task": 26,
+   "coarse": "return only",
+   "types": [
+    "return"
+   ],
+   "n_writes": 1,
+   "new": 0.5,
+   "base": 1.0,
+   "delta": -0.5,
+   "status": "lost",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "return_delivered_order_items",
+     "kwargs": {
+      "order_id": "#W5565470",
+      "item_ids": [
+       "7602931732",
+       "9570044148"
+      ],
+      "payment_method_id": "paypal_3024827"
+     }
+    }
+   ],
+   "new_trials": [
+    0,
+    1
+   ],
+   "base_trials": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "features": [
+    "withholds or does not know info",
+    "asks for info (price, total, tracking, options)"
+   ],
+   "cluster": 1
+  },
+  {
+   "task": 27,
+   "coarse": "exchange only",
+   "types": [
+    "exchange"
+   ],
+   "n_writes": 1,
+   "new": 0.5,
+   "base": 0.0,
+   "delta": 0.5,
+   "status": "gained",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "exchange_delivered_order_items",
+     "kwargs": {
+      "order_id": "#W7181492",
+      "item_ids": [
+       "8118291112"
+      ],
+      "new_item_ids": [
+       "8277474082"
+      ],
+      "payment_method_id": "paypal_3024827"
+     }
+    }
+   ],
+   "new_trials": [
+    1,
+    0
+   ],
+   "base_trials": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "features": [
+    "difficult persona (angry, impatient, anxious, rude...)"
+   ],
+   "cluster": 5
+  },
+  {
+   "task": 28,
+   "coarse": "return only",
+   "types": [
+    "return"
+   ],
+   "n_writes": 3,
+   "new": 0.0,
+   "base": 0.0,
+   "delta": 0.0,
+   "status": "same",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "return_delivered_order_items",
+     "kwargs": {
+      "order_id": "#W3792453",
+      "item_ids": [
+       "4293355847"
+      ],
+      "payment_method_id": "paypal_3024827"
+     }
+    },
+    {
+     "name": "return_delivered_order_items",
+     "kwargs": {
+      "order_id": "#W7181492",
+      "item_ids": [
+       "5753502325",
+       "9851293632"
+      ],
+      "payment_method_id": "paypal_3024827"
+     }
+    },
+    {
+     "name": "return_delivered_order_items",
+     "kwargs": {
+      "order_id": "#W5565470",
+      "item_ids": [
+       "9570044148",
+       "6857426243"
+      ],
+      "payment_method_id": "paypal_3024827"
+     }
+    }
+   ],
+   "new_trials": [
+    0,
+    0
+   ],
+   "base_trials": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "features": [
+    "has a fallback / conditional ('if X is not possible, do Y')",
+    "asks for info (price, total, tracking, options)"
+   ],
+   "cluster": 3
+  },
+  {
+   "task": 29,
+   "coarse": "exchange only",
+   "types": [
+    "exchange"
+   ],
+   "n_writes": 2,
+   "new": 0.0,
+   "base": 0.0,
+   "delta": 0.0,
+   "status": "same",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "exchange_delivered_order_items",
+     "kwargs": {
+      "order_id": "#W3792453",
+      "item_ids": [
+       "4293355847"
+      ],
+      "new_item_ids": [
+       "8176740019"
+      ],
+      "payment_method_id": "paypal_3024827"
+     }
+    },
+    {
+     "name": "exchange_delivered_order_items",
+     "kwargs": {
+      "order_id": "#W7181492",
+      "item_ids": [
+       "5753502325"
+      ],
+      "new_item_ids": [
+       "5206946487"
+      ],
+      "payment_method_id": "paypal_3024827"
+     }
+    }
+   ],
+   "new_trials": [
+    0,
+    0
+   ],
+   "base_trials": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "features": [
+    "asks for info (price, total, tracking, options)"
+   ],
+   "cluster": 3
+  },
+  {
+   "task": 30,
+   "coarse": "combo: 2+ action types",
+   "types": [
+    "cancel",
+    "return"
+   ],
+   "n_writes": 3,
+   "new": 0.0,
+   "base": 0.25,
+   "delta": -0.25,
+   "status": "same",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "return_delivered_order_items",
+     "kwargs": {
+      "order_id": "#W2692684",
+      "item_ids": [
+       "3788616824"
+      ],
+      "payment_method_id": "gift_card_7711863"
+     }
+    },
+    {
+     "name": "cancel_pending_order",
+     "kwargs": {
+      "order_id": "#W9373487",
+      "reason": "no longer needed"
+     }
+    },
+    {
+     "name": "return_delivered_order_items",
+     "kwargs": {
+      "order_id": "#W7449508",
+      "item_ids": [
+       "6477915553"
+      ],
+      "payment_method_id": "gift_card_7711863"
+     }
+    }
+   ],
+   "new_trials": [
+    0,
+    0
+   ],
+   "base_trials": [
+    1,
+    0,
+    0,
+    0
+   ],
+   "features": [
+    "has a fallback / conditional ('if X is not possible, do Y')",
+    "asks for info (price, total, tracking, options)"
+   ],
+   "cluster": 1
+  },
+  {
+   "task": 31,
+   "coarse": "combo: 2+ action types",
+   "types": [
+    "cancel",
+    "return"
+   ],
+   "n_writes": 2,
+   "new": 0.5,
+   "base": 0.5,
+   "delta": 0.0,
+   "status": "same",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "cancel_pending_order",
+     "kwargs": {
+      "order_id": "#W9373487",
+      "reason": "no longer needed"
+     }
+    },
+    {
+     "name": "return_delivered_order_items",
+     "kwargs": {
+      "order_id": "#W7449508",
+      "item_ids": [
+       "6477915553"
+      ],
+      "payment_method_id": "gift_card_7711863"
+     }
+    }
+   ],
+   "new_trials": [
+    1,
+    0
+   ],
+   "base_trials": [
+    0,
+    0,
+    1,
+    1
+   ],
+   "features": [
+    "has a fallback / conditional ('if X is not possible, do Y')",
+    "asks for info (price, total, tracking, options)"
+   ],
+   "cluster": 1
+  },
+  {
+   "task": 32,
+   "coarse": "combo: 2+ action types",
+   "types": [
+    "cancel",
+    "return"
+   ],
+   "n_writes": 3,
+   "new": 0.5,
+   "base": 0.0,
+   "delta": 0.5,
+   "status": "gained",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "cancel_pending_order",
+     "kwargs": {
+      "order_id": "#W9373487",
+      "reason": "no longer needed"
+     }
+    },
+    {
+     "name": "cancel_pending_order",
+     "kwargs": {
+      "order_id": "#W5481803",
+      "reason": "no longer needed"
+     }
+    },
+    {
+     "name": "return_delivered_order_items",
+     "kwargs": {
+      "order_id": "#W7449508",
+      "item_ids": [
+       "6477915553"
+      ],
+      "payment_method_id": "gift_card_7711863"
+     }
+    }
+   ],
+   "new_trials": [
+    1,
+    0
+   ],
+   "base_trials": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "features": [
+    "has a fallback / conditional ('if X is not possible, do Y')",
+    "asks for info (price, total, tracking, options)"
+   ],
+   "cluster": 1
+  },
+  {
+   "task": 33,
+   "coarse": "change profile address only",
+   "types": [
+    "change profile address"
+   ],
+   "n_writes": 1,
+   "new": 0.5,
+   "base": 0.75,
+   "delta": -0.25,
+   "status": "same",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "modify_user_address",
+     "kwargs": {
+      "user_id": "noah_patel_6952",
+      "address1": "517 Lakeview Drive",
+      "address2": "Suite 183",
+      "city": "Seattle",
+      "country": "USA",
+      "state": "WA",
+      "zip": "98195"
+     }
+    }
+   ],
+   "new_trials": [
+    1,
+    0
+   ],
+   "base_trials": [
+    1,
+    0,
+    1,
+    1
+   ],
+   "features": [
+    "has a fallback / conditional ('if X is not possible, do Y')",
+    "withholds or does not know info",
+    "difficult persona (angry, impatient, anxious, rude...)",
+    "asks for info (price, total, tracking, options)"
+   ],
+   "cluster": 1
+  },
+  {
+   "task": 34,
+   "coarse": "change order address only",
+   "types": [
+    "change order address"
+   ],
+   "n_writes": 1,
+   "new": 0.0,
+   "base": 0.0,
+   "delta": 0.0,
+   "status": "same",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "modify_pending_order_address",
+     "kwargs": {
+      "order_id": "#W1845024",
+      "address1": "224 Elm Street",
+      "address2": "Suite 491",
+      "city": "New York",
+      "country": "USA",
+      "state": "NY",
+      "zip": "10108"
+     }
+    }
+   ],
+   "new_trials": [
+    0,
+    0
+   ],
+   "base_trials": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "features": [
+    "has a fallback / conditional ('if X is not possible, do Y')",
+    "withholds or does not know info",
+    "difficult persona (angry, impatient, anxious, rude...)",
+    "asks for info (price, total, tracking, options)"
+   ],
+   "cluster": 1
+  },
+  {
+   "task": 35,
+   "coarse": "combo: 2+ action types",
+   "types": [
+    "modify items",
+    "return"
+   ],
+   "n_writes": 2,
+   "new": 0.0,
+   "base": 0.0,
+   "delta": 0.0,
+   "status": "same",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "return_delivered_order_items",
+     "kwargs": {
+      "order_id": "#W8528674",
+      "item_ids": [
+       "6704763132"
+      ],
+      "payment_method_id": "paypal_7664977"
+     }
+    },
+    {
+     "name": "modify_pending_order_items",
+     "kwargs": {
+      "order_id": "#W9672333",
+      "item_ids": [
+       "1684786391"
+      ],
+      "new_item_ids": [
+       "5052031638"
+      ],
+      "payment_method_id": "paypal_7664977"
+     }
+    }
+   ],
+   "new_trials": [
+    0,
+    0
+   ],
+   "base_trials": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "features": [
+    "has a fallback / conditional ('if X is not possible, do Y')",
+    "difficult persona (angry, impatient, anxious, rude...)",
+    "asks for info (price, total, tracking, options)",
+    "several orders involved"
+   ],
+   "cluster": 3
+  },
+  {
+   "task": 36,
+   "coarse": "modify items only",
+   "types": [
+    "modify items"
+   ],
+   "n_writes": 1,
+   "new": 0.0,
+   "base": 0.0,
+   "delta": 0.0,
+   "status": "same",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "modify_pending_order_items",
+     "kwargs": {
+      "order_id": "#W9348897",
+      "item_ids": [
+       "6117189161",
+       "7453605304",
+       "3799046073"
+      ],
+      "new_item_ids": [
+       "6700049080",
+       "5320792178",
+       "3234800602"
+      ],
+      "payment_method_id": "credit_card_8853416"
+     }
+    }
+   ],
+   "new_trials": [
+    0,
+    0
+   ],
+   "base_trials": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "features": [
+    "has a fallback / conditional ('if X is not possible, do Y')",
+    "difficult persona (angry, impatient, anxious, rude...)",
+    "asks for info (price, total, tracking, options)"
+   ],
+   "cluster": 5
+  },
+  {
+   "task": 37,
+   "coarse": "modify items only",
+   "types": [
+    "modify items"
+   ],
+   "n_writes": 1,
+   "new": 0.0,
+   "base": 0.0,
+   "delta": 0.0,
+   "status": "same",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "modify_pending_order_items",
+     "kwargs": {
+      "order_id": "#W9348897",
+      "item_ids": [
+       "6117189161",
+       "7453605304",
+       "3799046073"
+      ],
+      "new_item_ids": [
+       "6700049080",
+       "5320792178",
+       "3234800602"
+      ],
+      "payment_method_id": "credit_card_8853416"
+     }
+    }
+   ],
+   "new_trials": [
+    0,
+    0
+   ],
+   "base_trials": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "features": [
+    "has a fallback / conditional ('if X is not possible, do Y')",
+    "difficult persona (angry, impatient, anxious, rude...)",
+    "asks for info (price, total, tracking, options)"
+   ],
+   "cluster": 5
+  },
+  {
+   "task": 38,
+   "coarse": "cancel only",
+   "types": [
+    "cancel"
+   ],
+   "n_writes": 1,
+   "new": 0.0,
+   "base": 1.0,
+   "delta": -1.0,
+   "status": "lost",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "cancel_pending_order",
+     "kwargs": {
+      "order_id": "#W9348897",
+      "reason": "no longer needed"
+     }
+    }
+   ],
+   "new_trials": [
+    0,
+    0
+   ],
+   "base_trials": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "features": [
+    "has a fallback / conditional ('if X is not possible, do Y')",
+    "difficult persona (angry, impatient, anxious, rude...)",
+    "asks for info (price, total, tracking, options)"
+   ],
+   "cluster": 5
+  },
+  {
+   "task": 39,
+   "coarse": "change profile address only",
+   "types": [
+    "change profile address"
+   ],
+   "n_writes": 1,
+   "new": 0.0,
+   "base": 0.5,
+   "delta": -0.5,
+   "status": "lost",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "modify_user_address",
+     "kwargs": {
+      "user_id": "fatima_taylor_3452",
+      "address1": "157 Oak Street",
+      "address2": "Suite 258",
+      "city": "Phoenix",
+      "state": "AZ",
+      "country": "USA",
+      "zip": "85033"
+     }
+    }
+   ],
+   "new_trials": [
+    0,
+    0
+   ],
+   "base_trials": [
+    0,
+    1,
+    1,
+    0
+   ],
+   "features": [
+    "withholds or does not know info",
+    "asks for info (price, total, tracking, options)"
+   ],
+   "cluster": 4
+  },
+  {
+   "task": 40,
+   "coarse": "change payment only",
+   "types": [
+    "change payment"
+   ],
+   "n_writes": 1,
+   "new": 1.0,
+   "base": 0.75,
+   "delta": 0.25,
+   "status": "same",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "modify_pending_order_payment",
+     "kwargs": {
+      "order_id": "#W4923227",
+      "payment_method_id": "credit_card_8897086"
+     }
+    }
+   ],
+   "new_trials": [
+    1,
+    1
+   ],
+   "base_trials": [
+    0,
+    1,
+    1,
+    1
+   ],
+   "features": [
+    "has a fallback / conditional ('if X is not possible, do Y')",
+    "difficult persona (angry, impatient, anxious, rude...)",
+    "asks for info (price, total, tracking, options)"
+   ],
+   "cluster": 5
+  },
+  {
+   "task": 41,
+   "coarse": "combo: 2+ action types",
+   "types": [
+    "change order address",
+    "change profile address",
+    "modify items"
+   ],
+   "n_writes": 4,
+   "new": 0.0,
+   "base": 0.0,
+   "delta": 0.0,
+   "status": "same",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "modify_pending_order_address",
+     "kwargs": {
+      "order_id": "#W9583042",
+      "address1": "445 Maple Drive",
+      "address2": "Suite 394",
+      "city": "Fort Worth",
+      "state": "TX",
+      "country": "USA",
+      "zip": "76165"
+     }
+    },
+    {
+     "name": "modify_pending_order_address",
+     "kwargs": {
+      "order_id": "#W4082615",
+      "address1": "445 Maple Drive",
+      "address2": "Suite 394",
+      "city": "Fort Worth",
+      "state": "TX",
+      "country": "USA",
+      "zip": "76165"
+     }
+    },
+    {
+     "name": "modify_user_address",
+     "kwargs": {
+      "user_id": "mei_patel_7272",
+      "address1": "445 Maple Drive",
+      "address2": "Suite 394",
+      "city": "Fort Worth",
+      "state": "TX",
+      "country": "USA",
+      "zip": "76165"
+     }
+    },
+    {
+     "name": "modify_pending_order_items",
+     "kwargs": {
+      "order_id": "#W4082615",
+      "item_ids": [
+       "9779102705"
+      ],
+      "new_item_ids": [
+       "1096508426"
+      ],
+      "payment_method_id": "paypal_4768213"
+     }
+    }
+   ],
+   "new_trials": [
+    0,
+    0
+   ],
+   "base_trials": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "features": [
+    "asks for info (price, total, tracking, options)"
+   ],
+   "cluster": 4
+  },
+  {
+   "task": 42,
+   "coarse": "combo: 2+ action types",
+   "types": [
+    "change order address",
+    "change profile address",
+    "modify items"
+   ],
+   "n_writes": 4,
+   "new": 0.5,
+   "base": 0.25,
+   "delta": 0.25,
+   "status": "same",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "modify_pending_order_address",
+     "kwargs": {
+      "order_id": "#W9583042",
+      "address1": "445 Maple Drive",
+      "address2": "Suite 394",
+      "city": "Fort Worth",
+      "state": "TX",
+      "country": "USA",
+      "zip": "76165"
+     }
+    },
+    {
+     "name": "modify_pending_order_address",
+     "kwargs": {
+      "order_id": "#W4082615",
+      "address1": "445 Maple Drive",
+      "address2": "Suite 394",
+      "city": "Fort Worth",
+      "state": "TX",
+      "country": "USA",
+      "zip": "76165"
+     }
+    },
+    {
+     "name": "modify_user_address",
+     "kwargs": {
+      "user_id": "mei_patel_7272",
+      "address1": "445 Maple Drive",
+      "address2": "Suite 394",
+      "city": "Fort Worth",
+      "state": "TX",
+      "country": "USA",
+      "zip": "76165"
+     }
+    },
+    {
+     "name": "modify_pending_order_items",
+     "kwargs": {
+      "order_id": "#W4082615",
+      "item_ids": [
+       "9779102705"
+      ],
+      "new_item_ids": [
+       "1096508426"
+      ],
+      "payment_method_id": "paypal_4768213"
+     }
+    }
+   ],
+   "new_trials": [
+    0,
+    1
+   ],
+   "base_trials": [
+    0,
+    0,
+    1,
+    0
+   ],
+   "features": [
+    "has a fallback / conditional ('if X is not possible, do Y')"
+   ],
+   "cluster": 4
+  },
+  {
+   "task": 43,
+   "coarse": "change profile address only",
+   "types": [
+    "change profile address"
+   ],
+   "n_writes": 1,
+   "new": 0.5,
+   "base": 0.75,
+   "delta": -0.25,
+   "status": "same",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "modify_user_address",
+     "kwargs": {
+      "user_id": "lucas_santos_6600",
+      "address1": "943 Maple Drive",
+      "address2": "Suite 356",
+      "city": "Chicago",
+      "state": "IL",
+      "country": "USA",
+      "zip": "60621"
+     }
+    }
+   ],
+   "new_trials": [
+    1,
+    0
+   ],
+   "base_trials": [
+    1,
+    1,
+    1,
+    0
+   ],
+   "features": [
+    "asks for info (price, total, tracking, options)"
+   ],
+   "cluster": 4
+  },
+  {
+   "task": 44,
+   "coarse": "modify items only",
+   "types": [
+    "modify items"
+   ],
+   "n_writes": 1,
+   "new": 1.0,
+   "base": 0.5,
+   "delta": 0.5,
+   "status": "gained",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "modify_pending_order_items",
+     "kwargs": {
+      "order_id": "#W9300146",
+      "item_ids": [
+       "9190635437"
+      ],
+      "new_item_ids": [
+       "5320792178"
+      ],
+      "payment_method_id": "gift_card_7245904"
+     }
+    }
+   ],
+   "new_trials": [
+    1,
+    1
+   ],
+   "base_trials": [
+    0,
+    1,
+    0,
+    1
+   ],
+   "features": [
+    "asks for info (price, total, tracking, options)"
+   ],
+   "cluster": 3
+  },
+  {
+   "task": 45,
+   "coarse": "exchange only",
+   "types": [
+    "exchange"
+   ],
+   "n_writes": 1,
+   "new": 1.0,
+   "base": 0.0,
+   "delta": 1.0,
+   "status": "gained",
+   "newly_solved": true,
+   "actions": [
+    {
+     "name": "exchange_delivered_order_items",
+     "kwargs": {
+      "order_id": "#W9502127",
+      "item_ids": [
+       "6259501109"
+      ],
+      "new_item_ids": [
+       "7958300294"
+      ],
+      "payment_method_id": "paypal_2433177"
+     }
+    }
+   ],
+   "new_trials": [
+    1,
+    1
+   ],
+   "base_trials": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "features": [
+    "has a fallback / conditional ('if X is not possible, do Y')",
+    "withholds or does not know info",
+    "asks for info (price, total, tracking, options)"
+   ],
+   "cluster": 2
+  },
+  {
+   "task": 46,
+   "coarse": "return only",
+   "types": [
+    "return"
+   ],
+   "n_writes": 1,
+   "new": 0.5,
+   "base": 1.0,
+   "delta": -0.5,
+   "status": "lost",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "return_delivered_order_items",
+     "kwargs": {
+      "order_id": "#W9502127",
+      "item_ids": [
+       "6259501109",
+       "9534205511"
+      ],
+      "payment_method_id": "paypal_2433177"
+     }
+    }
+   ],
+   "new_trials": [
+    0,
+    1
+   ],
+   "base_trials": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "features": [
+    "withholds or does not know info",
+    "difficult persona (angry, impatient, anxious, rude...)",
+    "asks for info (price, total, tracking, options)"
+   ],
+   "cluster": 2
+  },
+  {
+   "task": 47,
+   "coarse": "return only",
+   "types": [
+    "return"
+   ],
+   "n_writes": 1,
+   "new": 1.0,
+   "base": 0.75,
+   "delta": 0.25,
+   "status": "same",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "return_delivered_order_items",
+     "kwargs": {
+      "order_id": "#W9502127",
+      "item_ids": [
+       "2872451762",
+       "9534205511"
+      ],
+      "payment_method_id": "paypal_2433177"
+     }
+    }
+   ],
+   "new_trials": [
+    1,
+    1
+   ],
+   "base_trials": [
+    0,
+    1,
+    1,
+    1
+   ],
+   "features": [
+    "withholds or does not know info",
+    "difficult persona (angry, impatient, anxious, rude...)",
+    "asks for info (price, total, tracking, options)"
+   ],
+   "cluster": 2
+  },
+  {
+   "task": 48,
+   "coarse": "return only",
+   "types": [
+    "return"
+   ],
+   "n_writes": 1,
+   "new": 0.5,
+   "base": 0.75,
+   "delta": -0.25,
+   "status": "same",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "return_delivered_order_items",
+     "kwargs": {
+      "order_id": "#W9502127",
+      "item_ids": [
+       "9534205511"
+      ],
+      "payment_method_id": "paypal_2433177"
+     }
+    }
+   ],
+   "new_trials": [
+    0,
+    1
+   ],
+   "base_trials": [
+    0,
+    1,
+    1,
+    1
+   ],
+   "features": [
+    "withholds or does not know info"
+   ],
+   "cluster": 1
+  },
+  {
+   "task": 49,
+   "coarse": "exchange only",
+   "types": [
+    "exchange"
+   ],
+   "n_writes": 1,
+   "new": 1.0,
+   "base": 0.75,
+   "delta": 0.25,
+   "status": "same",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "exchange_delivered_order_items",
+     "kwargs": {
+      "order_id": "#W3470184",
+      "item_ids": [
+       "2757705742"
+      ],
+      "new_item_ids": [
+       "1646531091"
+      ],
+      "payment_method_id": "gift_card_7245904"
+     }
+    }
+   ],
+   "new_trials": [
+    1,
+    1
+   ],
+   "base_trials": [
+    0,
+    1,
+    1,
+    1
+   ],
+   "features": [],
+   "cluster": 0
+  },
+  {
+   "task": 50,
+   "coarse": "no write action (lookup or transfer)",
+   "types": [],
+   "n_writes": 0,
+   "new": 1.0,
+   "base": 1.0,
+   "delta": 0.0,
+   "status": "same",
+   "newly_solved": false,
+   "actions": [],
+   "new_trials": [
+    1,
+    1
+   ],
+   "base_trials": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "features": [
+    "withholds or does not know info"
+   ],
+   "cluster": 2
+  },
+  {
+   "task": 51,
+   "coarse": "return only",
+   "types": [
+    "return"
+   ],
+   "n_writes": 1,
+   "new": 1.0,
+   "base": 1.0,
+   "delta": 0.0,
+   "status": "same",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "return_delivered_order_items",
+     "kwargs": {
+      "order_id": "#W4689314",
+      "item_ids": [
+       "5996159312"
+      ],
+      "payment_method_id": "credit_card_8105988"
+     }
+    }
+   ],
+   "new_trials": [
+    1,
+    1
+   ],
+   "base_trials": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "features": [],
+   "cluster": 1
+  },
+  {
+   "task": 52,
+   "coarse": "exchange only",
+   "types": [
+    "exchange"
+   ],
+   "n_writes": 1,
+   "new": 0.5,
+   "base": 0.25,
+   "delta": 0.25,
+   "status": "same",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "exchange_delivered_order_items",
+     "kwargs": {
+      "order_id": "#W4689314",
+      "item_ids": [
+       "5996159312"
+      ],
+      "new_item_ids": [
+       "9228757377"
+      ],
+      "payment_method_id": "paypal_8194385"
+     }
+    }
+   ],
+   "new_trials": [
+    0,
+    1
+   ],
+   "base_trials": [
+    0,
+    0,
+    0,
+    1
+   ],
+   "features": [
+    "asks for info (price, total, tracking, options)"
+   ],
+   "cluster": 2
+  },
+  {
+   "task": 53,
+   "coarse": "return only",
+   "types": [
+    "return"
+   ],
+   "n_writes": 1,
+   "new": 1.0,
+   "base": 0.5,
+   "delta": 0.5,
+   "status": "gained",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "return_delivered_order_items",
+     "kwargs": {
+      "order_id": "#W3916020",
+      "item_ids": [
+       "7758198585"
+      ],
+      "payment_method_id": "credit_card_8105988"
+     }
+    }
+   ],
+   "new_trials": [
+    1,
+    1
+   ],
+   "base_trials": [
+    0,
+    1,
+    1,
+    0
+   ],
+   "features": [],
+   "cluster": 1
+  },
+  {
+   "task": 54,
+   "coarse": "combo: 2+ action types",
+   "types": [
+    "cancel",
+    "return"
+   ],
+   "n_writes": 3,
+   "new": 0.0,
+   "base": 0.0,
+   "delta": 0.0,
+   "status": "same",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "cancel_pending_order",
+     "kwargs": {
+      "order_id": "#W4836353",
+      "reason": "no longer needed"
+     }
+    },
+    {
+     "name": "cancel_pending_order",
+     "kwargs": {
+      "order_id": "#W7342738",
+      "reason": "no longer needed"
+     }
+    },
+    {
+     "name": "return_delivered_order_items",
+     "kwargs": {
+      "order_id": "#W4597054",
+      "item_ids": [
+       "5669664287",
+       "4900990404",
+       "9862136885",
+       "6777246137"
+      ],
+      "payment_method_id": "gift_card_3491931"
+     }
+    }
+   ],
+   "new_trials": [
+    0,
+    0
+   ],
+   "base_trials": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "features": [
+    "difficult persona (angry, impatient, anxious, rude...)",
+    "asks for info (price, total, tracking, options)"
+   ],
+   "cluster": 5
+  },
+  {
+   "task": 55,
+   "coarse": "combo: 2+ action types",
+   "types": [
+    "cancel",
+    "return"
+   ],
+   "n_writes": 4,
+   "new": 0.0,
+   "base": 0.0,
+   "delta": 0.0,
+   "status": "same",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "cancel_pending_order",
+     "kwargs": {
+      "order_id": "#W4836353",
+      "reason": "no longer needed"
+     }
+    },
+    {
+     "name": "cancel_pending_order",
+     "kwargs": {
+      "order_id": "#W7342738",
+      "reason": "no longer needed"
+     }
+    },
+    {
+     "name": "return_delivered_order_items",
+     "kwargs": {
+      "order_id": "#W4597054",
+      "item_ids": [
+       "5669664287",
+       "4900990404",
+       "9862136885",
+       "6777246137"
+      ],
+      "payment_method_id": "gift_card_3491931"
+     }
+    },
+    {
+     "name": "return_delivered_order_items",
+     "kwargs": {
+      "order_id": "#W7773202",
+      "item_ids": [
+       "8277474082"
+      ],
+      "payment_method_id": "gift_card_3491931"
+     }
+    }
+   ],
+   "new_trials": [
+    0,
+    0
+   ],
+   "base_trials": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "features": [
+    "difficult persona (angry, impatient, anxious, rude...)"
+   ],
+   "cluster": 5
+  },
+  {
+   "task": 56,
+   "coarse": "modify items only",
+   "types": [
+    "modify items"
+   ],
+   "n_writes": 1,
+   "new": 0.5,
+   "base": 0.75,
+   "delta": -0.25,
+   "status": "same",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "modify_pending_order_items",
+     "kwargs": {
+      "order_id": "#W4284542",
+      "item_ids": [
+       "8302289002"
+      ],
+      "new_item_ids": [
+       "9534205511"
+      ],
+      "payment_method_id": "gift_card_9368765"
+     }
+    }
+   ],
+   "new_trials": [
+    1,
+    0
+   ],
+   "base_trials": [
+    0,
+    1,
+    1,
+    1
+   ],
+   "features": [
+    "has a fallback / conditional ('if X is not possible, do Y')",
+    "withholds or does not know info",
+    "asks for info (price, total, tracking, options)"
+   ],
+   "cluster": 4
+  },
+  {
+   "task": 57,
+   "coarse": "no write action (lookup or transfer)",
+   "types": [],
+   "n_writes": 0,
+   "new": 0.0,
+   "base": 0.25,
+   "delta": -0.25,
+   "status": "same",
+   "newly_solved": false,
+   "actions": [],
+   "new_trials": [
+    0,
+    0
+   ],
+   "base_trials": [
+    0,
+    0,
+    1,
+    0
+   ],
+   "features": [
+    "has a fallback / conditional ('if X is not possible, do Y')",
+    "asks for info (price, total, tracking, options)"
+   ],
+   "cluster": 4
+  },
+  {
+   "task": 58,
+   "coarse": "exchange only",
+   "types": [
+    "exchange"
+   ],
+   "n_writes": 1,
+   "new": 0.0,
+   "base": 1.0,
+   "delta": -1.0,
+   "status": "lost",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "exchange_delivered_order_items",
+     "kwargs": {
+      "order_id": "#W5838674",
+      "item_ids": [
+       "7441167885",
+       "3478699712"
+      ],
+      "new_item_ids": [
+       "3815173328",
+       "6017636844"
+      ],
+      "payment_method_id": "gift_card_9368765"
+     }
+    }
+   ],
+   "new_trials": [
+    0,
+    0
+   ],
+   "base_trials": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "features": [
+    "has a fallback / conditional ('if X is not possible, do Y')",
+    "difficult persona (angry, impatient, anxious, rude...)",
+    "asks for info (price, total, tracking, options)"
+   ],
+   "cluster": 1
+  },
+  {
+   "task": 59,
+   "coarse": "combo: 2+ action types",
+   "types": [
+    "cancel",
+    "change order address"
+   ],
+   "n_writes": 2,
+   "new": 0.5,
+   "base": 0.5,
+   "delta": 0.0,
+   "status": "same",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "cancel_pending_order",
+     "kwargs": {
+      "order_id": "#W8268610",
+      "reason": "no longer needed"
+     }
+    },
+    {
+     "name": "modify_pending_order_address",
+     "kwargs": {
+      "order_id": "#W2702727",
+      "address1": "1234 Elm St",
+      "address2": "",
+      "city": "Springfield",
+      "state": "IL",
+      "country": "USA",
+      "zip": "62701"
+     }
+    }
+   ],
+   "new_trials": [
+    1,
+    0
+   ],
+   "base_trials": [
+    0,
+    0,
+    1,
+    1
+   ],
+   "features": [
+    "has a fallback / conditional ('if X is not possible, do Y')",
+    "asks for info (price, total, tracking, options)",
+    "several orders involved"
+   ],
+   "cluster": 2
+  },
+  {
+   "task": 60,
+   "coarse": "modify items only",
+   "types": [
+    "modify items"
+   ],
+   "n_writes": 1,
+   "new": 0.5,
+   "base": 0.5,
+   "delta": 0.0,
+   "status": "same",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "modify_pending_order_items",
+     "kwargs": {
+      "order_id": "#W5061109",
+      "item_ids": [
+       "3694871183"
+      ],
+      "new_item_ids": [
+       "6077640618"
+      ],
+      "payment_method_id": "paypal_3742148"
+     }
+    }
+   ],
+   "new_trials": [
+    0,
+    1
+   ],
+   "base_trials": [
+    1,
+    0,
+    1,
+    0
+   ],
+   "features": [
+    "asks for info (price, total, tracking, options)"
+   ],
+   "cluster": 2
+  },
+  {
+   "task": 61,
+   "coarse": "modify items only",
+   "types": [
+    "modify items"
+   ],
+   "n_writes": 1,
+   "new": 1.0,
+   "base": 1.0,
+   "delta": 0.0,
+   "status": "same",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "modify_pending_order_items",
+     "kwargs": {
+      "order_id": "#W5061109",
+      "item_ids": [
+       "3694871183"
+      ],
+      "new_item_ids": [
+       "8555936349"
+      ],
+      "payment_method_id": "paypal_3742148"
+     }
+    }
+   ],
+   "new_trials": [
+    1,
+    1
+   ],
+   "base_trials": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "features": [
+    "asks for info (price, total, tracking, options)"
+   ],
+   "cluster": 2
+  },
+  {
+   "task": 62,
+   "coarse": "no write action (lookup or transfer)",
+   "types": [],
+   "n_writes": 0,
+   "new": 0.0,
+   "base": 0.25,
+   "delta": -0.25,
+   "status": "same",
+   "newly_solved": false,
+   "actions": [],
+   "new_trials": [
+    0,
+    0
+   ],
+   "base_trials": [
+    1,
+    0,
+    0,
+    0
+   ],
+   "features": [
+    "asks for info (price, total, tracking, options)"
+   ],
+   "cluster": 2
+  },
+  {
+   "task": 63,
+   "coarse": "modify items only",
+   "types": [
+    "modify items"
+   ],
+   "n_writes": 1,
+   "new": 0.0,
+   "base": 0.0,
+   "delta": 0.0,
+   "status": "same",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "modify_pending_order_items",
+     "kwargs": {
+      "order_id": "#W5061109",
+      "item_ids": [
+       "3254583681"
+      ],
+      "new_item_ids": [
+       "2635605237"
+      ],
+      "payment_method_id": "paypal_3742148"
+     }
+    }
+   ],
+   "new_trials": [
+    0,
+    0
+   ],
+   "base_trials": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "features": [
+    "asks for info (price, total, tracking, options)"
+   ],
+   "cluster": 2
+  },
+  {
+   "task": 64,
+   "coarse": "combo: 2+ action types",
+   "types": [
+    "exchange",
+    "modify items"
+   ],
+   "n_writes": 2,
+   "new": 0.5,
+   "base": 0.25,
+   "delta": 0.25,
+   "status": "same",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "exchange_delivered_order_items",
+     "kwargs": {
+      "order_id": "#W7464385",
+      "item_ids": [
+       "1810466394"
+      ],
+      "new_item_ids": [
+       "6700049080"
+      ],
+      "payment_method_id": "paypal_1261484"
+     }
+    },
+    {
+     "name": "modify_pending_order_items",
+     "kwargs": {
+      "order_id": "#W7464385",
+      "item_ids": [
+       "1810466394"
+      ],
+      "new_item_ids": [
+       "6700049080"
+      ],
+      "payment_method_id": "paypal_1261484"
+     }
+    }
+   ],
+   "new_trials": [
+    0,
+    1
+   ],
+   "base_trials": [
+    0,
+    0,
+    0,
+    1
+   ],
+   "features": [
+    "asks for info (price, total, tracking, options)"
+   ],
+   "cluster": 2
+  },
+  {
+   "task": 65,
+   "coarse": "no write action (lookup or transfer)",
+   "types": [],
+   "n_writes": 0,
+   "new": 1.0,
+   "base": 1.0,
+   "delta": 0.0,
+   "status": "same",
+   "newly_solved": false,
+   "actions": [],
+   "new_trials": [
+    1,
+    1
+   ],
+   "base_trials": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "features": [
+    "asks for info (price, total, tracking, options)"
+   ],
+   "cluster": 2
+  },
+  {
+   "task": 66,
+   "coarse": "cancel only",
+   "types": [
+    "cancel"
+   ],
+   "n_writes": 1,
+   "new": 1.0,
+   "base": 0.75,
+   "delta": 0.25,
+   "status": "same",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "cancel_pending_order",
+     "kwargs": {
+      "order_id": "#W3361211",
+      "reason": "no longer needed"
+     }
+    }
+   ],
+   "new_trials": [
+    1,
+    1
+   ],
+   "base_trials": [
+    1,
+    1,
+    0,
+    1
+   ],
+   "features": [
+    "has a fallback / conditional ('if X is not possible, do Y')"
+   ],
+   "cluster": 2
+  },
+  {
+   "task": 67,
+   "coarse": "no write action (lookup or transfer)",
+   "types": [],
+   "n_writes": 0,
+   "new": 1.0,
+   "base": 0.25,
+   "delta": 0.75,
+   "status": "gained",
+   "newly_solved": false,
+   "actions": [],
+   "new_trials": [
+    1,
+    1
+   ],
+   "base_trials": [
+    0,
+    1,
+    0,
+    0
+   ],
+   "features": [
+    "withholds or does not know info",
+    "asks for info (price, total, tracking, options)"
+   ],
+   "cluster": 4
+  },
+  {
+   "task": 68,
+   "coarse": "no write action (lookup or transfer)",
+   "types": [],
+   "n_writes": 0,
+   "new": 1.0,
+   "base": 1.0,
+   "delta": 0.0,
+   "status": "same",
+   "newly_solved": false,
+   "actions": [],
+   "new_trials": [
+    1,
+    1
+   ],
+   "base_trials": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "features": [
+    "withholds or does not know info",
+    "asks for info (price, total, tracking, options)"
+   ],
+   "cluster": 4
+  },
+  {
+   "task": 69,
+   "coarse": "cancel only",
+   "types": [
+    "cancel"
+   ],
+   "n_writes": 1,
+   "new": 1.0,
+   "base": 0.75,
+   "delta": 0.25,
+   "status": "same",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "cancel_pending_order",
+     "kwargs": {
+      "order_id": "#W2417020",
+      "reason": "no longer needed"
+     }
+    }
+   ],
+   "new_trials": [
+    1,
+    1
+   ],
+   "base_trials": [
+    1,
+    0,
+    1,
+    1
+   ],
+   "features": [
+    "has a fallback / conditional ('if X is not possible, do Y')",
+    "withholds or does not know info"
+   ],
+   "cluster": 1
+  },
+  {
+   "task": 70,
+   "coarse": "exchange only",
+   "types": [
+    "exchange"
+   ],
+   "n_writes": 1,
+   "new": 1.0,
+   "base": 0.75,
+   "delta": 0.25,
+   "status": "same",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "exchange_delivered_order_items",
+     "kwargs": {
+      "order_id": "#W3947049",
+      "item_ids": [
+       "3358616356"
+      ],
+      "new_item_ids": [
+       "9013366374"
+      ],
+      "payment_method_id": "credit_card_7901829"
+     }
+    }
+   ],
+   "new_trials": [
+    1,
+    1
+   ],
+   "base_trials": [
+    0,
+    1,
+    1,
+    1
+   ],
+   "features": [
+    "difficult persona (angry, impatient, anxious, rude...)",
+    "asks for info (price, total, tracking, options)"
+   ],
+   "cluster": 4
+  },
+  {
+   "task": 71,
+   "coarse": "combo: 2+ action types",
+   "types": [
+    "change order address",
+    "modify items"
+   ],
+   "n_writes": 2,
+   "new": 0.0,
+   "base": 0.0,
+   "delta": 0.0,
+   "status": "same",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "modify_pending_order_address",
+     "kwargs": {
+      "order_id": "#W5270061",
+      "address1": "159 Hickory Lane",
+      "address2": "Suite 995",
+      "city": "Charlotte",
+      "country": "USA",
+      "state": "NC",
+      "zip": "28243"
+     }
+    },
+    {
+     "name": "modify_pending_order_items",
+     "kwargs": {
+      "order_id": "#W5270061",
+      "item_ids": [
+       "2492465580"
+      ],
+      "new_item_ids": [
+       "5917587651"
+      ],
+      "payment_method_id": "paypal_7729105"
+     }
+    }
+   ],
+   "new_trials": [
+    0,
+    0
+   ],
+   "base_trials": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "features": [
+    "has a fallback / conditional ('if X is not possible, do Y')",
+    "customer changes their mind",
+    "withholds or does not know info"
+   ],
+   "cluster": 4
+  },
+  {
+   "task": 72,
+   "coarse": "combo: 2+ action types",
+   "types": [
+    "change order address",
+    "modify items"
+   ],
+   "n_writes": 2,
+   "new": 0.0,
+   "base": 0.0,
+   "delta": 0.0,
+   "status": "same",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "modify_pending_order_address",
+     "kwargs": {
+      "order_id": "#W5270061",
+      "address1": "159 Hickory Lane",
+      "address2": "Suite 995",
+      "city": "Charlotte",
+      "country": "USA",
+      "state": "NC",
+      "zip": "28243"
+     }
+    },
+    {
+     "name": "modify_pending_order_items",
+     "kwargs": {
+      "order_id": "#W5270061",
+      "item_ids": [
+       "2492465580"
+      ],
+      "new_item_ids": [
+       "5917587651"
+      ],
+      "payment_method_id": "paypal_7729105"
+     }
+    }
+   ],
+   "new_trials": [
+    0,
+    0
+   ],
+   "base_trials": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "features": [
+    "has a fallback / conditional ('if X is not possible, do Y')",
+    "customer changes their mind",
+    "withholds or does not know info"
+   ],
+   "cluster": 4
+  },
+  {
+   "task": 73,
+   "coarse": "return only",
+   "types": [
+    "return"
+   ],
+   "n_writes": 1,
+   "new": 0.5,
+   "base": 1.0,
+   "delta": -0.5,
+   "status": "lost",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "return_delivered_order_items",
+     "kwargs": {
+      "order_id": "#W5272531",
+      "item_ids": [
+       "7228247242",
+       "2698416822",
+       "8098621301",
+       "3320557165"
+      ],
+      "payment_method_id": "credit_card_6824399"
+     }
+    }
+   ],
+   "new_trials": [
+    0,
+    1
+   ],
+   "base_trials": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "features": [],
+   "cluster": 1
+  },
+  {
+   "task": 74,
+   "coarse": "combo: 2+ action types",
+   "types": [
+    "cancel",
+    "modify items"
+   ],
+   "n_writes": 2,
+   "new": 0.0,
+   "base": 0.25,
+   "delta": -0.25,
+   "status": "same",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "cancel_pending_order",
+     "kwargs": {
+      "order_id": "#W3189752",
+      "reason": "no longer needed"
+     }
+    },
+    {
+     "name": "modify_pending_order_items",
+     "kwargs": {
+      "order_id": "#W5166363",
+      "item_ids": [
+       "3334537816"
+      ],
+      "new_item_ids": [
+       "3265035808"
+      ],
+      "payment_method_id": "credit_card_4466831"
+     }
+    }
+   ],
+   "new_trials": [
+    0,
+    0
+   ],
+   "base_trials": [
+    0,
+    1,
+    0,
+    0
+   ],
+   "features": [
+    "withholds or does not know info",
+    "difficult persona (angry, impatient, anxious, rude...)",
+    "asks for info (price, total, tracking, options)"
+   ],
+   "cluster": 4
+  },
+  {
+   "task": 75,
+   "coarse": "exchange only",
+   "types": [
+    "exchange"
+   ],
+   "n_writes": 1,
+   "new": 0.5,
+   "base": 0.75,
+   "delta": -0.25,
+   "status": "same",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "exchange_delivered_order_items",
+     "kwargs": {
+      "order_id": "#W6908222",
+      "item_ids": [
+       "8555936349"
+      ],
+      "new_item_ids": [
+       "4063058357"
+      ],
+      "payment_method_id": "paypal_4518393"
+     }
+    }
+   ],
+   "new_trials": [
+    0,
+    1
+   ],
+   "base_trials": [
+    1,
+    0,
+    1,
+    1
+   ],
+   "features": [],
+   "cluster": 0
+  },
+  {
+   "task": 76,
+   "coarse": "cancel only",
+   "types": [
+    "cancel"
+   ],
+   "n_writes": 2,
+   "new": 0.5,
+   "base": 0.0,
+   "delta": 0.5,
+   "status": "gained",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "cancel_pending_order",
+     "kwargs": {
+      "order_id": "#W8367380",
+      "reason": "ordered by mistake"
+     }
+    },
+    {
+     "name": "cancel_pending_order",
+     "kwargs": {
+      "order_id": "#W1242543",
+      "reason": "no longer needed"
+     }
+    }
+   ],
+   "new_trials": [
+    1,
+    0
+   ],
+   "base_trials": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "features": [
+    "has a fallback / conditional ('if X is not possible, do Y')",
+    "asks for info (price, total, tracking, options)"
+   ],
+   "cluster": 3
+  },
+  {
+   "task": 77,
+   "coarse": "exchange only",
+   "types": [
+    "exchange"
+   ],
+   "n_writes": 1,
+   "new": 1.0,
+   "base": 0.75,
+   "delta": 0.25,
+   "status": "same",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "exchange_delivered_order_items",
+     "kwargs": {
+      "order_id": "#W1671835",
+      "item_ids": [
+       "5081446110"
+      ],
+      "new_item_ids": [
+       "3399869890"
+      ],
+      "payment_method_id": "paypal_6918118"
+     }
+    }
+   ],
+   "new_trials": [
+    1,
+    1
+   ],
+   "base_trials": [
+    0,
+    1,
+    1,
+    1
+   ],
+   "features": [
+    "has a fallback / conditional ('if X is not possible, do Y')"
+   ],
+   "cluster": 4
+  },
+  {
+   "task": 78,
+   "coarse": "combo: 2+ action types",
+   "types": [
+    "cancel",
+    "change order address",
+    "modify items"
+   ],
+   "n_writes": 3,
+   "new": 1.0,
+   "base": 0.75,
+   "delta": 0.25,
+   "status": "same",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "modify_pending_order_address",
+     "kwargs": {
+      "order_id": "#W5056519",
+      "address1": "380 Maple Drive",
+      "address2": "Suite 960",
+      "city": "San Diego",
+      "country": "USA",
+      "state": "CA",
+      "zip": "92101"
+     }
+    },
+    {
+     "name": "modify_pending_order_items",
+     "kwargs": {
+      "order_id": "#W5056519",
+      "item_ids": [
+       "7902309762"
+      ],
+      "new_item_ids": [
+       "1573035764"
+      ],
+      "payment_method_id": "credit_card_3095586"
+     }
+    },
+    {
+     "name": "cancel_pending_order",
+     "kwargs": {
+      "order_id": "#W5995614",
+      "reason": "ordered by mistake"
+     }
+    }
+   ],
+   "new_trials": [
+    1,
+    1
+   ],
+   "base_trials": [
+    1,
+    1,
+    0,
+    1
+   ],
+   "features": [
+    "difficult persona (angry, impatient, anxious, rude...)"
+   ],
+   "cluster": 3
+  },
+  {
+   "task": 79,
+   "coarse": "modify items only",
+   "types": [
+    "modify items"
+   ],
+   "n_writes": 1,
+   "new": 0.0,
+   "base": 0.0,
+   "delta": 0.0,
+   "status": "same",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "modify_pending_order_items",
+     "kwargs": {
+      "order_id": "#W8661412",
+      "item_ids": [
+       "3453331371"
+      ],
+      "new_item_ids": [
+       "2439754078"
+      ],
+      "payment_method_id": "credit_card_7239357"
+     }
+    }
+   ],
+   "new_trials": [
+    0,
+    0
+   ],
+   "base_trials": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "features": [
+    "has a fallback / conditional ('if X is not possible, do Y')",
+    "difficult persona (angry, impatient, anxious, rude...)"
+   ],
+   "cluster": 4
+  },
+  {
+   "task": 80,
+   "coarse": "exchange only",
+   "types": [
+    "exchange"
+   ],
+   "n_writes": 1,
+   "new": 1.0,
+   "base": 0.25,
+   "delta": 0.75,
+   "status": "gained",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "exchange_delivered_order_items",
+     "kwargs": {
+      "order_id": "#W7209932",
+      "item_ids": [
+       "5047954489"
+      ],
+      "new_item_ids": [
+       "9354168549"
+      ],
+      "payment_method_id": "gift_card_2611937"
+     }
+    }
+   ],
+   "new_trials": [
+    1,
+    1
+   ],
+   "base_trials": [
+    1,
+    0,
+    0,
+    0
+   ],
+   "features": [],
+   "cluster": 4
+  },
+  {
+   "task": 81,
+   "coarse": "cancel only",
+   "types": [
+    "cancel"
+   ],
+   "n_writes": 2,
+   "new": 0.0,
+   "base": 0.0,
+   "delta": 0.0,
+   "status": "same",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "cancel_pending_order",
+     "kwargs": {
+      "order_id": "#W3289292",
+      "reason": "no longer needed"
+     }
+    },
+    {
+     "name": "cancel_pending_order",
+     "kwargs": {
+      "order_id": "#W9722559",
+      "reason": "no longer needed"
+     }
+    }
+   ],
+   "new_trials": [
+    0,
+    0
+   ],
+   "base_trials": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "features": [
+    "has a fallback / conditional ('if X is not possible, do Y')"
+   ],
+   "cluster": 5
+  },
+  {
+   "task": 82,
+   "coarse": "return only",
+   "types": [
+    "return"
+   ],
+   "n_writes": 1,
+   "new": 1.0,
+   "base": 0.0,
+   "delta": 1.0,
+   "status": "gained",
+   "newly_solved": true,
+   "actions": [
+    {
+     "name": "return_delivered_order_items",
+     "kwargs": {
+      "order_id": "#W9571698",
+      "item_ids": [
+       "5952720925",
+       "9973034634",
+       "7381052709",
+       "6065192424"
+      ],
+      "payment_method_id": "gift_card_7250692"
+     }
+    }
+   ],
+   "new_trials": [
+    1,
+    1
+   ],
+   "base_trials": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "features": [
+    "has a fallback / conditional ('if X is not possible, do Y')",
+    "difficult persona (angry, impatient, anxious, rude...)"
+   ],
+   "cluster": 1
+  },
+  {
+   "task": 83,
+   "coarse": "return only",
+   "types": [
+    "return"
+   ],
+   "n_writes": 1,
+   "new": 0.0,
+   "base": 0.0,
+   "delta": 0.0,
+   "status": "same",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "return_delivered_order_items",
+     "kwargs": {
+      "order_id": "#W9571698",
+      "item_ids": [
+       "6065192424"
+      ],
+      "payment_method_id": "gift_card_7250692"
+     }
+    }
+   ],
+   "new_trials": [
+    0,
+    0
+   ],
+   "base_trials": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "features": [
+    "has a fallback / conditional ('if X is not possible, do Y')",
+    "difficult persona (angry, impatient, anxious, rude...)"
+   ],
+   "cluster": 1
+  },
+  {
+   "task": 84,
+   "coarse": "return only",
+   "types": [
+    "return"
+   ],
+   "n_writes": 1,
+   "new": 1.0,
+   "base": 0.75,
+   "delta": 0.25,
+   "status": "same",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "return_delivered_order_items",
+     "kwargs": {
+      "order_id": "#W9571698",
+      "item_ids": [
+       "6065192424"
+      ],
+      "payment_method_id": "gift_card_7250692"
+     }
+    }
+   ],
+   "new_trials": [
+    1,
+    1
+   ],
+   "base_trials": [
+    0,
+    1,
+    1,
+    1
+   ],
+   "features": [
+    "has a fallback / conditional ('if X is not possible, do Y')",
+    "customer changes their mind"
+   ],
+   "cluster": 1
+  },
+  {
+   "task": 85,
+   "coarse": "modify items only",
+   "types": [
+    "modify items"
+   ],
+   "n_writes": 1,
+   "new": 1.0,
+   "base": 0.75,
+   "delta": 0.25,
+   "status": "same",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "modify_pending_order_items",
+     "kwargs": {
+      "order_id": "#W2466703",
+      "item_ids": [
+       "9385662952"
+      ],
+      "new_item_ids": [
+       "8733974883"
+      ],
+      "payment_method_id": "paypal_7529813"
+     }
+    }
+   ],
+   "new_trials": [
+    1,
+    1
+   ],
+   "base_trials": [
+    1,
+    1,
+    0,
+    1
+   ],
+   "features": [],
+   "cluster": 4
+  },
+  {
+   "task": 86,
+   "coarse": "combo: 2+ action types",
+   "types": [
+    "change profile address",
+    "modify items"
+   ],
+   "n_writes": 2,
+   "new": 1.0,
+   "base": 1.0,
+   "delta": 0.0,
+   "status": "same",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "modify_pending_order_items",
+     "kwargs": {
+      "order_id": "#W2466703",
+      "item_ids": [
+       "9385662952"
+      ],
+      "new_item_ids": [
+       "8733974883"
+      ],
+      "payment_method_id": "paypal_7529813"
+     }
+    },
+    {
+     "name": "modify_user_address",
+     "kwargs": {
+      "user_id": "yusuf_hernandez_6785",
+      "address1": "565 Maple Drive",
+      "address2": "Suite 501",
+      "city": "Washington",
+      "country": "USA",
+      "state": "DC",
+      "zip": "20307"
+     }
+    }
+   ],
+   "new_trials": [
+    1,
+    1
+   ],
+   "base_trials": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "features": [
+    "withholds or does not know info"
+   ],
+   "cluster": 4
+  },
+  {
+   "task": 87,
+   "coarse": "combo: 2+ action types",
+   "types": [
+    "change order address",
+    "change profile address"
+   ],
+   "n_writes": 4,
+   "new": 0.0,
+   "base": 0.25,
+   "delta": -0.25,
+   "status": "same",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "modify_pending_order_address",
+     "kwargs": {
+      "order_id": "#W2166301",
+      "address1": "565 Maple Drive",
+      "address2": "Suite 501",
+      "city": "Washington",
+      "country": "USA",
+      "state": "DC",
+      "zip": "20307"
+     }
+    },
+    {
+     "name": "modify_pending_order_address",
+     "kwargs": {
+      "order_id": "#W2466703",
+      "address1": "565 Maple Drive",
+      "address2": "Suite 501",
+      "city": "Washington",
+      "country": "USA",
+      "state": "DC",
+      "zip": "20307"
+     }
+    },
+    {
+     "name": "modify_pending_order_address",
+     "kwargs": {
+      "order_id": "#W6832752",
+      "address1": "565 Maple Drive",
+      "address2": "Suite 501",
+      "city": "Washington",
+      "country": "USA",
+      "state": "DC",
+      "zip": "20307"
+     }
+    },
+    {
+     "name": "modify_user_address",
+     "kwargs": {
+      "user_id": "yusuf_hernandez_6785",
+      "address1": "565 Maple Drive",
+      "address2": "Suite 501",
+      "city": "Washington",
+      "country": "USA",
+      "state": "DC",
+      "zip": "20307"
+     }
+    }
+   ],
+   "new_trials": [
+    0,
+    0
+   ],
+   "base_trials": [
+    0,
+    1,
+    0,
+    0
+   ],
+   "features": [
+    "withholds or does not know info"
+   ],
+   "cluster": 4
+  },
+  {
+   "task": 88,
+   "coarse": "cancel only",
+   "types": [
+    "cancel"
+   ],
+   "n_writes": 1,
+   "new": 0.0,
+   "base": 0.0,
+   "delta": 0.0,
+   "status": "same",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "cancel_pending_order",
+     "kwargs": {
+      "order_id": "#W8835847",
+      "reason": "ordered by mistake"
+     }
+    }
+   ],
+   "new_trials": [
+    0,
+    0
+   ],
+   "base_trials": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "features": [
+    "has a fallback / conditional ('if X is not possible, do Y')",
+    "difficult persona (angry, impatient, anxious, rude...)"
+   ],
+   "cluster": 3
+  },
+  {
+   "task": 89,
+   "coarse": "return only",
+   "types": [
+    "return"
+   ],
+   "n_writes": 1,
+   "new": 1.0,
+   "base": 0.5,
+   "delta": 0.5,
+   "status": "gained",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "return_delivered_order_items",
+     "kwargs": {
+      "order_id": "#W4680753",
+      "item_ids": [
+       "9690244451"
+      ],
+      "payment_method_id": "paypal_2417743"
+     }
+    }
+   ],
+   "new_trials": [
+    1,
+    1
+   ],
+   "base_trials": [
+    0,
+    1,
+    0,
+    1
+   ],
+   "features": [
+    "has a fallback / conditional ('if X is not possible, do Y')",
+    "asks for info (price, total, tracking, options)"
+   ],
+   "cluster": 3
+  },
+  {
+   "task": 90,
+   "coarse": "cancel only",
+   "types": [
+    "cancel"
+   ],
+   "n_writes": 1,
+   "new": 1.0,
+   "base": 0.75,
+   "delta": 0.25,
+   "status": "same",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "cancel_pending_order",
+     "kwargs": {
+      "order_id": "#W9284598",
+      "reason": "ordered by mistake"
+     }
+    }
+   ],
+   "new_trials": [
+    1,
+    1
+   ],
+   "base_trials": [
+    1,
+    0,
+    1,
+    1
+   ],
+   "features": [
+    "has a fallback / conditional ('if X is not possible, do Y')",
+    "difficult persona (angry, impatient, anxious, rude...)",
+    "asks for info (price, total, tracking, options)"
+   ],
+   "cluster": 3
+  },
+  {
+   "task": 91,
+   "coarse": "combo: 2+ action types",
+   "types": [
+    "exchange",
+    "return"
+   ],
+   "n_writes": 2,
+   "new": 0.0,
+   "base": 0.0,
+   "delta": 0.0,
+   "status": "same",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "return_delivered_order_items",
+     "kwargs": {
+      "order_id": "#W7553978",
+      "item_ids": [
+       "4545791457",
+       "3098764622",
+       "1631806422"
+      ],
+      "payment_method_id": "credit_card_5902940"
+     }
+    },
+    {
+     "name": "exchange_delivered_order_items",
+     "kwargs": {
+      "order_id": "#W3239882",
+      "item_ids": [
+       "9494281769"
+      ],
+      "new_item_ids": [
+       "9494281769"
+      ],
+      "payment_method_id": "credit_card_5902940"
+     }
+    }
+   ],
+   "new_trials": [
+    0,
+    0
+   ],
+   "base_trials": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "features": [
+    "has a fallback / conditional ('if X is not possible, do Y')",
+    "difficult persona (angry, impatient, anxious, rude...)"
+   ],
+   "cluster": 1
+  },
+  {
+   "task": 92,
+   "coarse": "return only",
+   "types": [
+    "return"
+   ],
+   "n_writes": 2,
+   "new": 0.0,
+   "base": 0.25,
+   "delta": -0.25,
+   "status": "same",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "return_delivered_order_items",
+     "kwargs": {
+      "order_id": "#W7553978",
+      "item_ids": [
+       "4545791457",
+       "3098764622",
+       "1631806422"
+      ],
+      "payment_method_id": "credit_card_5902940"
+     }
+    },
+    {
+     "name": "return_delivered_order_items",
+     "kwargs": {
+      "order_id": "#W3239882",
+      "item_ids": [
+       "9494281769"
+      ],
+      "payment_method_id": "credit_card_5902940"
+     }
+    }
+   ],
+   "new_trials": [
+    0,
+    0
+   ],
+   "base_trials": [
+    0,
+    1,
+    0,
+    0
+   ],
+   "features": [
+    "has a fallback / conditional ('if X is not possible, do Y')",
+    "difficult persona (angry, impatient, anxious, rude...)"
+   ],
+   "cluster": 1
+  },
+  {
+   "task": 93,
+   "coarse": "exchange only",
+   "types": [
+    "exchange"
+   ],
+   "n_writes": 1,
+   "new": 0.0,
+   "base": 0.0,
+   "delta": 0.0,
+   "status": "same",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "exchange_delivered_order_items",
+     "kwargs": {
+      "order_id": "#W4073673",
+      "item_ids": [
+       "2216662955"
+      ],
+      "new_item_ids": [
+       "9844888101"
+      ],
+      "payment_method_id": "credit_card_3677959"
+     }
+    }
+   ],
+   "new_trials": [
+    0,
+    0
+   ],
+   "base_trials": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "features": [
+    "difficult persona (angry, impatient, anxious, rude...)"
+   ],
+   "cluster": 1
+  },
+  {
+   "task": 94,
+   "coarse": "exchange only",
+   "types": [
+    "exchange"
+   ],
+   "n_writes": 1,
+   "new": 0.5,
+   "base": 0.5,
+   "delta": 0.0,
+   "status": "same",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "exchange_delivered_order_items",
+     "kwargs": {
+      "order_id": "#W2905754",
+      "item_ids": [
+       "3478699712"
+      ],
+      "new_item_ids": [
+       "9844888101"
+      ],
+      "payment_method_id": "credit_card_3677959"
+     }
+    }
+   ],
+   "new_trials": [
+    0,
+    1
+   ],
+   "base_trials": [
+    0,
+    1,
+    1,
+    0
+   ],
+   "features": [
+    "difficult persona (angry, impatient, anxious, rude...)"
+   ],
+   "cluster": 1
+  },
+  {
+   "task": 95,
+   "coarse": "exchange only",
+   "types": [
+    "exchange"
+   ],
+   "n_writes": 1,
+   "new": 0.0,
+   "base": 0.5,
+   "delta": -0.5,
+   "status": "lost",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "exchange_delivered_order_items",
+     "kwargs": {
+      "order_id": "#W4073673",
+      "item_ids": [
+       "2216662955"
+      ],
+      "new_item_ids": [
+       "9844888101"
+      ],
+      "payment_method_id": "credit_card_3677959"
+     }
+    }
+   ],
+   "new_trials": [
+    0,
+    0
+   ],
+   "base_trials": [
+    1,
+    0,
+    0,
+    1
+   ],
+   "features": [
+    "difficult persona (angry, impatient, anxious, rude...)"
+   ],
+   "cluster": 1
+  },
+  {
+   "task": 96,
+   "coarse": "exchange only",
+   "types": [
+    "exchange"
+   ],
+   "n_writes": 2,
+   "new": 1.0,
+   "base": 0.25,
+   "delta": 0.75,
+   "status": "gained",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "exchange_delivered_order_items",
+     "kwargs": {
+      "order_id": "#W2905754",
+      "item_ids": [
+       "3478699712"
+      ],
+      "new_item_ids": [
+       "9844888101"
+      ],
+      "payment_method_id": "credit_card_3677959"
+     }
+    },
+    {
+     "name": "exchange_delivered_order_items",
+     "kwargs": {
+      "order_id": "#W4073673",
+      "item_ids": [
+       "2216662955"
+      ],
+      "new_item_ids": [
+       "9844888101"
+      ],
+      "payment_method_id": "credit_card_3677959"
+     }
+    }
+   ],
+   "new_trials": [
+    1,
+    1
+   ],
+   "base_trials": [
+    0,
+    0,
+    0,
+    1
+   ],
+   "features": [
+    "customer changes their mind",
+    "difficult persona (angry, impatient, anxious, rude...)",
+    "asks for info (price, total, tracking, options)"
+   ],
+   "cluster": 1
+  },
+  {
+   "task": 97,
+   "coarse": "combo: 2+ action types",
+   "types": [
+    "change order address",
+    "modify items"
+   ],
+   "n_writes": 2,
+   "new": 0.5,
+   "base": 0.25,
+   "delta": 0.25,
+   "status": "same",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "modify_pending_order_address",
+     "kwargs": {
+      "order_id": "#W6750959",
+      "address1": "476 Maple Drive",
+      "address2": "Suite 432",
+      "city": "New York",
+      "country": "USA",
+      "state": "NY",
+      "zip": "10093"
+     }
+    },
+    {
+     "name": "modify_pending_order_items",
+     "kwargs": {
+      "order_id": "#W6750959",
+      "item_ids": [
+       "3254583681"
+      ],
+      "new_item_ids": [
+       "9440686670"
+      ],
+      "payment_method_id": "paypal_8080730"
+     }
+    }
+   ],
+   "new_trials": [
+    1,
+    0
+   ],
+   "base_trials": [
+    1,
+    0,
+    0,
+    0
+   ],
+   "features": [
+    "difficult persona (angry, impatient, anxious, rude...)"
+   ],
+   "cluster": 4
+  },
+  {
+   "task": 98,
+   "coarse": "combo: 2+ action types",
+   "types": [
+    "change order address",
+    "modify items"
+   ],
+   "n_writes": 2,
+   "new": 0.0,
+   "base": 0.0,
+   "delta": 0.0,
+   "status": "same",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "modify_pending_order_address",
+     "kwargs": {
+      "order_id": "#W6750959",
+      "address1": "476 Maple Drive",
+      "address2": "Suite 432",
+      "city": "New York",
+      "country": "USA",
+      "state": "NY",
+      "zip": "10093"
+     }
+    },
+    {
+     "name": "modify_pending_order_items",
+     "kwargs": {
+      "order_id": "#W6750959",
+      "item_ids": [
+       "3254583681"
+      ],
+      "new_item_ids": [
+       "9440686670"
+      ],
+      "payment_method_id": "paypal_8080730"
+     }
+    }
+   ],
+   "new_trials": [
+    0,
+    0
+   ],
+   "base_trials": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "features": [
+    "difficult persona (angry, impatient, anxious, rude...)"
+   ],
+   "cluster": 4
+  },
+  {
+   "task": 99,
+   "coarse": "combo: 2+ action types",
+   "types": [
+    "cancel",
+    "exchange"
+   ],
+   "n_writes": 3,
+   "new": 0.0,
+   "base": 0.0,
+   "delta": 0.0,
+   "status": "same",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "exchange_delivered_order_items",
+     "kwargs": {
+      "order_id": "#W4689314",
+      "item_ids": [
+       "5996159312"
+      ],
+      "new_item_ids": [
+       "8363011723"
+      ],
+      "payment_method_id": "credit_card_3951670"
+     }
+    },
+    {
+     "name": "exchange_delivered_order_items",
+     "kwargs": {
+      "order_id": "#W3916020",
+      "item_ids": [
+       "7758198585",
+       "4068787148"
+      ],
+      "new_item_ids": [
+       "5606522780",
+       "6245746168"
+      ],
+      "payment_method_id": "credit_card_8105988"
+     }
+    },
+    {
+     "name": "cancel_pending_order",
+     "kwargs": {
+      "order_id": "#W8855135",
+      "reason": "no longer needed"
+     }
+    }
+   ],
+   "new_trials": [
+    0,
+    0
+   ],
+   "base_trials": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "features": [
+    "has a fallback / conditional ('if X is not possible, do Y')",
+    "difficult persona (angry, impatient, anxious, rude...)",
+    "asks for info (price, total, tracking, options)"
+   ],
+   "cluster": 4
+  },
+  {
+   "task": 100,
+   "coarse": "exchange only",
+   "types": [
+    "exchange"
+   ],
+   "n_writes": 2,
+   "new": 0.5,
+   "base": 0.0,
+   "delta": 0.5,
+   "status": "gained",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "exchange_delivered_order_items",
+     "kwargs": {
+      "order_id": "#W4689314",
+      "item_ids": [
+       "5996159312"
+      ],
+      "new_item_ids": [
+       "8363011723"
+      ],
+      "payment_method_id": "credit_card_3951670"
+     }
+    },
+    {
+     "name": "exchange_delivered_order_items",
+     "kwargs": {
+      "order_id": "#W3916020",
+      "item_ids": [
+       "7758198585",
+       "4068787148"
+      ],
+      "new_item_ids": [
+       "5606522780",
+       "5546244844"
+      ],
+      "payment_method_id": "credit_card_3951670"
+     }
+    }
+   ],
+   "new_trials": [
+    0,
+    1
+   ],
+   "base_trials": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "features": [
+    "has a fallback / conditional ('if X is not possible, do Y')",
+    "difficult persona (angry, impatient, anxious, rude...)",
+    "asks for info (price, total, tracking, options)",
+    "several orders involved"
+   ],
+   "cluster": 4
+  },
+  {
+   "task": 101,
+   "coarse": "combo: 2+ action types",
+   "types": [
+    "modify items",
+    "return"
+   ],
+   "n_writes": 2,
+   "new": 0.0,
+   "base": 0.0,
+   "delta": 0.0,
+   "status": "same",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "modify_pending_order_items",
+     "kwargs": {
+      "order_id": "#W3295833",
+      "item_ids": [
+       "8926329222",
+       "5312063289"
+      ],
+      "new_item_ids": [
+       "7160999700",
+       "6956751343"
+      ],
+      "payment_method_id": "credit_card_3261838"
+     }
+    },
+    {
+     "name": "return_delivered_order_items",
+     "kwargs": {
+      "order_id": "#W8488728",
+      "item_ids": [
+       "5676696062"
+      ],
+      "payment_method_id": "paypal_3650980"
+     }
+    }
+   ],
+   "new_trials": [
+    0,
+    0
+   ],
+   "base_trials": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "features": [
+    "difficult persona (angry, impatient, anxious, rude...)"
+   ],
+   "cluster": 1
+  },
+  {
+   "task": 102,
+   "coarse": "combo: 2+ action types",
+   "types": [
+    "change order address",
+    "modify items"
+   ],
+   "n_writes": 3,
+   "new": 0.0,
+   "base": 0.25,
+   "delta": -0.25,
+   "status": "same",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "modify_pending_order_address",
+     "kwargs": {
+      "order_id": "#W4219264",
+      "address1": "144 Lakeview Drive",
+      "address2": "Suite 925",
+      "city": "New York",
+      "country": "USA",
+      "state": "NY",
+      "zip": "10228"
+     }
+    },
+    {
+     "name": "modify_pending_order_items",
+     "kwargs": {
+      "order_id": "#W4219264",
+      "item_ids": [
+       "8886009523"
+      ],
+      "new_item_ids": [
+       "2407258246"
+      ],
+      "payment_method_id": "credit_card_1620755"
+     }
+    },
+    {
+     "name": "modify_pending_order_items",
+     "kwargs": {
+      "order_id": "#W6729841",
+      "item_ids": [
+       "3076708684"
+      ],
+      "new_item_ids": [
+       "8302289002"
+      ],
+      "payment_method_id": "credit_card_1620755"
+     }
+    }
+   ],
+   "new_trials": [
+    0,
+    0
+   ],
+   "base_trials": [
+    0,
+    0,
+    1,
+    0
+   ],
+   "features": [
+    "withholds or does not know info",
+    "difficult persona (angry, impatient, anxious, rude...)"
+   ],
+   "cluster": 4
+  },
+  {
+   "task": 103,
+   "coarse": "combo: 2+ action types",
+   "types": [
+    "change order address",
+    "exchange",
+    "modify items"
+   ],
+   "n_writes": 3,
+   "new": 0.0,
+   "base": 0.0,
+   "delta": 0.0,
+   "status": "same",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "modify_pending_order_address",
+     "kwargs": {
+      "order_id": "#W4219264",
+      "address1": "144 Lakeview Drive",
+      "address2": "Suite 925",
+      "city": "New York",
+      "country": "USA",
+      "state": "NY",
+      "zip": "10228"
+     }
+    },
+    {
+     "name": "modify_pending_order_items",
+     "kwargs": {
+      "order_id": "#W4219264",
+      "item_ids": [
+       "8886009523"
+      ],
+      "new_item_ids": [
+       "2407258246"
+      ],
+      "payment_method_id": "credit_card_1620755"
+     }
+    },
+    {
+     "name": "exchange_delivered_order_items",
+     "kwargs": {
+      "order_id": "#W3445693",
+      "item_ids": [
+       "6341716129"
+      ],
+      "new_item_ids": [
+       "8302289002"
+      ],
+      "payment_method_id": "credit_card_1620755"
+     }
+    }
+   ],
+   "new_trials": [
+    0,
+    0
+   ],
+   "base_trials": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "features": [
+    "withholds or does not know info",
+    "difficult persona (angry, impatient, anxious, rude...)"
+   ],
+   "cluster": 4
+  },
+  {
+   "task": 104,
+   "coarse": "combo: 2+ action types",
+   "types": [
+    "change order address",
+    "modify items",
+    "return"
+   ],
+   "n_writes": 4,
+   "new": 0.0,
+   "base": 0.0,
+   "delta": 0.0,
+   "status": "same",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "return_delivered_order_items",
+     "kwargs": {
+      "order_id": "#W6239298",
+      "item_ids": [
+       "4900661478",
+       "3614853563"
+      ],
+      "payment_method_id": "credit_card_2112420"
+     }
+    },
+    {
+     "name": "return_delivered_order_items",
+     "kwargs": {
+      "order_id": "#W9218746",
+      "item_ids": [
+       "7824298782"
+      ],
+      "payment_method_id": "credit_card_2112420"
+     }
+    },
+    {
+     "name": "modify_pending_order_address",
+     "kwargs": {
+      "order_id": "#W4860251",
+      "address1": "921 Park Avenue",
+      "address2": "Suite 892",
+      "city": "Chicago",
+      "country": "USA",
+      "state": "IL",
+      "zip": "60612"
+     }
+    },
+    {
+     "name": "modify_pending_order_items",
+     "kwargs": {
+      "order_id": "#W4860251",
+      "item_ids": [
+       "5209958006"
+      ],
+      "new_item_ids": [
+       "8964750292"
+      ],
+      "payment_method_id": "credit_card_2112420"
+     }
+    }
+   ],
+   "new_trials": [
+    0,
+    0
+   ],
+   "base_trials": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "features": [
+    "asks for info (price, total, tracking, options)"
+   ],
+   "cluster": 1
+  },
+  {
+   "task": 105,
+   "coarse": "combo: 2+ action types",
+   "types": [
+    "change order address",
+    "modify items",
+    "return"
+   ],
+   "n_writes": 4,
+   "new": 0.0,
+   "base": 0.0,
+   "delta": 0.0,
+   "status": "same",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "return_delivered_order_items",
+     "kwargs": {
+      "order_id": "#W8660475",
+      "item_ids": [
+       "8479046075"
+      ],
+      "payment_method_id": "credit_card_2112420"
+     }
+    },
+    {
+     "name": "return_delivered_order_items",
+     "kwargs": {
+      "order_id": "#W9218746",
+      "item_ids": [
+       "7824298782"
+      ],
+      "payment_method_id": "credit_card_2112420"
+     }
+    },
+    {
+     "name": "modify_pending_order_address",
+     "kwargs": {
+      "order_id": "#W4860251",
+      "address1": "921 Park Avenue",
+      "address2": "Suite 892",
+      "city": "Chicago",
+      "country": "USA",
+      "state": "IL",
+      "zip": "60612"
+     }
+    },
+    {
+     "name": "modify_pending_order_items",
+     "kwargs": {
+      "order_id": "#W4860251",
+      "item_ids": [
+       "5209958006"
+      ],
+      "new_item_ids": [
+       "8964750292"
+      ],
+      "payment_method_id": "credit_card_2112420"
+     }
+    }
+   ],
+   "new_trials": [
+    0,
+    0
+   ],
+   "base_trials": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "features": [
+    "withholds or does not know info",
+    "asks for info (price, total, tracking, options)",
+    "several orders involved"
+   ],
+   "cluster": 1
+  },
+  {
+   "task": 106,
+   "coarse": "exchange only",
+   "types": [
+    "exchange"
+   ],
+   "n_writes": 1,
+   "new": 0.5,
+   "base": 0.0,
+   "delta": 0.5,
+   "status": "gained",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "exchange_delivered_order_items",
+     "kwargs": {
+      "order_id": "#W4316152",
+      "item_ids": [
+       "7292993796",
+       "7292993796"
+      ],
+      "new_item_ids": [
+       "3761330360",
+       "9647374798"
+      ],
+      "payment_method_id": "gift_card_7245904"
+     }
+    }
+   ],
+   "new_trials": [
+    1,
+    0
+   ],
+   "base_trials": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "features": [],
+   "cluster": 3
+  },
+  {
+   "task": 107,
+   "coarse": "exchange only",
+   "types": [
+    "exchange"
+   ],
+   "n_writes": 1,
+   "new": 0.0,
+   "base": 0.25,
+   "delta": -0.25,
+   "status": "same",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "exchange_delivered_order_items",
+     "kwargs": {
+      "order_id": "#W3388163",
+      "item_ids": [
+       "9354168549"
+      ],
+      "new_item_ids": [
+       "2060066974"
+      ],
+      "payment_method_id": "paypal_5334408"
+     }
+    }
+   ],
+   "new_trials": [
+    0,
+    0
+   ],
+   "base_trials": [
+    0,
+    0,
+    0,
+    1
+   ],
+   "features": [
+    "difficult persona (angry, impatient, anxious, rude...)"
+   ],
+   "cluster": 4
+  },
+  {
+   "task": 108,
+   "coarse": "exchange only",
+   "types": [
+    "exchange"
+   ],
+   "n_writes": 2,
+   "new": 0.5,
+   "base": 0.25,
+   "delta": 0.25,
+   "status": "same",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "exchange_delivered_order_items",
+     "kwargs": {
+      "order_id": "#W1304208",
+      "item_ids": [
+       "1615379700"
+      ],
+      "new_item_ids": [
+       "1615379700"
+      ],
+      "payment_method_id": "paypal_1679017"
+     }
+    },
+    {
+     "name": "exchange_delivered_order_items",
+     "kwargs": {
+      "order_id": "#W8353027",
+      "item_ids": [
+       "6245746168"
+      ],
+      "new_item_ids": [
+       "3112842858"
+      ],
+      "payment_method_id": "paypal_1679017"
+     }
+    }
+   ],
+   "new_trials": [
+    1,
+    0
+   ],
+   "base_trials": [
+    0,
+    0,
+    0,
+    1
+   ],
+   "features": [],
+   "cluster": 4
+  },
+  {
+   "task": 109,
+   "coarse": "return only",
+   "types": [
+    "return"
+   ],
+   "n_writes": 1,
+   "new": 0.5,
+   "base": 0.75,
+   "delta": -0.25,
+   "status": "same",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "return_delivered_order_items",
+     "kwargs": {
+      "order_id": "#W1679211",
+      "item_ids": [
+       "9612497925",
+       "7127170374",
+       "6268080249"
+      ],
+      "payment_method_id": "paypal_3022415"
+     }
+    }
+   ],
+   "new_trials": [
+    1,
+    0
+   ],
+   "base_trials": [
+    1,
+    1,
+    1,
+    0
+   ],
+   "features": [
+    "asks for info (price, total, tracking, options)"
+   ],
+   "cluster": 3
+  },
+  {
+   "task": 110,
+   "coarse": "combo: 2+ action types",
+   "types": [
+    "change order address",
+    "change profile address",
+    "modify items"
+   ],
+   "n_writes": 3,
+   "new": 0.5,
+   "base": 0.5,
+   "delta": 0.0,
+   "status": "same",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "modify_pending_order_address",
+     "kwargs": {
+      "order_id": "#W1603792",
+      "address1": "592 Elm Avenue",
+      "address2": "Suite 978",
+      "city": "Houston",
+      "country": "USA",
+      "state": "TX",
+      "zip": "77242"
+     }
+    },
+    {
+     "name": "modify_user_address",
+     "kwargs": {
+      "user_id": "sophia_martin_8570",
+      "address1": "592 Elm Avenue",
+      "address2": "Suite 978",
+      "city": "Houston",
+      "country": "USA",
+      "state": "TX",
+      "zip": "77242"
+     }
+    },
+    {
+     "name": "modify_pending_order_items",
+     "kwargs": {
+      "order_id": "#W1603792",
+      "item_ids": [
+       "6501071631"
+      ],
+      "new_item_ids": [
+       "2106335193"
+      ],
+      "payment_method_id": "credit_card_5694100"
+     }
+    }
+   ],
+   "new_trials": [
+    1,
+    0
+   ],
+   "base_trials": [
+    1,
+    1,
+    0,
+    0
+   ],
+   "features": [
+    "withholds or does not know info",
+    "several orders involved"
+   ],
+   "cluster": 4
+  },
+  {
+   "task": 111,
+   "coarse": "combo: 2+ action types",
+   "types": [
+    "change order address",
+    "change profile address",
+    "modify items"
+   ],
+   "n_writes": 3,
+   "new": 0.0,
+   "base": 0.0,
+   "delta": 0.0,
+   "status": "same",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "modify_pending_order_address",
+     "kwargs": {
+      "order_id": "#W1092119",
+      "address1": "760 Elm Avenue",
+      "address2": "Suite 564",
+      "city": "Houston",
+      "state": "TX",
+      "country": "USA",
+      "zip": "77034"
+     }
+    },
+    {
+     "name": "modify_user_address",
+     "kwargs": {
+      "user_id": "sophia_martin_8570",
+      "address1": "760 Elm Avenue",
+      "address2": "Suite 564",
+      "city": "Houston",
+      "state": "TX",
+      "country": "USA",
+      "zip": "77034"
+     }
+    },
+    {
+     "name": "modify_pending_order_items",
+     "kwargs": {
+      "order_id": "#W1603792",
+      "item_ids": [
+       "6501071631"
+      ],
+      "new_item_ids": [
+       "2106335193"
+      ],
+      "payment_method_id": "credit_card_5694100"
+     }
+    }
+   ],
+   "new_trials": [
+    0,
+    0
+   ],
+   "base_trials": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "features": [
+    "withholds or does not know info",
+    "several orders involved"
+   ],
+   "cluster": 4
+  },
+  {
+   "task": 112,
+   "coarse": "combo: 2+ action types",
+   "types": [
+    "change order address",
+    "modify items"
+   ],
+   "n_writes": 3,
+   "new": 0.0,
+   "base": 0.0,
+   "delta": 0.0,
+   "status": "same",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "modify_pending_order_items",
+     "kwargs": {
+      "order_id": "#W9810810",
+      "item_ids": [
+       "1355937109"
+      ],
+      "new_item_ids": [
+       "9949163720"
+      ],
+      "payment_method_id": "gift_card_7252880"
+     }
+    },
+    {
+     "name": "modify_pending_order_address",
+     "kwargs": {
+      "order_id": "#W3730488",
+      "address1": "555 Highland Drive",
+      "address2": "Suite 872",
+      "city": "New York",
+      "country": "USA",
+      "state": "NY",
+      "zip": "10116"
+     }
+    },
+    {
+     "name": "modify_pending_order_items",
+     "kwargs": {
+      "order_id": "#W3730488",
+      "item_ids": [
+       "2913673670"
+      ],
+      "new_item_ids": [
+       "2216662955"
+      ],
+      "payment_method_id": "gift_card_7252880"
+     }
+    }
+   ],
+   "new_trials": [
+    0,
+    0
+   ],
+   "base_trials": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "features": [
+    "withholds or does not know info"
+   ],
+   "cluster": 4
+  },
+  {
+   "task": 113,
+   "coarse": "combo: 2+ action types",
+   "types": [
+    "change order address",
+    "modify items"
+   ],
+   "n_writes": 3,
+   "new": 0.0,
+   "base": 0.0,
+   "delta": 0.0,
+   "status": "same",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "modify_pending_order_items",
+     "kwargs": {
+      "order_id": "#W9810810",
+      "item_ids": [
+       "1355937109"
+      ],
+      "new_item_ids": [
+       "9949163720"
+      ],
+      "payment_method_id": "gift_card_7252880"
+     }
+    },
+    {
+     "name": "modify_pending_order_address",
+     "kwargs": {
+      "order_id": "#W3730488",
+      "address1": "555 Highland Drive",
+      "address2": "Suite 872",
+      "city": "New York",
+      "country": "USA",
+      "state": "NY",
+      "zip": "10116"
+     }
+    },
+    {
+     "name": "modify_pending_order_items",
+     "kwargs": {
+      "order_id": "#W3730488",
+      "item_ids": [
+       "2913673670"
+      ],
+      "new_item_ids": [
+       "9844888101"
+      ],
+      "payment_method_id": "gift_card_7252880"
+     }
+    }
+   ],
+   "new_trials": [
+    0,
+    0
+   ],
+   "base_trials": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "features": [
+    "withholds or does not know info"
+   ],
+   "cluster": 4
+  },
+  {
+   "task": 114,
+   "coarse": "cancel only",
+   "types": [
+    "cancel"
+   ],
+   "n_writes": 2,
+   "new": 1.0,
+   "base": 0.25,
+   "delta": 0.75,
+   "status": "gained",
+   "newly_solved": false,
+   "actions": [
+    {
+     "name": "cancel_pending_order",
+     "kwargs": {
+      "order_id": "#W5056519",
+      "reason": "ordered by mistake"
+     }
+    },
+    {
+     "name": "cancel_pending_order",
+     "kwargs": {
+      "order_id": "#W5995614",
+      "reason": "ordered by mistake"
+     }
+    }
+   ],
+   "new_trials": [
+    1,
+    1
+   ],
+   "base_trials": [
+    0,
+    1,
+    0,
+    0
+   ],
+   "features": [
+    "withholds or does not know info"
+   ],
+   "cluster": 3
+  }
+ ]
+}
