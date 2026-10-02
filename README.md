@@ -4,7 +4,7 @@ This branch contains **one experiment only**: a Qwen3-32B-AWQ teacher plays hard
 conversations are used to fine-tune Qwen3-14B (QLoRA), and the 14B is tested on the retail test split against a
 same-pod control. Earlier experiments (SFT, GRPO) are on `main`.
 
-**Start here: `notebooks/distillation_experiment.ipynb`** (all charts are plotly; a standalone copy is
+**Start here: `notebooks/distillation_experiment.ipynb`** (all charts are matplotlib; a standalone copy is
 `renders/distillation_experiment.html`). It recomputes every number from the files in this branch.
 
 ## Recipe
@@ -48,7 +48,7 @@ is a hypothesis, not a finding. The airline test was started and stopped after 1
 ## Files
 
 ```
-notebooks/distillation_experiment.ipynb   plotly notebook (executed, outputs included)
+notebooks/distillation_experiment.ipynb   matplotlib notebook (executed, outputs included)
 renders/distillation_experiment.html      the same notebook as a standalone page
 renders/retail_test_new_solves.html       tasks the new model solves that the control does not (earlier analysis)
 results/distill/distill_run.json          4-trial retail test: per-trial, per-type, comparisons, training curves
