@@ -7815,7 +7815,7 @@ a.anchor-link {
 <!-- End of mermaid configuration --></head>
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
 <main>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=8d10cc84">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=bae60c88">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7831,7 +7831,7 @@ a.anchor-link {
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=2d62ec47">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=bd205860">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7850,6 +7850,11 @@ a.anchor-link {
 <span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">"figure.dpi"</span><span class="p">:</span> <span class="mi">110</span><span class="p">,</span> <span class="s2">"axes.spines.top"</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span> <span class="s2">"axes.spines.right"</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span> <span class="s2">"axes.grid"</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
                      <span class="s2">"grid.alpha"</span><span class="p">:</span> <span class="mf">0.25</span><span class="p">,</span> <span class="s2">"axes.titlesize"</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="s2">"axes.labelsize"</span><span class="p">:</span> <span class="mi">9</span><span class="p">,</span> <span class="s2">"legend.fontsize"</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span> <span class="s2">"font.size"</span><span class="p">:</span> <span class="mi">9</span><span class="p">})</span>
 <span class="n">ROOT</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">".."</span><span class="p">)</span> <span class="k">if</span> <span class="n">Path</span><span class="p">(</span><span class="s2">"../results/distill"</span><span class="p">)</span><span class="o">.</span><span class="n">exists</span><span class="p">()</span> <span class="k">else</span> <span class="n">Path</span><span class="p">(</span><span class="s2">"."</span><span class="p">)</span>
+<span class="n">FIG</span> <span class="o">=</span> <span class="n">ROOT</span> <span class="o">/</span> <span class="s2">"figures"</span><span class="p">;</span> <span class="n">FIG</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">show</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">FIG</span> <span class="o">/</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">.jpg"</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">130</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s2">"jpg"</span><span class="p">,</span> <span class="n">pil_kwargs</span><span class="o">=</span><span class="p">{</span><span class="s2">"quality"</span><span class="p">:</span> <span class="mi">90</span><span class="p">},</span> <span class="n">facecolor</span><span class="o">=</span><span class="s2">"white"</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 <span class="n">RUN</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">ROOT</span> <span class="o">/</span> <span class="s2">"results/distill/distill_run.json"</span><span class="p">))</span>
 <span class="n">TEACHER</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">ROOT</span> <span class="o">/</span> <span class="s2">"results/distill/teacher_run.json"</span><span class="p">))</span>
 <span class="n">CONV</span> <span class="o">=</span> <span class="n">ROOT</span> <span class="o">/</span> <span class="s2">"dataset/distill/retail_eval_conversations"</span>
@@ -7889,7 +7894,7 @@ a.anchor-link {
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=44a22861">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=7ae59778">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7985,7 +7990,7 @@ a.anchor-link {
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=e4196627">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=4f650f24">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7995,7 +8000,7 @@ a.anchor-link {
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=5bd663b7">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=7f76b1e7">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -8022,7 +8027,7 @@ a.anchor-link {
 <span class="n">t0</span> <span class="o">=</span> <span class="n">rows</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">"started_run_at"</span><span class="p">]</span>
 <span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">([(</span><span class="n">r</span><span class="p">[</span><span class="s2">"finished_at"</span><span class="p">]</span> <span class="o">-</span> <span class="n">t0</span><span class="p">)</span> <span class="o">/</span> <span class="mi">60</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">rows</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">cumsum</span><span class="p">([</span><span class="mi">1</span> <span class="k">if</span> <span class="n">r</span><span class="p">[</span><span class="s2">"reward"</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">1</span> <span class="k">else</span> <span class="mi">0</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">rows</span><span class="p">]),</span> <span class="n">color</span><span class="o">=</span><span class="n">C_TEACH</span><span class="p">)</span>
 <span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">"Cumulative teacher passes over time"</span><span class="p">);</span> <span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">"minutes"</span><span class="p">);</span> <span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">"passing rollouts"</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">();</span> <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="n">show</span><span class="p">(</span><span class="s2">"01_teacher_rollouts"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -8048,7 +8053,7 @@ a.anchor-link {
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=892e85be">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=ebfce809">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -8058,7 +8063,7 @@ a.anchor-link {
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=602931b0">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=1d593e27">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -8079,7 +8084,7 @@ a.anchor-link {
 <span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">step</span><span class="p">,</span> <span class="n">T</span><span class="p">[</span><span class="s2">"lr"</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="n">C_OLD</span><span class="p">);</span> <span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">"Learning rate"</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">ax</span><span class="p">:</span>
     <span class="n">a</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">"optimizer step"</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">();</span> <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="n">show</span><span class="p">(</span><span class="s2">"02_sft_training"</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">T</span><span class="p">[</span><span class="s1">'steps_total'</span><span class="p">]</span><span class="si">}</span><span class="s2"> steps, </span><span class="si">{</span><span class="n">T</span><span class="p">[</span><span class="s1">'elapsed_min'</span><span class="p">]</span><span class="o">/</span><span class="mi">60</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2"> h, loss first 10 steps </span><span class="si">{</span><span class="n">T</span><span class="p">[</span><span class="s1">'loss_first10'</span><span class="p">]</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> -&gt; last 10 steps </span><span class="si">{</span><span class="n">T</span><span class="p">[</span><span class="s1">'loss_last10'</span><span class="p">]</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -8106,7 +8111,7 @@ a.anchor-link {
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=e91b30de">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=e0008671">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -8116,7 +8121,7 @@ a.anchor-link {
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=39189137">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=4a8fd2f2">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -8156,7 +8161,7 @@ a.anchor-link {
     <span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="n">k</span> <span class="o">+</span> <span class="mi">1</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">tr</span><span class="p">)],</span> <span class="p">[</span><span class="nb">sum</span><span class="p">(</span><span class="n">tr</span><span class="p">[</span><span class="n">k</span><span class="p">])</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">tr</span><span class="p">[</span><span class="n">k</span><span class="p">])</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">tr</span><span class="p">)],</span> <span class="s2">"o-"</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">name</span><span class="p">)</span>
 <span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]);</span> <span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">);</span> <span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">"trial"</span><span class="p">);</span> <span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">"pass rate over 115 tasks"</span><span class="p">)</span>
 <span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">"pass^1 per trial"</span><span class="p">);</span> <span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">();</span> <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="n">show</span><span class="p">(</span><span class="s2">"03_retail_test_overview"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -8174,7 +8179,7 @@ a.anchor-link {
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=daa1e5ac">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=750cb891">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -8196,7 +8201,7 @@ a.anchor-link {
             <span class="n">ax</span><span class="p">[</span><span class="n">ci</span><span class="p">]</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">m</span> <span class="o">+</span> <span class="mf">0.03</span><span class="p">,</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">m</span><span class="si">:</span><span class="s2">.0%</span><span class="si">}</span><span class="s2">"</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s2">"center"</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">7</span><span class="p">)</span>
     <span class="n">ax</span><span class="p">[</span><span class="n">ci</span><span class="p">]</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">));</span> <span class="n">ax</span><span class="p">[</span><span class="n">ci</span><span class="p">]</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="n">labels</span><span class="p">);</span> <span class="n">ax</span><span class="p">[</span><span class="n">ci</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">);</span> <span class="n">ax</span><span class="p">[</span><span class="n">ci</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s2">"pass^</span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s2"> by task type"</span><span class="p">)</span>
 <span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">();</span> <span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">"pass rate"</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">();</span> <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="n">show</span><span class="p">(</span><span class="s2">"04_by_task_type"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -8215,7 +8220,7 @@ a.anchor-link {
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=012c9681">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=0dc5806c">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -8225,7 +8230,7 @@ a.anchor-link {
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=854ed33e">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=28eaa0e6">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -8270,54 +8275,54 @@ a.anchor-link {
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <style type="text/css">
 </style>
-<table id="T_2e4dc">
+<table id="T_025aa">
 <thead>
 <tr>
-<th class="col_heading level0 col0" id="T_2e4dc_level0_col0">comparison</th>
-<th class="col_heading level0 col1" id="T_2e4dc_level0_col1">mean</th>
-<th class="col_heading level0 col2" id="T_2e4dc_level0_col2">se</th>
-<th class="col_heading level0 col3" id="T_2e4dc_level0_col3">lo</th>
-<th class="col_heading level0 col4" id="T_2e4dc_level0_col4">hi</th>
-<th class="col_heading level0 col5" id="T_2e4dc_level0_col5">p</th>
-<th class="col_heading level0 col6" id="T_2e4dc_level0_col6">tasks</th>
+<th class="col_heading level0 col0" id="T_025aa_level0_col0">comparison</th>
+<th class="col_heading level0 col1" id="T_025aa_level0_col1">mean</th>
+<th class="col_heading level0 col2" id="T_025aa_level0_col2">se</th>
+<th class="col_heading level0 col3" id="T_025aa_level0_col3">lo</th>
+<th class="col_heading level0 col4" id="T_025aa_level0_col4">hi</th>
+<th class="col_heading level0 col5" id="T_025aa_level0_col5">p</th>
+<th class="col_heading level0 col6" id="T_025aa_level0_col6">tasks</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="data row0 col0" id="T_2e4dc_row0_col0">new model vs control (same pod), pass^1, 4 trials</td>
-<td class="data row0 col1" id="T_2e4dc_row0_col1">+0.039</td>
-<td class="data row0 col2" id="T_2e4dc_row0_col2">0.026</td>
-<td class="data row0 col3" id="T_2e4dc_row0_col3">-0.011</td>
-<td class="data row0 col4" id="T_2e4dc_row0_col4">+0.089</td>
-<td class="data row0 col5" id="T_2e4dc_row0_col5">0.145</td>
-<td class="data row0 col6" id="T_2e4dc_row0_col6">115</td>
+<td class="data row0 col0" id="T_025aa_row0_col0">new model vs control (same pod), pass^1, 4 trials</td>
+<td class="data row0 col1" id="T_025aa_row0_col1">+0.039</td>
+<td class="data row0 col2" id="T_025aa_row0_col2">0.026</td>
+<td class="data row0 col3" id="T_025aa_row0_col3">-0.011</td>
+<td class="data row0 col4" id="T_025aa_row0_col4">+0.089</td>
+<td class="data row0 col5" id="T_025aa_row0_col5">0.145</td>
+<td class="data row0 col6" id="T_025aa_row0_col6">115</td>
 </tr>
 <tr>
-<td class="data row1 col0" id="T_2e4dc_row1_col0">new model vs control (same pod), pass^2</td>
-<td class="data row1 col1" id="T_2e4dc_row1_col1">+0.028</td>
-<td class="data row1 col2" id="T_2e4dc_row1_col2">0.029</td>
-<td class="data row1 col3" id="T_2e4dc_row1_col3">-0.028</td>
-<td class="data row1 col4" id="T_2e4dc_row1_col4">+0.084</td>
-<td class="data row1 col5" id="T_2e4dc_row1_col5">0.341</td>
-<td class="data row1 col6" id="T_2e4dc_row1_col6">115</td>
+<td class="data row1 col0" id="T_025aa_row1_col0">new model vs control (same pod), pass^2</td>
+<td class="data row1 col1" id="T_025aa_row1_col1">+0.028</td>
+<td class="data row1 col2" id="T_025aa_row1_col2">0.029</td>
+<td class="data row1 col3" id="T_025aa_row1_col3">-0.028</td>
+<td class="data row1 col4" id="T_025aa_row1_col4">+0.084</td>
+<td class="data row1 col5" id="T_025aa_row1_col5">0.341</td>
+<td class="data row1 col6" id="T_025aa_row1_col6">115</td>
 </tr>
 <tr>
-<td class="data row2 col0" id="T_2e4dc_row2_col0">new model (first 2 trials) vs EARLIER test, pass^1</td>
-<td class="data row2 col1" id="T_2e4dc_row2_col1">+0.087</td>
-<td class="data row2 col2" id="T_2e4dc_row2_col2">0.038</td>
-<td class="data row2 col3" id="T_2e4dc_row2_col3">+0.013</td>
-<td class="data row2 col4" id="T_2e4dc_row2_col4">+0.161</td>
-<td class="data row2 col5" id="T_2e4dc_row2_col5">0.034</td>
-<td class="data row2 col6" id="T_2e4dc_row2_col6">115</td>
+<td class="data row2 col0" id="T_025aa_row2_col0">new model (first 2 trials) vs EARLIER test, pass^1</td>
+<td class="data row2 col1" id="T_025aa_row2_col1">+0.087</td>
+<td class="data row2 col2" id="T_025aa_row2_col2">0.038</td>
+<td class="data row2 col3" id="T_025aa_row2_col3">+0.013</td>
+<td class="data row2 col4" id="T_025aa_row2_col4">+0.161</td>
+<td class="data row2 col5" id="T_025aa_row2_col5">0.034</td>
+<td class="data row2 col6" id="T_025aa_row2_col6">115</td>
 </tr>
 <tr>
-<td class="data row3 col0" id="T_2e4dc_row3_col0">CONTROL (first 2 trials) vs EARLIER test, pass^1</td>
-<td class="data row3 col1" id="T_2e4dc_row3_col1">+0.022</td>
-<td class="data row3 col2" id="T_2e4dc_row3_col2">0.038</td>
-<td class="data row3 col3" id="T_2e4dc_row3_col3">-0.052</td>
-<td class="data row3 col4" id="T_2e4dc_row3_col4">+0.096</td>
-<td class="data row3 col5" id="T_2e4dc_row3_col5">0.647</td>
-<td class="data row3 col6" id="T_2e4dc_row3_col6">115</td>
+<td class="data row3 col0" id="T_025aa_row3_col0">CONTROL (first 2 trials) vs EARLIER test, pass^1</td>
+<td class="data row3 col1" id="T_025aa_row3_col1">+0.022</td>
+<td class="data row3 col2" id="T_025aa_row3_col2">0.038</td>
+<td class="data row3 col3" id="T_025aa_row3_col3">-0.052</td>
+<td class="data row3 col4" id="T_025aa_row3_col4">+0.096</td>
+<td class="data row3 col5" id="T_025aa_row3_col5">0.647</td>
+<td class="data row3 col6" id="T_025aa_row3_col6">115</td>
 </tr>
 </tbody>
 </table>
@@ -8325,7 +8330,7 @@ a.anchor-link {
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=914ccc12">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=a1eb6168">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -8356,7 +8361,7 @@ a.anchor-link {
     <span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="s2">"hi"</span><span class="p">]</span> <span class="o">+</span> <span class="mf">0.01</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">r</span><span class="p">[</span><span class="s1">'mean'</span><span class="p">]</span><span class="si">:</span><span class="s2">+.3f</span><span class="si">}</span><span class="s2">, p = </span><span class="si">{</span><span class="n">r</span><span class="p">[</span><span class="s1">'p'</span><span class="p">]</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">"</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s2">"center"</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
 <span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">"black"</span><span class="p">);</span> <span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_yticks</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">));</span> <span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_yticklabels</span><span class="p">(</span><span class="n">labs</span><span class="p">);</span> <span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">invert_yaxis</span><span class="p">()</span>
 <span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="o">-</span><span class="mf">0.12</span><span class="p">,</span> <span class="mf">0.30</span><span class="p">);</span> <span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">"pass^1 difference, 95% bootstrap interval"</span><span class="p">);</span> <span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">"Effect sizes"</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">();</span> <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="n">show</span><span class="p">(</span><span class="s2">"05_significance"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -8382,7 +8387,7 @@ a.anchor-link {
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=f214a5f5">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=a6d075ce">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -8393,7 +8398,7 @@ a.anchor-link {
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=dd34fb7b">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=7e85d9c0">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -8403,7 +8408,7 @@ a.anchor-link {
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=495f1411">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=f04f8373">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -8424,7 +8429,7 @@ a.anchor-link {
 <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">color</span><span class="p">,</span> <span class="n">rows</span> <span class="ow">in</span> <span class="p">((</span><span class="s2">"new model"</span><span class="p">,</span> <span class="n">C_NEW</span><span class="p">,</span> <span class="n">NEW_ROWS</span><span class="p">),</span> <span class="p">(</span><span class="s2">"control"</span><span class="p">,</span> <span class="n">C_CTL</span><span class="p">,</span> <span class="n">CTL_ROWS</span><span class="p">)):</span>
     <span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">hist</span><span class="p">([</span><span class="n">r</span><span class="p">[</span><span class="s2">"n_messages"</span><span class="p">]</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">rows</span><span class="p">],</span> <span class="n">bins</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.55</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">name</span><span class="p">)</span>
 <span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">"messages in the conversation"</span><span class="p">);</span> <span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">"Conversation length per rollout"</span><span class="p">);</span> <span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">();</span> <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="n">show</span><span class="p">(</span><span class="s2">"06_where_the_gain_is"</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">({</span><span class="n">k</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="nb">chr</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span> <span class="s1">' '</span><span class="p">):</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">v</span><span class="p">)</span><span class="si">:</span><span class="s2">+.3f</span><span class="si">}</span><span class="s2"> over </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">v</span><span class="p">)</span><span class="si">}</span><span class="s2"> tasks"</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">groups</span><span class="o">.</span><span class="n">items</span><span class="p">()})</span>
 </pre></div>
 </div>
@@ -8451,7 +8456,7 @@ a.anchor-link {
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=96310259">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=063d254e">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>

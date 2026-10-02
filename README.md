@@ -45,10 +45,46 @@ earlier test, so part of that gap is pod-to-pod drift. The new model led the con
 (+7.4 points vs +1.2 on the 64 combo tasks), even though training used only combo-task conversations; at this sample size that
 is a hypothesis, not a finding. The airline test was started and stopped after 10 rollouts: there is no airline comparison.
 
+## Figures
+
+**1. Teacher rollouts.** The 32B teacher solved 86 of the 114 hard train tasks. The left panel splits them by how the 14B did
+before (never / mixed / always solved), the middle shows passes per task, the right how fast passing conversations accumulated.
+
+![Teacher rollouts](figures/01_teacher_rollouts.jpg)
+
+**2. SFT training.** Loss falls from 0.53 to 0.35 over 384 steps (dotted lines = saved checkpoints at steps 96, 192, 288);
+gradient norm and learning rate are shown for completeness.
+
+![SFT training](figures/02_sft_training.jpg)
+
+**3. Retail test overview.** Left: running pass^1 as rollouts finish (the new model leads early and the gap narrows). Middle:
+pass^1 to pass^4 for the new model, the same-pod control and the earlier test (the earlier test only has 2 trials, so no
+pass^3/4). Right: pass^1 per trial for both models on the same pod.
+
+![Retail test overview](figures/03_retail_test_overview.jpg)
+
+**4. By task type.** The 64 combo tasks (several actions in one request, the kind the SFT data contains) barely move;
+the 51 other tasks are where the new model is ahead.
+
+![By task type](figures/04_by_task_type.jpg)
+
+**5. Is the difference real?** Left: per-task pass rates, new model (y) vs control (x); points above the dotted line favour the
+new model. Middle: bootstrap distribution of the mean pass^1 difference (+3.9 points; zero is inside it). Right: effect sizes with
+95% intervals for the three comparisons. Only the comparison against the earlier test excludes zero, and that one mixes in
+pod-to-pod drift (the control sits +2.2 points above the earlier test).
+
+![Significance](figures/05_significance.jpg)
+
+**6. Where the gain is.** Mean difference by task type, how many tasks gained or lost, and conversation lengths (the new model
+does not produce systematically longer or shorter conversations).
+
+![Where the gain is](figures/06_where_the_gain_is.jpg)
+
 ## Files
 
 ```
-notebooks/distillation_experiment.ipynb   matplotlib notebook (executed, outputs included)
+notebooks/distillation_experiment.ipynb   matplotlib notebook (executed, outputs included; also writes figures/*.jpg)
+figures/                                  the six charts above as JPGs
 renders/distillation_experiment.html      the same notebook as a standalone page
 renders/retail_test_new_solves.html       tasks the new model solves that the control does not (earlier analysis)
 results/distill/distill_run.json          4-trial retail test: per-trial, per-type, comparisons, training curves
