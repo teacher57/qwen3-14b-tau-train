@@ -1,0 +1,646 @@
+[
+ {
+  "task_index": 24,
+  "grpo_rounds": [
+   4
+  ],
+  "instruction": "Your name is Juan Rossi and your zip code is 77209. You are independent, shy, curious, relaxing. For #W7602708, change payment to gift_card_8893815. For #W7602708, modify Garden Hose {'length': '25ft', 'material': 'vinyl', 'color': 'green'} to {'color': 'blue'}; via gift_card_8893815. ",
+  "target_actions": [
+   {
+    "name": "modify_pending_order_payment",
+    "kwargs": {
+     "order_id": "#W7602708",
+     "payment_method_id": "gift_card_8893815"
+    }
+   },
+   {
+    "name": "modify_pending_order_items",
+    "kwargs": {
+     "order_id": "#W7602708",
+     "item_ids": [
+      "3369928769"
+     ],
+     "new_item_ids": [
+      "9829827210"
+     ],
+     "payment_method_id": "gift_card_8893815"
+    }
+   }
+  ]
+ },
+ {
+  "task_index": 27,
+  "grpo_rounds": [
+   12
+  ],
+  "instruction": "Your name is Fatima Johnson and your email is fatima.johnson2300@example.com. You are creative, happy, curious, polite, impatient. For #W5199551, change payment to gift_card_1675628. For #W5199551, modify Cycling Helmet {'size': 'S', 'color': 'black', 'ventilation': 'medium'} to {'color': 'red', 'ventilation': 'low'}; Wristwatch {'strap material': 'silicone', 'dial color': 'black'} to {'strap material': 'metal', 'dial color': 'white'}; via paypal_5364164. ",
+  "target_actions": [
+   {
+    "name": "modify_pending_order_payment",
+    "kwargs": {
+     "order_id": "#W5199551",
+     "payment_method_id": "gift_card_1675628"
+    }
+   },
+   {
+    "name": "modify_pending_order_items",
+    "kwargs": {
+     "order_id": "#W5199551",
+     "item_ids": [
+      "5537798301",
+      "1994478369"
+     ],
+     "new_item_ids": [
+      "3358616356",
+      "2407258246"
+     ],
+     "payment_method_id": "paypal_5364164"
+    }
+   }
+  ]
+ },
+ {
+  "task_index": 44,
+  "grpo_rounds": [
+   5
+  ],
+  "instruction": "Your name is Sofia Rossi and your email is sofia.rossi2645@example.com. You are dependent, rigid, creative, confident, relaxing. For #W2818151, modify Luggage Set {'piece count': '4-piece', 'color': 'red', 'material': 'hardshell'} to {'piece count': '3-piece', 'color': 'blue', 'material': 'softshell'}; via credit_card_5051208. Cancel order #W5500815 because ordered by mistake. ",
+  "target_actions": [
+   {
+    "name": "modify_pending_order_items",
+    "kwargs": {
+     "order_id": "#W2818151",
+     "item_ids": [
+      "9956648681"
+     ],
+     "new_item_ids": [
+      "6301799585"
+     ],
+     "payment_method_id": "credit_card_5051208"
+    }
+   },
+   {
+    "name": "cancel_pending_order",
+    "kwargs": {
+     "order_id": "#W5500815",
+     "reason": "ordered by mistake"
+    }
+   }
+  ]
+ },
+ {
+  "task_index": 100,
+  "grpo_rounds": [
+   7
+  ],
+  "instruction": "Your name is Yusuf Garcia and your zip code is 46202. You are curious, outgoing, busy. Cancel order #W7639559 because no longer needed. Cancel order #W3691773 because no longer needed. ",
+  "target_actions": [
+   {
+    "name": "cancel_pending_order",
+    "kwargs": {
+     "order_id": "#W7639559",
+     "reason": "no longer needed"
+    }
+   },
+   {
+    "name": "cancel_pending_order",
+    "kwargs": {
+     "order_id": "#W3691773",
+     "reason": "no longer needed"
+    }
+   }
+  ]
+ },
+ {
+  "task_index": 127,
+  "grpo_rounds": [
+   11
+  ],
+  "instruction": "Your name is Lei Anderson and your zip code is 76192. You are creative, direct, pessimistic, patient, happy. Return #W4072946 via paypal_1808675: Hiking Boots; For #W6002467, change address to {'order_id': '#W6002467', 'address1': '544 Sunset Drive', 'address2': 'Suite 337', 'city': 'Jacksonville', 'country': 'USA', 'state': 'FL', 'zip': '32205'} (same as #W1866533). For #W6002467, modify Cycling Helmet {'size': 'L', 'color': 'blue', 'ventilation': 'low'} to {'color': 'white', 'ventilation': 'medium'}; Water Bottle {'capacity': '750ml', 'material': 'stainless steel', 'color': 'blue'} to {'capacity': '1000ml', 'color': 'red'}; via paypal_1808675. ",
+  "target_actions": [
+   {
+    "name": "return_delivered_order_items",
+    "kwargs": {
+     "order_id": "#W4072946",
+     "item_ids": [
+      "8106223139"
+     ],
+     "payment_method_id": "paypal_1808675"
+    }
+   },
+   {
+    "name": "modify_pending_order_address",
+    "kwargs": {
+     "order_id": "#W6002467",
+     "address1": "544 Sunset Drive",
+     "address2": "Suite 337",
+     "city": "Jacksonville",
+     "country": "USA",
+     "state": "FL",
+     "zip": "32205"
+    }
+   },
+   {
+    "name": "modify_pending_order_items",
+    "kwargs": {
+     "order_id": "#W6002467",
+     "item_ids": [
+      "7907773809",
+      "7843064651"
+     ],
+     "new_item_ids": [
+      "6697922351",
+      "2439754078"
+     ],
+     "payment_method_id": "paypal_1808675"
+    }
+   }
+  ]
+ },
+ {
+  "task_index": 130,
+  "grpo_rounds": [
+   0
+  ],
+  "instruction": "Your name is Evelyn Ahmed and your email is evelyn.ahmed2006@example.com. You are creative, sad, patient, polite, organized. For #W3746173, change address to {'order_id': '#W3746173', 'address1': '137 Willow Lane', 'address2': 'Suite 127', 'city': 'Charlotte', 'country': 'USA', 'state': 'NC', 'zip': '28249'} (same as #W1416704). For #W3746173, change payment to credit_card_7898168. For #W3746173, modify Makeup Kit {'skin tone': 'medium', 'kit size': 'professional', 'brand': 'Brand A'} to {}; via credit_card_7898168. Cancel order #W1416704 because ordered by mistake. ",
+  "target_actions": [
+   {
+    "name": "modify_pending_order_address",
+    "kwargs": {
+     "order_id": "#W3746173",
+     "address1": "137 Willow Lane",
+     "address2": "Suite 127",
+     "city": "Charlotte",
+     "country": "USA",
+     "state": "NC",
+     "zip": "28249"
+    }
+   },
+   {
+    "name": "modify_pending_order_payment",
+    "kwargs": {
+     "order_id": "#W3746173",
+     "payment_method_id": "credit_card_7898168"
+    }
+   },
+   {
+    "name": "modify_pending_order_items",
+    "kwargs": {
+     "order_id": "#W3746173",
+     "item_ids": [
+      "2882812427"
+     ],
+     "new_item_ids": [
+      "2882812427"
+     ],
+     "payment_method_id": "credit_card_7898168"
+    }
+   },
+   {
+    "name": "cancel_pending_order",
+    "kwargs": {
+     "order_id": "#W1416704",
+     "reason": "ordered by mistake"
+    }
+   }
+  ]
+ },
+ {
+  "task_index": 150,
+  "grpo_rounds": [
+   5
+  ],
+  "instruction": "Your name is Harper Santos and your zip code is 46237. You are direct, independent, happy, messy, busy. For #W4941028, change payment to credit_card_7507679. For #W4941028, modify Backpack {'color': 'grey', 'size': 'large', 'material': 'nylon', 'compartment': 'hydration'} to {'color': 'green', 'size': 'small', 'material': 'polyester', 'compartment': 'laptop'}; Laptop {'screen size': '17-inch', 'processor': 'i9', 'ram': '8GB', 'storage': '256GB SSD', 'color': 'silver'} to {'screen size': '15-inch', 'processor': 'i5', 'ram': '32GB', 'color': 'space grey'}; Smart Thermostat {'compatibility': 'Apple HomeKit', 'color': 'stainless steel'} to {}; via credit_card_7507679. ",
+  "target_actions": [
+   {
+    "name": "modify_pending_order_payment",
+    "kwargs": {
+     "order_id": "#W4941028",
+     "payment_method_id": "credit_card_7507679"
+    }
+   },
+   {
+    "name": "modify_pending_order_items",
+    "kwargs": {
+     "order_id": "#W4941028",
+     "item_ids": [
+      "5726859009",
+      "3265035808",
+      "9480266227"
+     ],
+     "new_item_ids": [
+      "3557711149",
+      "2216662955",
+      "9480266227"
+     ],
+     "payment_method_id": "credit_card_7507679"
+    }
+   }
+  ]
+ },
+ {
+  "task_index": 201,
+  "grpo_rounds": [
+   1
+  ],
+  "instruction": "Your name is Noah Sanchez and your email is noah.sanchez7461@example.com. You are flexible, busy. Cancel order #W8645374 because ordered by mistake. For #W7293142, exchange Hiking Boots {'size': '10', 'material': 'leather', 'waterproof': 'no'} to {'size': '11'}; Mechanical Keyboard {'switch type': 'clicky', 'backlight': 'RGB', 'size': 'full size'} to {'switch type': 'linear', 'backlight': 'none'}; via gift_card_9909795. ",
+  "target_actions": [
+   {
+    "name": "cancel_pending_order",
+    "kwargs": {
+     "order_id": "#W8645374",
+     "reason": "ordered by mistake"
+    }
+   },
+   {
+    "name": "exchange_delivered_order_items",
+    "kwargs": {
+     "order_id": "#W7293142",
+     "item_ids": [
+      "2185126308",
+      "9025753381"
+     ],
+     "new_item_ids": [
+      "5676696062",
+      "9570044148"
+     ],
+     "payment_method_id": "gift_card_9909795"
+    }
+   }
+  ]
+ },
+ {
+  "task_index": 231,
+  "grpo_rounds": [
+   2
+  ],
+  "instruction": "Your name is Aarav Davis and your zip code is 76150. You are busy, happy, direct, impatient, dependent. For #W7430166, change address to {'order_id': '#W7430166', 'address1': '808 Chestnut Street', 'address2': 'Suite 832', 'city': 'Phoenix', 'country': 'USA', 'state': 'AZ', 'zip': '85072'} (same as #W2403075). For #W7430166, modify Headphones {'type': 'in-ear', 'connectivity': 'wired', 'color': 'red'} to {'type': 'on-ear', 'connectivity': 'wireless'}; via gift_card_9708163. For #W3223435, exchange Garden Hose {'length': '25ft', 'material': 'latex', 'color': 'green'} to {'material': 'vinyl'}; via gift_card_9708163. ",
+  "target_actions": [
+   {
+    "name": "modify_pending_order_address",
+    "kwargs": {
+     "order_id": "#W7430166",
+     "address1": "808 Chestnut Street",
+     "address2": "Suite 832",
+     "city": "Phoenix",
+     "country": "USA",
+     "state": "AZ",
+     "zip": "85072"
+    }
+   },
+   {
+    "name": "modify_pending_order_items",
+    "kwargs": {
+     "order_id": "#W7430166",
+     "item_ids": [
+      "1133777903"
+     ],
+     "new_item_ids": [
+      "3104857380"
+     ],
+     "payment_method_id": "gift_card_9708163"
+    }
+   },
+   {
+    "name": "exchange_delivered_order_items",
+    "kwargs": {
+     "order_id": "#W3223435",
+     "item_ids": [
+      "3230708338"
+     ],
+     "new_item_ids": [
+      "3369928769"
+     ],
+     "payment_method_id": "gift_card_9708163"
+    }
+   }
+  ]
+ },
+ {
+  "task_index": 277,
+  "grpo_rounds": [
+   12
+  ],
+  "instruction": "Your name is Fatima Li and your email is fatima.li1185@example.com. You are logical, sad, organized. Cancel order #W8005719 because no longer needed. For #W3510092, change payment to paypal_6366157. For #W3510092, modify Laptop {'screen size': '13-inch', 'processor': 'i5', 'ram': '16GB', 'storage': '512GB SSD', 'color': 'space grey'} to {'processor': 'i7', 'ram': '32GB', 'color': 'black'}; via credit_card_2713802. ",
+  "target_actions": [
+   {
+    "name": "cancel_pending_order",
+    "kwargs": {
+     "order_id": "#W8005719",
+     "reason": "no longer needed"
+    }
+   },
+   {
+    "name": "modify_pending_order_payment",
+    "kwargs": {
+     "order_id": "#W3510092",
+     "payment_method_id": "paypal_6366157"
+    }
+   },
+   {
+    "name": "modify_pending_order_items",
+    "kwargs": {
+     "order_id": "#W3510092",
+     "item_ids": [
+      "6056040996"
+     ],
+     "new_item_ids": [
+      "1657832319"
+     ],
+     "payment_method_id": "credit_card_2713802"
+    }
+   }
+  ]
+ },
+ {
+  "task_index": 367,
+  "grpo_rounds": [
+   4
+  ],
+  "instruction": "Your name is Sophia Hernandez and your zip code is 76197. You are shy, creative, independent, pessimistic. Return #W1748126 via gift_card_1139567: Tea Kettle; Cancel order #W4614740 because no longer needed. ",
+  "target_actions": [
+   {
+    "name": "return_delivered_order_items",
+    "kwargs": {
+     "order_id": "#W1748126",
+     "item_ids": [
+      "8293778132"
+     ],
+     "payment_method_id": "gift_card_1139567"
+    }
+   },
+   {
+    "name": "cancel_pending_order",
+    "kwargs": {
+     "order_id": "#W4614740",
+     "reason": "no longer needed"
+    }
+   }
+  ]
+ },
+ {
+  "task_index": 393,
+  "grpo_rounds": [
+   9
+  ],
+  "instruction": "Your name is Liam Thomas and your zip code is 85049. You are outgoing, impatient, logical. Return #W8488728 via paypal_3650980: Hiking Boots; For #W1654931, modify E-Reader {'screen size': '7-inch', 'connectivity': 'Wi-Fi', 'storage': '8GB'} to {'connectivity': 'Wi-Fi + Cellular'}; Air Purifier {'room size': 'small', 'filter type': 'ionic', 'features': 'quiet operation'} to {'room size': 'medium', 'filter type': 'carbon'}; via paypal_3650980. For #W6397299, exchange Vacuum Cleaner {'type': 'canister', 'bagged/bagless': 'bagged', 'features': 'pet hair removal'} to {'type': 'robotic', 'bagged/bagless': 'bagless', 'features': 'HEPA filter'}; Dumbbell Set {'weight range': '5-25 lbs', 'material': 'rubber', 'set type': 'adjustable'} to {'material': 'urethane'}; via credit_card_3261838. ",
+  "target_actions": [
+   {
+    "name": "return_delivered_order_items",
+    "kwargs": {
+     "order_id": "#W8488728",
+     "item_ids": [
+      "5676696062"
+     ],
+     "payment_method_id": "paypal_3650980"
+    }
+   },
+   {
+    "name": "modify_pending_order_items",
+    "kwargs": {
+     "order_id": "#W1654931",
+     "item_ids": [
+      "6268080249",
+      "5669664287"
+     ],
+     "new_item_ids": [
+      "5418781403",
+      "9375701158"
+     ],
+     "payment_method_id": "paypal_3650980"
+    }
+   },
+   {
+    "name": "exchange_delivered_order_items",
+    "kwargs": {
+     "order_id": "#W6397299",
+     "item_ids": [
+      "2872451762",
+      "7896397433"
+     ],
+     "new_item_ids": [
+      "4725166838",
+      "3275928196"
+     ],
+     "payment_method_id": "credit_card_3261838"
+    }
+   }
+  ]
+ },
+ {
+  "task_index": 415,
+  "grpo_rounds": [
+   9
+  ],
+  "instruction": "Your name is Emma Kovacs and your zip code is 95111. You are shy, creative. For #W6554908, change address to {'order_id': '#W6554908', 'address1': '111 Sunset Drive', 'address2': 'Suite 183', 'city': 'San Diego', 'country': 'USA', 'state': 'CA', 'zip': '92179'} (same as #W3618959). For #W6554908, modify Skateboard {'deck material': 'maple', 'length': '28 inch', 'design': 'graphic'} to {'deck material': 'plastic', 'design': 'plain'}; Perfume {'scent family': 'fresh', 'size': '30ml', 'gender': 'men'} to {'scent family': 'oriental'}; via gift_card_9246707. For #W7109609, change address to {'order_id': '#W7109609', 'address1': '111 Sunset Drive', 'address2': 'Suite 183', 'city': 'San Diego', 'country': 'USA', 'state': 'CA', 'zip': '92179'} (same as #W3618959). For #W7109609, modify Vacuum Cleaner {'type': 'robotic', 'bagged/bagless': 'bagless', 'features': 'cordless'} to {'features': 'pet hair removal'}; via gift_card_9246707. ",
+  "target_actions": [
+   {
+    "name": "modify_pending_order_address",
+    "kwargs": {
+     "order_id": "#W6554908",
+     "address1": "111 Sunset Drive",
+     "address2": "Suite 183",
+     "city": "San Diego",
+     "country": "USA",
+     "state": "CA",
+     "zip": "92179"
+    }
+   },
+   {
+    "name": "modify_pending_order_items",
+    "kwargs": {
+     "order_id": "#W6554908",
+     "item_ids": [
+      "2819462352",
+      "9447903288"
+     ],
+     "new_item_ids": [
+      "4545791457",
+      "1325156478"
+     ],
+     "payment_method_id": "gift_card_9246707"
+    }
+   },
+   {
+    "name": "modify_pending_order_address",
+    "kwargs": {
+     "order_id": "#W7109609",
+     "address1": "111 Sunset Drive",
+     "address2": "Suite 183",
+     "city": "San Diego",
+     "country": "USA",
+     "state": "CA",
+     "zip": "92179"
+    }
+   },
+   {
+    "name": "modify_pending_order_items",
+    "kwargs": {
+     "order_id": "#W7109609",
+     "item_ids": [
+      "4806644905"
+     ],
+     "new_item_ids": [
+      "4965355367"
+     ],
+     "payment_method_id": "gift_card_9246707"
+    }
+   }
+  ]
+ },
+ {
+  "task_index": 431,
+  "grpo_rounds": [
+   0
+  ],
+  "instruction": "Your name is Yusuf Garcia and your email is yusuf.garcia2909@example.com. You are independent, organized, outgoing, sad, insecure. Cancel order #W3260419 because no longer needed. Return #W2286012 via gift_card_7588375: Electric Toothbrush; Action Camera; Perfume; For #W4794911, exchange T-Shirt {'color': 'purple', 'size': 'S', 'material': 'polyester', 'style': 'v-neck'} to {'color': 'blue', 'material': 'cotton'}; via credit_card_8405687. For #W6885344, change address to {'order_id': '#W6885344', 'address1': '690 Broadway', 'address2': 'Suite 737', 'city': 'Indianapolis', 'country': 'USA', 'state': 'IN', 'zip': '46226'} (same as #W2564042). For #W6885344, change payment to gift_card_7588375. For #W6885344, modify Backpack {'color': 'grey', 'size': 'medium', 'material': 'polyester', 'compartment': 'laptop'} to {'color': 'navy', 'size': 'large'}; via paypal_7503218. ",
+  "target_actions": [
+   {
+    "name": "cancel_pending_order",
+    "kwargs": {
+     "order_id": "#W3260419",
+     "reason": "no longer needed"
+    }
+   },
+   {
+    "name": "return_delivered_order_items",
+    "kwargs": {
+     "order_id": "#W2286012",
+     "item_ids": [
+      "8098621301",
+      "7523669277",
+      "5421902839"
+     ],
+     "payment_method_id": "gift_card_7588375"
+    }
+   },
+   {
+    "name": "exchange_delivered_order_items",
+    "kwargs": {
+     "order_id": "#W4794911",
+     "item_ids": [
+      "9647292434"
+     ],
+     "new_item_ids": [
+      "8349118980"
+     ],
+     "payment_method_id": "credit_card_8405687"
+    }
+   },
+   {
+    "name": "modify_pending_order_address",
+    "kwargs": {
+     "order_id": "#W6885344",
+     "address1": "690 Broadway",
+     "address2": "Suite 737",
+     "city": "Indianapolis",
+     "country": "USA",
+     "state": "IN",
+     "zip": "46226"
+    }
+   },
+   {
+    "name": "modify_pending_order_payment",
+    "kwargs": {
+     "order_id": "#W6885344",
+     "payment_method_id": "gift_card_7588375"
+    }
+   },
+   {
+    "name": "modify_pending_order_items",
+    "kwargs": {
+     "order_id": "#W6885344",
+     "item_ids": [
+      "5917587651"
+     ],
+     "new_item_ids": [
+      "8084436579"
+     ],
+     "payment_method_id": "paypal_7503218"
+    }
+   }
+  ]
+ },
+ {
+  "task_index": 433,
+  "grpo_rounds": [
+   10
+  ],
+  "instruction": "Your name is Yusuf Hernandez and your zip code is 80265. You are confident, cautious. For #W2466703, change address to {'order_id': '#W2466703', 'address1': '580 Broadway', 'address2': 'Suite 162', 'city': 'Denver', 'country': 'USA', 'state': 'CO', 'zip': '80265'} (same as #W2166301). For #W2466703, modify Fleece Jacket {'size': 'L', 'color': 'black', 'zipper': 'full'} to {'size': 'XS', 'color': 'navy'}; Grill {'type': 'charcoal', 'size': 'medium', 'features': 'side burner'} to {'features': 'rotisserie'}; via paypal_7529813. For #W7739115, exchange Makeup Kit {'skin tone': 'dark', 'kit size': 'professional', 'brand': 'Brand A'} to {'brand': 'Brand C'}; via paypal_7529813. ",
+  "target_actions": [
+   {
+    "name": "modify_pending_order_address",
+    "kwargs": {
+     "order_id": "#W2466703",
+     "address1": "580 Broadway",
+     "address2": "Suite 162",
+     "city": "Denver",
+     "country": "USA",
+     "state": "CO",
+     "zip": "80265"
+    }
+   },
+   {
+    "name": "modify_pending_order_items",
+    "kwargs": {
+     "order_id": "#W2466703",
+     "item_ids": [
+      "9385662952",
+      "7848293342"
+     ],
+     "new_item_ids": [
+      "8161321868",
+      "7082455361"
+     ],
+     "payment_method_id": "paypal_7529813"
+    }
+   },
+   {
+    "name": "exchange_delivered_order_items",
+    "kwargs": {
+     "order_id": "#W7739115",
+     "item_ids": [
+      "1573035764"
+     ],
+     "new_item_ids": [
+      "1763705424"
+     ],
+     "payment_method_id": "paypal_7529813"
+    }
+   }
+  ]
+ },
+ {
+  "task_index": 459,
+  "grpo_rounds": [
+   0
+  ],
+  "instruction": "Your name is Chen Silva and your email is chen.silva2698@example.com. You are organized, busy. For #W2598834, exchange Jigsaw Puzzle {'pieces': '1500', 'theme': 'animals', 'difficulty level': 'intermediate'} to {'difficulty level': 'beginner'}; via gift_card_7250692. Return #W8171054 via gift_card_7250692: Tea Kettle; Running Shoes; ",
+  "target_actions": [
+   {
+    "name": "exchange_delivered_order_items",
+    "kwargs": {
+     "order_id": "#W2598834",
+     "item_ids": [
+      "6245746168"
+     ],
+     "new_item_ids": [
+      "9665100170"
+     ],
+     "payment_method_id": "gift_card_7250692"
+    }
+   },
+   {
+    "name": "return_delivered_order_items",
+    "kwargs": {
+     "order_id": "#W8171054",
+     "item_ids": [
+      "9747045638",
+      "9791469541"
+     ],
+     "payment_method_id": "gift_card_7250692"
+    }
+   }
+  ]
+ }
+]

@@ -12,7 +12,7 @@ Env overrides: POD_HOST, POD_PORT, POD_KEY.
 """
 import base64, collections, datetime, io, json, os, subprocess, sys
 
-VENV_PY = "/Users/serjtankian/.claude/jobs/2f730982/tmp/nb_venv/bin/python"
+VENV_PY = os.path.join(os.path.dirname(os.path.abspath(__file__)), ".venv-nb", "bin", "python")
 try:
     import matplotlib  # noqa: F401
 except ImportError:
