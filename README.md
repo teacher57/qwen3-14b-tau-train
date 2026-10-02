@@ -352,8 +352,12 @@ is on the non-combo tasks, although training used only combo conversations.
 **Is it significant? No.** Paired by task over all 4 trials, the new model is **+3.9 points pass^1** over the same-pod control
 (standard error 2.6, paired t = 1.53, 95% bootstrap interval -1.1 to +8.9, permutation p = 0.15). The sign test on pass^2
 (new higher on 31 tasks, control higher on 23, 61 ties) gives p = 0.34. pass^4 is identical. The first 2-trial comparison looked
-like +6.5 points (and +9 against the earlier test), but re-running the *same* starting adapter on the same pod scored 41.7%
-instead of 37.8%: part of the early "gain" was run-to-run drift of the baseline (the control also beats the earlier test, p = 0.005).
+like +6.5 points over the control; trials 3 and 4 gave only +1.3, so the early lead partly regressed with more sampling.
+Against the earlier baseline test (37.8%, 2 trials, other pod) the new model's first two trials are +8.7 points ahead
+(matched trial counts, permutation p = 0.03), but the same starting adapter re-run on the new pod already scored +2.2 points
+above that earlier test (first two trials, p = 0.65, not significant by itself), so part of that gap is pod-to-pod drift and the
+same-pod control is the comparison to trust. (An earlier version of this README claimed the control beat the earlier test with
+p = 0.005; that compared pass^2 over unequal trial counts and was wrong.)
 Honest summary: a small positive effect (about +4 points) that is plausible but not established. Per-trial pass rates:
 new 43.5 / 49.6 / 41.7 / 47.8%; control 40.9 / 39.1 / 41.7 / 45.2%.
 
