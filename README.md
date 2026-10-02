@@ -1,5 +1,7 @@
 # Distilling Qwen3-32B into Qwen3-14B on τ-bench retail
 
+AI friendly
+
 This branch contains **one experiment only**: a Qwen3-32B-AWQ teacher plays hard retail *train* tasks, its passing
 conversations are used to fine-tune Qwen3-14B (QLoRA), and the 14B is tested on the retail test split against a
 same-pod control. Earlier experiments (SFT, GRPO) are on `main`.
