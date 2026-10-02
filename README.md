@@ -75,8 +75,10 @@ pod-to-pod drift (the control sits +2.2 points above the earlier test).
 
 ![Significance](figures/05_significance.jpg)
 
-**6. Where the gain is.** Mean difference by task type, how many tasks gained or lost, and conversation lengths (the new model
-does not produce systematically longer or shorter conversations).
+**6. Where the gain is.** Mean pass^1 difference by task type (other tasks +7.4 points ± 3.7 s.e., combo tasks +1.2 ± 3.5; this
+split was made after seeing the results, so treat it as a hypothesis, not a finding), how many tasks gained or lost (the control
+wins 28 tasks by 0.25 or more, the new model 39), and conversation lengths (the distributions overlap heavily; the new model's
+conversations run slightly longer).
 
 ![Where the gain is](figures/06_where_the_gain_is.jpg)
 
