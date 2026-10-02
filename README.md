@@ -19,7 +19,9 @@ root-cause diagnosis for the one that did.
 **Follow-up (section 8):** test tasks are far more "combo" (several actions in one
 conversation) than our training data, so we re-ran GRPO on only the combo tasks the
 model solves some of the time. The held-out probe fell the same way (0.45 → 0.20 by
-round 5), and training stopped itself.
+round 5), and training stopped itself. A gentler run (10x lower learning rate) did not
+fall, but a full 115-task test with two trials per task could not tell its round-5
+checkpoint from the starting adapter (pass^2 25.2% vs 21.7%, p = 0.57): a null result.
 
 LoRA checkpoint weights (~250MB each, too large for plain git) are on
 [Hugging Face](https://huggingface.co/teacher57/qwen3-14b-tau-grpo-checkpoints).
@@ -266,8 +268,56 @@ rounds 0 and 5, so the decline cannot be located between them.
 - 4-bit decoding is slow (about 300 tokens/s in total), so a round of 16 rollouts takes
   about 20 minutes and the 612-rollout diagnostic took about 4.5 hours.
 
-**Gentle follow-up (lr 1e-6, same pool): running at the time of writing; results will be
-added here.**
+**Gentle follow-up (lr 1e-6, same start and pool).** Everything as above except a 10x
+lower learning rate; checkpoints saved and probed at rounds 1, 3, 5 and 10, with the stop
+rule widened to a drop of more than 0.15 below the best (the probe is noisy). The same
+starting adapter was reused as the baseline (0.40, not re-measured):
+
+| checkpoint | probe (20 held-out test tasks) |
+|---|---|
+| baseline (the starting adapter) | 0.40 |
+| gentle round 1 | 0.50 |
+| gentle round 3 | 0.45 |
+| gentle round 5 | 0.60 |
+| gentle round 10 | 0.40 |
+
+Training stopped itself during round 12 after the round-10 score fell 0.20 below the round-5
+best. That stop was itself within the probe's noise. Training reward over rounds 0-11 stayed
+between 0.31 and 0.75 with no trend; 8-16 of the 16 rollouts contributed a gradient per round
+(all 16 in rounds 3, 7, 8 and 10). The gentle run never collapsed the way the lr 1e-5 run did, but its five probes
+average about 0.49, the same as the starting adapter's usual score (0.40-0.55 across our
+setups), so the 20-task probe cannot say whether it helped.
+
+### 9. pass^2 test: is gentle round 5 better than the starting adapter?
+
+To settle it we ran the full retail test split (all 115 tasks), each task twice at
+temperature 0.7, for the round-5 checkpoint and for the starting adapter as a control with
+identical settings (tool-calling agent, GPT-4o as the simulated user, 25 steps). pass^1 is the
+average over all trials; pass^2 is the share of tasks where both trials pass (the τ-bench
+definition, C(c,2)/C(n,2) with n = 2); consistency is pass^2 / pass^1. Temperature above 0 is
+needed for pass^k to measure the model's own consistency: at 0 the trials differ only through
+the user simulator (which sets no temperature, so it samples at the API default) and GPU
+arithmetic.
+
+| | gentle round 5 | starting adapter (control) |
+|---|---|---|
+| pass^1 (230 rollouts) | 40.4% ± 3.2 | 37.8% ± 3.2 |
+| pass^2 (115 tasks) | 25.2% ± 4.0 | 21.7% ± 3.8 |
+| consistency | 0.62 | 0.57 |
+
+Round 5 passes both trials on 16 tasks where the control does not; the control wins 12 the
+other way (paired test p = 0.57), with no errors in either run. The difference is well inside
+the margin of error, so **the gentle run neither helped nor hurt measurably**, and the 0.60
+probe score was most likely noise. Per-rollout results are in `results/passk_run.json` and
+the live notebook section; the full conversations from this test and from the gentle-run
+probes were only on the training pod and were lost when it was terminated, so they are not
+included.
+
+**Where this leaves us.** SFT broke the model, GRPO at lr 1e-5 degraded it, and GRPO at lr
+1e-6 left it unchanged. About 12 rounds of 16 rollouts is too little signal to move a 14B model
+by more than the measurement noise (about 4 points on 115 tasks). Untried: prompt and
+scaffolding changes, distillation from a stronger teacher with mixed conversation shapes,
+offline rejection-sampling fine-tuning on the combo pool, a larger base model.
 
 ## Repo contents
 
@@ -290,6 +340,10 @@ results/
   combo_tasks.json                  the 153 combo train tasks (instruction + target actions)
   combo_grpo_run.json               combo-pool GRPO run: per-round rewards, probes, timings
   combo_grpo_train_log.jsonl, combo_grpo_stdout.log    raw logs of that run
+  gentle_grpo_run.json, gentle_grpo_train_log.jsonl, gentle_grpo_stdout.log
+                                    the gentle (lr 1e-6) run: per-round rewards, probes, logs
+  passk_run.json                    section 9 pass^2 test: per-rollout results, pass^1/pass^2,
+                                     paired comparison (conversations were lost with the pod)
 dataset/
   qwen3_14b_retail_train_rollout_sft.json      the 422 genuine passing multi-turn
                                                 rollouts used for fine-tuning attempt #2
@@ -321,6 +375,10 @@ code/
   grpo_gentle_train.py  same with lr 1e-6 (the gentle follow-up)
   eval_parallel.py, probe_watcher*.sh, disk_guard*.sh    parallel probe, the watcher that
                          probes new checkpoints and stops training on a decline, disk guard
+  full_passk.py, run_passk_chain.sh    section 9: pass^k eval of an adapter on the full 115-task
+                         test (trials and temperature configurable), and the chain that ran it
+  live_passk_section.py, section10_updater.sh    auto-updating notebook section for that test
+                         and the detached launcher that keeps it current
   update_notebook.py, live_grpo_section.py, live_gentle_section.py, sync_checkpoints.py
                          laptop-side helpers that keep the notebook, a live HTML page and
                          local checkpoint copies current (pod address/paths are defaults)
