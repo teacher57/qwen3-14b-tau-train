@@ -371,6 +371,53 @@ Files: all 460 conversations per model (`dataset/distill/retail_eval_conversatio
 `renders/retail_test_new_solves.html`. The conversations of the *earliest* baseline test (37.8%) were not kept, only its
 rewards (`results/passk_run.json`). The trained adapter (`distill-epoch-1`, 257 MB) is not in this repo.
 
+### 11. Teaching two habits: open every order, confirm every change
+
+The failure analysis of the distilled model (59 failed τ³ tasks, 255 failed τ-bench rollouts) showed two big causes: the agent **does not look at all of a customer's orders** before acting (about 28% of failures), and it **changes the database before the customer clearly agrees** (about 20%). We rebuilt the 180 teacher conversations (train tasks only) so that the agent loads the account and opens **every** order before anything else, and so that **every** change is preceded by a message listing exactly what will happen and a customer "yes". 178 conversations remained (two changed an order before authenticating the customer), 710 lookups and 309 confirmations inserted by rule from the retail database. A fresh LoRA on the 14B base, same recipe as section 10 (r=16, lr 5e-5, batch 8, 1 epoch = 511 steps, loss 0.65 → 0.30 on 4,086 samples).
+
+**τ-bench retail test, 115 tasks, 4 trials, temperature 0.7, GPT-4o customer** (same setup as section 10):
+
+| | starting adapter (control) | distilled (section 10) | **augmented** |
+|---|---|---|---|
+| pass^1 | 41.7% ± 3.4 | 45.7% ± 3.4 | **44.6% ± 3.6** |
+| pass^2 | 27.1% | 29.9% | 30.9% |
+| pass^3 | 20.2% | 22.0% | 23.9% |
+| pass^4 | 16.5% | 16.5% | 20.0% |
+
+Paired by task, pass^1: augmented vs control +2.8 points (95% interval −2.6 to +8.7, permutation p = 0.37), vs distilled −1.1 points (p = 0.72). **Not distinguishable.**
+
+**τ³ (tau2-bench) retail, 114 tasks, 2 trials, default settings** (agent temperature 0, 200 steps, GPT-4.1 customer):
+
+| | baseline (starting adapter) | augmented |
+|---|---|---|
+| rollouts passed | 99 / 228 | 109 / 228 |
+| pass^1 | 43.4% ± 3.7 | **47.8% ± 4.1** |
+| pass^2 | 25.4% ± 4.1 | **35.1% ± 4.5** |
+| rollouts hitting the 20-minute limit | 1 | 19 |
+
+Paired by task: pass^1 +4.4 points (interval −3.5 to +12.3, p = 0.33), pass^2 +9.6 points (p = 0.063). Earlier τ³ runs used temperature 0.7 and 1 trial (starting adapter 46.5%, distilled 48.2%), so they are not like-for-like.
+
+**Did it learn the habits?** Confirmation, yes: 59% of changes came right after an explicit yes (control 44%, distilled 37%). Lookup, barely: in tasks with 2+ orders it opened all orders before the first change in only 24% of rollouts (control 18%, distilled 21%), and it opened an order right after loading the account in only **37%** of rollouts (control 66%, distilled 59%), although 177 of the 178 training conversations do. The "open every order" decision was only 178 examples (about 1% of the agent text) against about 3,900 unchanged ones, and the model's own reasoning habit ("which order does the user mean, I should ask") overrides it.
+
+**Failure causes** (rule-based classifier checked against about 20 hand-read dialogs; counts of failed rollouts):
+
+| cause | control (268) | distilled (250) | augmented (255) |
+|---|---|---|---|
+| wrong or incomplete order lookup | 87 | 75 | 72 |
+| changed the database without a yes or before the facts (incl. locked orders) | 60 | 68 | 52 |
+| wrong or invented values (wrong item chosen, etc.) | 54 | 52 | 72 |
+| cancelled a whole order for a one-item request | 23 | 22 | 20 |
+| account lookup dead end | 13 | 11 | 14 |
+| required information not stated | 14 | 13 | 17 |
+| transferred when the task was doable | 10 | 2 | 2 |
+| other / scenario problem | 7 | 7 | 6 |
+
+The augmented model also uses more steps: it hit the 25-step limit in 27 of 460 τ-bench rollouts (control 7, distilled 10) and timed out in 19 of 228 τ³ rollouts. The per-task cause classification for the 59 and 61 failed τ³ tasks of the new and old models (first τ³ run) is in `results/augmentation/new_model_failure_causes.json` and `old_model_failure_causes.json`.
+
+**Honest summary:** a small, not statistically significant gain; clearly more consistent on pass^2 and pass^4, but the confirmation habit did not turn into a clearly better pass rate and the lookup habit did not transfer. We also built (but have **not** trained) a habit-only dataset, 898 conversations in which only the lookup and confirmation turns carry loss (3,830 supervised turns, synthetic examples from customers no test task uses): `code/augmentation/build_habit_data.py`.
+
+Data (conversations, datasets, adapters) is on Hugging Face: [model](https://huggingface.co/teacher57/qwen3-14b-tau-lookup-confirm-augmented), [dataset](https://huggingface.co/datasets/teacher57/tau-retail-distillation) (folders `augmentation/` and `tau3_eval/`). The notebook `notebooks/aug_sft_experiment.ipynb` has the training curves, the evaluation, the behaviour measures and the τ³ run; `notebooks/tau3_retail_eval.ipynb` covers the first τ³ run.
+
 ## Repo contents
 
 ```
@@ -396,6 +443,7 @@ results/
                                     the gentle (lr 1e-6) run: per-round rewards, probes, logs
   distill/                          section 10: distill_run.json (4-trial retail test, per-trial and per-type
                                      stats, comparisons), teacher_run.json, new_solves_analysis.json
+  augmentation/                     section 11: aug_sft_run.json (training curves and evaluation status), tau3_std_run.json (τ³ default-settings run), tau3_run.json (first τ³ run), failure_causes_auto.json (rule-based causes of every failed τ-bench rollout), new/old_model_failure_causes.json (hand-read causes of the failed τ³ tasks)
   passk_run.json                    section 9 pass^2 test: per-rollout results, pass^1/pass^2,
                                      paired comparison (conversations were lost with the pod)
 dataset/
@@ -418,7 +466,11 @@ dataset/
     retail_eval_conversations/       all 4-trial retail test conversations (new model and same-pod control),
                                      per-rollout results, GRPO probe conversations, early benchmark transcripts
     groups.json, tools.json, *_tasks lists, retail_test_tasks.json   task lists and task definitions used
+  augmentation/
+    teacher32b_passed_sft_lookups_confirm_stats.json, habit_dataset_stats.json, retail_aug_4trials_results.jsonl   section 11: statistics of the augmented and the habit-only
+                                     datasets and the per-rollout results of the augmented 4-trial test (the datasets and conversations are on Hugging Face)
 notebooks/
+  aug_sft_experiment.ipynb, tau3_retail_eval.ipynb   section 11 and the τ³ runs (plotly)
   qwen3_14b_training_and_rollouts.ipynb     all training-loss curves, rollout-generation
                                              progress, eval comparison chart, and the
                                              GRPO training + eval-probe charts
@@ -446,6 +498,9 @@ code/
                          sft_samples.py, train_sft.py), pod setup and eval chains, and the JSON writer and notebook
                          Section 11/12 builders (update_distill_json.py, add_distill_section.py); full_passk.py above
                          now takes env and task count arguments
+  augmentation/   section 11: build_augmented_sft.py (inserts lookups and confirmations by rule), build_habit_data.py (habit-only dataset),
+                  train_sft_habits.py, classify_failures.py, trackers (update_*_json.py), checkpoint sync, pod scripts (pod/), notebook builder
+  tau3/           τ³ run helpers: JSON tracker, notebook builder, dialog renderer, pod scripts
 renders/
   retail_test_new_solves.html        tasks the distilled model solves that the control does not
   combo_task_comparison.html         the combo tasks of the test split, train split, passing

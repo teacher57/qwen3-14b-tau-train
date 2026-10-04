@@ -1,0 +1,258 @@
+{
+ "clusters": {
+  "1": "Wrong or incomplete order lookup (missed, mixed up or never opened the right order)",
+  "2": "Changed the database without an explicit yes, or before the facts were in",
+  "3": "Wrong or invented values, or said something different from what it did",
+  "4": "Cancelled a whole order for a one-item request",
+  "5": "Account lookup dead end: gave up, or invented details",
+  "6": "Simulated customer or scenario problem",
+  "7": "Did not state the required number",
+  "8": "Transferred to a human when the task was doable (old model only)"
+ },
+ "tasks": {
+  "1": [
+   2,
+   "Exchanged the keyboard too, although the customer only wanted it if a clicky RGB full-size one exists (it does not), and started with a made-up order id."
+  ],
+  "2": [
+   7,
+   "Returned the right items but never answered how many t-shirt options exist (it said it could not count them)."
+  ],
+  "3": [
+   1,
+   "Changed every pending shirt to purple S, including the XXL shirt in an order the customer did not mean."
+  ],
+  "5": [
+   2,
+   "Exchanged the lamp right away; the customer then changed their mind, and the order was locked so the water bottle return was impossible."
+  ],
+  "6": [
+   2,
+   "Exchanged both items at once, then a second exchange on the same order failed (one per order); the customer wanted only the lamp."
+  ],
+  "8": [
+   3,
+   "Told the customer the lamp was bright white and battery powered; it is a silver low-brightness lamp, not the brighter one asked for."
+  ],
+  "12": [
+   2,
+   "Returned three items to the credit card although the customer said they prefer PayPal; the scenario expects a transfer instead."
+  ],
+  "13": [
+   3,
+   "Its PayPal refund attempt failed, and it then told the customer the return was processed without ever making a successful return call."
+  ],
+  "14": [
+   1,
+   "Returned the keyboard and never opened the other order with the gaming mouse."
+  ],
+  "16": [
+   1,
+   "Cancelled only one of two pending orders and stated a total without the second order."
+  ],
+  "19": [
+   7,
+   "Returned the water bottle, then the exchange failed (order locked); it also named a pet bed that is not the cheapest, so the savings figure was wrong."
+  ],
+  "21": [
+   1,
+   "Looked at the processed order for the shoes and never found they are in the pending order, so the shoe exchange never happened."
+  ],
+  "22": [
+   6,
+   "The customer asked it to revert the order address too, which the scenario did not expect."
+  ],
+  "27": [
+   1,
+   "Said no order contains the hose, backpack or boots after opening only some orders; they are in delivered order #W7181492."
+  ],
+  "30": [
+   2,
+   "Picked the cancellation reason itself ('ordered by mistake') instead of asking."
+  ],
+  "32": [
+   2,
+   "Started a return of the lost tablet without being asked and cancelled a whole order for the boot and kettle."
+  ],
+  "33": [
+   4,
+   "Tried to remove two items, which the tool cannot do, then cancelled the whole order."
+  ],
+  "34": [
+   5,
+   "Made up an email and a name for the first lookups, then transferred at once."
+  ],
+  "36": [
+   3,
+   "Switched items to variants that were not all the cheapest and changed an item that was already cheapest, after several failed calls."
+  ],
+  "37": [
+   3,
+   "Switched the last item to a t-shirt that was not the cheapest variant."
+  ],
+  "39": [
+   5,
+   "The customer gave the new Phoenix zip; the agent made up a lookup, then transferred."
+  ],
+  "40": [
+   5,
+   "Made up an email and a zip code (12345), then transferred without asking."
+  ],
+  "41": [
+   1,
+   "Fixed the address and puzzle in one order but never corrected the address of the other pending order."
+  ],
+  "42": [
+   1,
+   "Corrected the user address and one order but not the second pending order."
+  ],
+  "46": [
+   2,
+   "Returned a canister vacuum without confirming which vacuum (the customer meant the robotic one)."
+  ],
+  "48": [
+   1,
+   "Told the customer there was no air purifier in any order after opening only some orders."
+  ],
+  "49": [
+   8,
+   "Transferred to a human saying it could not use a credit card, instead of doing the exchange with the gift card."
+  ],
+  "54": [
+   5,
+   "Two failed lookups (wrong zip, first of two emails), then transferred without asking for another email."
+  ],
+  "56": [
+   8,
+   "Tried to remove the purifier with empty and identical items, then transferred instead of swapping to the cheapest purifier as asked."
+  ],
+  "57": [
+   2,
+   "Cancelled the whole order before the refund to a gift card was checked; the refund went to the credit card."
+  ],
+  "58": [
+   2,
+   "Used the credit card for the exchange without asking, picked a 1 litre espresso machine, and could not fix the payment afterwards."
+  ],
+  "63": [
+   4,
+   "Cancelled the whole order to remove one speaker, then could not modify the order."
+  ],
+  "67": [
+   5,
+   "The customer guessed a wrong zip; the agent transferred right after the failed lookup and never gave the total."
+  ],
+  "71": [
+   1,
+   "Took 'the most recent order' as the one shipped to Washington DC without opening orders, and applied changes at once without asking."
+  ],
+  "72": [
+   1,
+   "Changed the most recent order instead of the one shipped to Washington DC."
+  ],
+  "74": [
+   2,
+   "Used PayPal for the laptop change without asking which payment method."
+  ],
+  "76": [
+   1,
+   "Tried an invented variant, then cancelled a whole order that was not the one with the skateboard."
+  ],
+  "79": [
+   1,
+   "Said the new bottle matched the colour of the other 1-litre bottle without opening that order; that bottle is red."
+  ],
+  "80": [
+   3,
+   "Told the customer it exchanged for a red XXL crew neck, but chose the black XXL item."
+  ],
+  "81": [
+   1,
+   "Cancelled an order with none of the items the customer listed after offering to cancel the whole order."
+  ],
+  "82": [
+   1,
+   "Returned the cheaper tablet from the first order it found; the pricier tablet is in another order and it never confirmed."
+  ],
+  "83": [
+   1,
+   "Returned the first tablet it found without comparing the two tablets across orders."
+  ],
+  "87": [
+   1,
+   "Applied the default Denver address to everything and said it came from an order; it never opened the order with the Washington DC address."
+  ],
+  "88": [
+   2,
+   "Cancelled the order and picked the reason itself instead of asking the customer."
+  ],
+  "92": [
+   2,
+   "Returned the skateboards immediately; the smart watch return then failed because the order was locked."
+  ],
+  "94": [
+   1,
+   "Exchanged the laptop in the first order it found, not the 15-inch 16GB one in the other order."
+  ],
+  "96": [
+   3,
+   "Applied the changes at once and chose a red speaker for the 'cheapest green'; the later fix was blocked."
+  ],
+  "97": [
+   3,
+   "Called a red speaker the 'cheapest green' one and exchanged to it."
+  ],
+  "98": [
+   2,
+   "Exchanged the bicycle immediately, which locked the order so the jigsaw exchange failed."
+  ],
+  "99": [
+   2,
+   "Did two separate exchanges on one order; the second failed because an order allows only one."
+  ],
+  "100": [
+   1,
+   "Never opened the customer's orders, asked for an order id, and transferred."
+  ],
+  "101": [
+   1,
+   "Said no order had watches, so the watch order never got its address or item change."
+  ],
+  "103": [
+   1,
+   "Asked for order ids instead of opening orders, and returned items one at a time, which locked orders."
+  ],
+  "104": [
+   3,
+   "Returned only the backpack and never executed the bookshelf and jigsaw returns it had listed."
+  ],
+  "105": [
+   2,
+   "Returned one kettle before exchanging the other, which locked the order."
+  ],
+  "106": [
+   5,
+   "The customer could not give a zip; the agent transferred immediately."
+  ],
+  "108": [
+   1,
+   "Transferred because the order the customer named was pending, without opening the customer's other orders."
+  ],
+  "109": [
+   1,
+   "Took the default address as the new home and updated it without asking."
+  ],
+  "110": [
+   1,
+   "Changed the address of the wrong order."
+  ],
+  "111": [
+   3,
+   "Made up the New York address by editing the Houston one, on the wrong order."
+  ],
+  "112": [
+   3,
+   "Made up a New York address ('123 5th Ave') and saved it as the default."
+  ]
+ }
+}

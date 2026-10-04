@@ -1,0 +1,16 @@
+{
+ "conversations_in": 180,
+ "lookups_inserted": 710,
+ "user_details_inserted": 50,
+ "writes": 494,
+ "writes_already_confirmed": 185,
+ "confirmations_inserted": 309,
+ "skipped": [],
+ "dropped_changed_before_authenticating": [
+  21,
+  109
+ ],
+ "conversations_out": 178,
+ "avg_messages_before": 36.05555555555556,
+ "avg_messages_after": 48.0
+}

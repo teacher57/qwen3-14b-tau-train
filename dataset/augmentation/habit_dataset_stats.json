@@ -1,0 +1,20 @@
+{
+ "conversations": 898,
+ "real": 178,
+ "synthetic_lookup": 341,
+ "synthetic_confirm": 379,
+ "free_customers_used": 472,
+ "test_customers_excluded": 28,
+ "supervised_turns": 3830,
+ "real_counts": {
+  "user_details": 192,
+  "orders": 710,
+  "confirm": 494,
+  "write": 494
+ },
+ "supervised_by_kind": {
+  "real": 1882,
+  "synthetic_lookup": 1190,
+  "synthetic_confirm": 758
+ }
+}

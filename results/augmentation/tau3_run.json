@@ -1,0 +1,5931 @@
+{
+ "updated": "2026-10-03T22:24:31+04:00",
+ "pod_reachable": true,
+ "stage": "finished",
+ "pod": {
+  "host": "root@202.181.159.229:14606",
+  "gpu": "NVIDIA L40S, 0 %, 43509 MiB, 46068 MiB",
+  "disk": "overlay          30G   22G  8.4G  73% /",
+  "vllm_up": true,
+  "procs": {
+   "setup": false,
+   "run": false,
+   "tau2": false,
+   "vllm": true
+  },
+  "setup_tail": "/root/adapters/round-0/adapter_model.safetensors\n2026-10-03T17:06:01Z TAU3_SETUP_DONE",
+  "vllm_log_tail": "\u001b[1;36m(APIServer pid=1368)\u001b[0;0m INFO:     127.0.0.1:58714 - \"GET /v1/models HTTP/1.1\" 200 OK\n\u001b[1;36m(APIServer pid=1368)\u001b[0;0m INFO:     127.0.0.1:41334 - \"GET /v1/models HTTP/1.1\" 200 OK"
+ },
+ "config": {
+  "domain": "retail",
+  "task_split": "base (all 114 tasks)",
+  "trials": 1,
+  "agent_temperature": 0.7,
+  "user_llm": "gpt-4.1",
+  "max_steps": 200,
+  "concurrency": 24,
+  "agent_base": "unsloth/Qwen3-14B-unsloth-bnb-4bit",
+  "old_adapter": "round-0 (starting adapter)",
+  "new_adapter": "distill-epoch-1 (SFT on the 32B teacher)"
+ },
+ "old": {
+  "rollouts_done": 114,
+  "rollouts_total": 114,
+  "passed": 53,
+  "pass1": 0.4649122807017544,
+  "pass1_se": 0.04692008381368906,
+  "running_pass1": [
+   1.0,
+   1.0,
+   0.6666666666666666,
+   0.5,
+   0.4,
+   0.3333333333333333,
+   0.2857142857142857,
+   0.375,
+   0.3333333333333333,
+   0.4,
+   0.36363636363636365,
+   0.4166666666666667,
+   0.38461538461538464,
+   0.42857142857142855,
+   0.4,
+   0.4375,
+   0.47058823529411764,
+   0.4444444444444444,
+   0.42105263157894735,
+   0.45,
+   0.47619047619047616,
+   0.45454545454545453,
+   0.4782608695652174,
+   0.4583333333333333,
+   0.44,
+   0.4230769230769231,
+   0.4444444444444444,
+   0.4642857142857143,
+   0.4827586206896552,
+   0.5,
+   0.5161290322580645,
+   0.5,
+   0.5151515151515151,
+   0.5294117647058824,
+   0.5142857142857142,
+   0.5277777777777778,
+   0.5135135135135135,
+   0.5,
+   0.5128205128205128,
+   0.5,
+   0.5121951219512195,
+   0.5238095238095238,
+   0.5116279069767442,
+   0.5227272727272727,
+   0.5333333333333333,
+   0.5434782608695652,
+   0.5319148936170213,
+   0.5208333333333334,
+   0.5102040816326531,
+   0.5,
+   0.5098039215686274,
+   0.5192307692307693,
+   0.5283018867924528,
+   0.5185185185185185,
+   0.509090909090909,
+   0.5178571428571429,
+   0.5263157894736842,
+   0.5344827586206896,
+   0.5423728813559322,
+   0.55,
+   0.5573770491803278,
+   0.5645161290322581,
+   0.5555555555555556,
+   0.5625,
+   0.5538461538461539,
+   0.5606060606060606,
+   0.5671641791044776,
+   0.5735294117647058,
+   0.5652173913043478,
+   0.5571428571428572,
+   0.5492957746478874,
+   0.5416666666666666,
+   0.5342465753424658,
+   0.5405405405405406,
+   0.5333333333333333,
+   0.5263157894736842,
+   0.5194805194805194,
+   0.5128205128205128,
+   0.5063291139240507,
+   0.5125,
+   0.5185185185185185,
+   0.5121951219512195,
+   0.5180722891566265,
+   0.5119047619047619,
+   0.5176470588235295,
+   0.5116279069767442,
+   0.5057471264367817,
+   0.5,
+   0.4943820224719101,
+   0.4888888888888889,
+   0.4945054945054945,
+   0.4891304347826087,
+   0.4946236559139785,
+   0.5,
+   0.5052631578947369,
+   0.5,
+   0.4948453608247423,
+   0.4897959183673469,
+   0.494949494949495,
+   0.5,
+   0.49504950495049505,
+   0.5,
+   0.49514563106796117,
+   0.5,
+   0.5047619047619047,
+   0.5,
+   0.4953271028037383,
+   0.49074074074074076,
+   0.48623853211009177,
+   0.4818181818181818,
+   0.4774774774774775,
+   0.4732142857142857,
+   0.4690265486725664,
+   0.4649122807017544
+  ],
+  "finish_times": [
+   "2026-10-03T17:13:06+04:00",
+   "2026-10-03T17:13:17+04:00",
+   "2026-10-03T17:14:20+04:00",
+   "2026-10-03T17:14:26+04:00",
+   "2026-10-03T17:14:51+04:00",
+   "2026-10-03T17:15:07+04:00",
+   "2026-10-03T17:15:39+04:00",
+   "2026-10-03T17:15:52+04:00",
+   "2026-10-03T17:16:23+04:00",
+   "2026-10-03T17:16:39+04:00",
+   "2026-10-03T17:16:53+04:00",
+   "2026-10-03T17:17:06+04:00",
+   "2026-10-03T17:17:10+04:00",
+   "2026-10-03T17:17:29+04:00",
+   "2026-10-03T17:17:49+04:00",
+   "2026-10-03T17:17:53+04:00",
+   "2026-10-03T17:18:17+04:00",
+   "2026-10-03T17:19:10+04:00",
+   "2026-10-03T17:19:13+04:00",
+   "2026-10-03T17:19:14+04:00",
+   "2026-10-03T17:19:30+04:00",
+   "2026-10-03T17:19:52+04:00",
+   "2026-10-03T17:19:56+04:00",
+   "2026-10-03T17:19:58+04:00",
+   "2026-10-03T17:20:11+04:00",
+   "2026-10-03T17:20:12+04:00",
+   "2026-10-03T17:20:17+04:00",
+   "2026-10-03T17:20:35+04:00",
+   "2026-10-03T17:20:54+04:00",
+   "2026-10-03T17:21:20+04:00",
+   "2026-10-03T17:21:42+04:00",
+   "2026-10-03T17:21:52+04:00",
+   "2026-10-03T17:23:02+04:00",
+   "2026-10-03T17:23:12+04:00",
+   "2026-10-03T17:23:16+04:00",
+   "2026-10-03T17:23:39+04:00",
+   "2026-10-03T17:23:47+04:00",
+   "2026-10-03T17:23:59+04:00",
+   "2026-10-03T17:24:10+04:00",
+   "2026-10-03T17:24:10+04:00",
+   "2026-10-03T17:24:30+04:00",
+   "2026-10-03T17:24:30+04:00",
+   "2026-10-03T17:24:32+04:00",
+   "2026-10-03T17:24:41+04:00",
+   "2026-10-03T17:25:20+04:00",
+   "2026-10-03T17:25:29+04:00",
+   "2026-10-03T17:25:32+04:00",
+   "2026-10-03T17:25:38+04:00",
+   "2026-10-03T17:26:21+04:00",
+   "2026-10-03T17:26:37+04:00",
+   "2026-10-03T17:26:57+04:00",
+   "2026-10-03T17:27:05+04:00",
+   "2026-10-03T17:27:36+04:00",
+   "2026-10-03T17:27:42+04:00",
+   "2026-10-03T17:27:47+04:00",
+   "2026-10-03T17:27:48+04:00",
+   "2026-10-03T17:28:09+04:00",
+   "2026-10-03T17:28:34+04:00",
+   "2026-10-03T17:28:42+04:00",
+   "2026-10-03T17:28:59+04:00",
+   "2026-10-03T17:29:23+04:00",
+   "2026-10-03T17:29:33+04:00",
+   "2026-10-03T17:30:06+04:00",
+   "2026-10-03T17:30:34+04:00",
+   "2026-10-03T17:31:15+04:00",
+   "2026-10-03T17:31:18+04:00",
+   "2026-10-03T17:31:20+04:00",
+   "2026-10-03T17:31:27+04:00",
+   "2026-10-03T17:31:34+04:00",
+   "2026-10-03T17:32:01+04:00",
+   "2026-10-03T17:32:04+04:00",
+   "2026-10-03T17:32:07+04:00",
+   "2026-10-03T17:32:18+04:00",
+   "2026-10-03T17:32:46+04:00",
+   "2026-10-03T17:32:56+04:00",
+   "2026-10-03T17:33:03+04:00",
+   "2026-10-03T17:33:13+04:00",
+   "2026-10-03T17:33:22+04:00",
+   "2026-10-03T17:33:40+04:00",
+   "2026-10-03T17:33:46+04:00",
+   "2026-10-03T17:34:02+04:00",
+   "2026-10-03T17:34:04+04:00",
+   "2026-10-03T17:34:07+04:00",
+   "2026-10-03T17:34:42+04:00",
+   "2026-10-03T17:34:47+04:00",
+   "2026-10-03T17:35:19+04:00",
+   "2026-10-03T17:35:27+04:00",
+   "2026-10-03T17:35:52+04:00",
+   "2026-10-03T17:35:56+04:00",
+   "2026-10-03T17:36:05+04:00",
+   "2026-10-03T17:36:13+04:00",
+   "2026-10-03T17:36:33+04:00",
+   "2026-10-03T17:36:38+04:00",
+   "2026-10-03T17:38:35+04:00",
+   "2026-10-03T17:38:40+04:00",
+   "2026-10-03T17:38:56+04:00",
+   "2026-10-03T17:39:41+04:00",
+   "2026-10-03T17:39:55+04:00",
+   "2026-10-03T17:39:57+04:00",
+   "2026-10-03T17:40:15+04:00",
+   "2026-10-03T17:41:00+04:00",
+   "2026-10-03T17:41:05+04:00",
+   "2026-10-03T17:41:13+04:00",
+   "2026-10-03T17:41:48+04:00",
+   "2026-10-03T17:42:14+04:00",
+   "2026-10-03T17:42:21+04:00",
+   "2026-10-03T17:42:24+04:00",
+   "2026-10-03T17:42:27+04:00",
+   "2026-10-03T17:43:18+04:00",
+   "2026-10-03T17:43:40+04:00",
+   "2026-10-03T17:44:20+04:00",
+   "2026-10-03T17:45:19+04:00",
+   "2026-10-03T17:45:49+04:00",
+   "2026-10-03T17:46:07+04:00"
+  ],
+  "terminations": {
+   "user_stop": 114
+  },
+  "breakdown_pass_rate": {
+   "DB": 0.49122807017543857,
+   "NL_ASSERTION": 0.8839285714285714
+  },
+  "agent_cost": 0,
+  "user_cost": 1.3272979999999999,
+  "avg_duration_s": 376.90511849370637,
+  "rollouts_per_min": 3.2215753959475157,
+  "agent_llm": "hosted_vllm/old",
+  "user_llm": "gpt-4.1",
+  "rows": [
+   {
+    "task_id": "17",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 140.5809132270515,
+    "user_cost": 0.00606,
+    "n_messages": 16,
+    "n_tool_calls": 3,
+    "n_target_actions": 6,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_user_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "modify_pending_order_address"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "10",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 152.44276375696063,
+    "user_cost": 0.004932,
+    "n_messages": 18,
+    "n_tool_calls": 5,
+    "n_target_actions": 5,
+    "target_actions": [
+     "find_user_id_by_email",
+     "get_user_details",
+     "get_order_details",
+     "get_order_details",
+     "transfer_to_human_agents"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "14",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 214.8329004868865,
+    "user_cost": 0.012044,
+    "n_messages": 24,
+    "n_tool_calls": 5,
+    "n_target_actions": 6,
+    "target_actions": [
+     "find_user_id_by_email",
+     "get_user_details",
+     "get_order_details",
+     "get_order_details",
+     "return_delivered_order_items",
+     "return_delivered_order_items"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "13",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 220.6321094110608,
+    "user_cost": 0.01091,
+    "n_messages": 22,
+    "n_tool_calls": 5,
+    "n_target_actions": 5,
+    "target_actions": [
+     "find_user_id_by_email",
+     "get_user_details",
+     "get_order_details",
+     "get_order_details",
+     "return_delivered_order_items"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "1",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 246.67835675552487,
+    "user_cost": 0.008482,
+    "n_messages": 24,
+    "n_tool_calls": 7,
+    "n_target_actions": 5,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_order_details",
+     "get_product_details",
+     "get_product_details",
+     "exchange_delivered_order_items"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "12",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 262.1166736893356,
+    "user_cost": 0.009982,
+    "n_messages": 23,
+    "n_tool_calls": 6,
+    "n_target_actions": 5,
+    "target_actions": [
+     "find_user_id_by_email",
+     "get_user_details",
+     "get_order_details",
+     "get_order_details",
+     "transfer_to_human_agents"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "8",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 295.21078255958855,
+    "user_cost": 0.013862,
+    "n_messages": 28,
+    "n_tool_calls": 7,
+    "n_target_actions": 6,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_user_details",
+     "get_order_details",
+     "get_product_details",
+     "get_product_details",
+     "exchange_delivered_order_items"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "15",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 306.7546443603933,
+    "user_cost": 0.010752,
+    "n_messages": 22,
+    "n_tool_calls": 5,
+    "n_target_actions": 7,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_user_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "get_product_details",
+     "modify_pending_order_items"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "16",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 337.6633276157081,
+    "user_cost": 0.010421999999999999,
+    "n_messages": 26,
+    "n_tool_calls": 7,
+    "n_target_actions": 9,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_user_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "calculate",
+     "cancel_pending_order",
+     "cancel_pending_order",
+     "return_delivered_order_items"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 0.0
+    }
+   },
+   {
+    "task_id": "0",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 354.8153070732951,
+    "user_cost": 0.010934,
+    "n_messages": 24,
+    "n_tool_calls": 6,
+    "n_target_actions": 5,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_order_details",
+     "get_product_details",
+     "get_product_details",
+     "exchange_delivered_order_items"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "22",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 367.3197910953313,
+    "user_cost": 0.013895999999999999,
+    "n_messages": 32,
+    "n_tool_calls": 8,
+    "n_target_actions": 7,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "modify_user_address",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "modify_pending_order_address",
+     "modify_user_address"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "18",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 380.53976566158235,
+    "user_cost": 0.014986,
+    "n_messages": 28,
+    "n_tool_calls": 5,
+    "n_target_actions": 5,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_user_details",
+     "get_order_details",
+     "get_product_details",
+     "exchange_delivered_order_items"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "19",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 383.6626488659531,
+    "user_cost": 0.01149,
+    "n_messages": 26,
+    "n_tool_calls": 8,
+    "n_target_actions": 7,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_user_details",
+     "get_order_details",
+     "get_order_details",
+     "get_product_details",
+     "get_product_details",
+     "return_delivered_order_items"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 0.0
+    }
+   },
+   {
+    "task_id": "24",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 263.11344838142395,
+    "user_cost": 0.012537999999999999,
+    "n_messages": 26,
+    "n_tool_calls": 6,
+    "n_target_actions": 0,
+    "target_actions": [],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "5",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 424.07341819256544,
+    "user_cost": 0.017943999999999998,
+    "n_messages": 34,
+    "n_tool_calls": 8,
+    "n_target_actions": 5,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_user_details",
+     "get_order_details",
+     "get_product_details",
+     "return_delivered_order_items"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "11",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 428.735682528466,
+    "user_cost": 0.011680000000000001,
+    "n_messages": 28,
+    "n_tool_calls": 6,
+    "n_target_actions": 6,
+    "target_actions": [
+     "find_user_id_by_email",
+     "get_user_details",
+     "get_order_details",
+     "get_order_details",
+     "return_delivered_order_items",
+     "return_delivered_order_items"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "9",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 451.84692993201315,
+    "user_cost": 0.010248,
+    "n_messages": 24,
+    "n_tool_calls": 6,
+    "n_target_actions": 6,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_user_details",
+     "get_order_details",
+     "get_product_details",
+     "get_product_details",
+     "exchange_delivered_order_items"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "34",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 137.23460355214775,
+    "user_cost": 0.004869999999999999,
+    "n_messages": 12,
+    "n_tool_calls": 3,
+    "n_target_actions": 6,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_user_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "modify_pending_order_address"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0
+    }
+   },
+   {
+    "task_id": "39",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 79.43963842652738,
+    "user_cost": 0.005082,
+    "n_messages": 10,
+    "n_tool_calls": 2,
+    "n_target_actions": 5,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "find_user_id_by_name_zip",
+     "get_user_details",
+     "get_order_details",
+     "modify_user_address"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 0.0
+    }
+   },
+   {
+    "task_id": "25",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 356.3944071084261,
+    "user_cost": 0.008197999999999999,
+    "n_messages": 24,
+    "n_tool_calls": 7,
+    "n_target_actions": 6,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_user_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "7",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 525.4666308648884,
+    "user_cost": 0.019354,
+    "n_messages": 36,
+    "n_tool_calls": 8,
+    "n_target_actions": 6,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_user_details",
+     "get_order_details",
+     "get_product_details",
+     "get_product_details",
+     "exchange_delivered_order_items"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "40",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 94.26673260703683,
+    "user_cost": 0.004262,
+    "n_messages": 12,
+    "n_tool_calls": 3,
+    "n_target_actions": 4,
+    "target_actions": [
+     "find_user_id_by_email",
+     "get_user_details",
+     "get_order_details",
+     "modify_pending_order_payment"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 0.0
+    }
+   },
+   {
+    "task_id": "26",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 336.21677055582404,
+    "user_cost": 0.00836,
+    "n_messages": 22,
+    "n_tool_calls": 6,
+    "n_target_actions": 8,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_user_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "return_delivered_order_items",
+     "transfer_to_human_agents"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "6",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 553.7813191842288,
+    "user_cost": 0.011467999999999999,
+    "n_messages": 30,
+    "n_tool_calls": 9,
+    "n_target_actions": 6,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_user_details",
+     "get_order_details",
+     "get_product_details",
+     "get_product_details",
+     "exchange_delivered_order_items"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "27",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 344.4153315704316,
+    "user_cost": 0.010051999999999998,
+    "n_messages": 20,
+    "n_tool_calls": 5,
+    "n_target_actions": 6,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_user_details",
+     "get_order_details",
+     "get_order_details",
+     "get_product_details",
+     "exchange_delivered_order_items"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "2",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 567.7963748089969,
+    "user_cost": 0.008798,
+    "n_messages": 34,
+    "n_tool_calls": 12,
+    "n_target_actions": 11,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_product_details",
+     "get_product_details",
+     "get_user_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "get_product_details",
+     "return_delivered_order_items"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 0.0
+    }
+   },
+   {
+    "task_id": "20",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 571.3856192436069,
+    "user_cost": 0.011483999999999998,
+    "n_messages": 32,
+    "n_tool_calls": 10,
+    "n_target_actions": 10,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_user_details",
+     "get_order_details",
+     "get_order_details",
+     "get_product_details",
+     "get_product_details",
+     "get_product_details",
+     "get_product_details",
+     "modify_pending_order_items",
+     "get_order_details"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "4",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 590.4278728365898,
+    "user_cost": 0.019624,
+    "n_messages": 44,
+    "n_tool_calls": 12,
+    "n_target_actions": 13,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_product_details",
+     "get_product_details",
+     "get_user_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "get_product_details",
+     "get_user_details",
+     "modify_pending_order_items",
+     "modify_pending_order_items"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "23",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 607.6472609955817,
+    "user_cost": 0.025570000000000002,
+    "n_messages": 44,
+    "n_tool_calls": 12,
+    "n_target_actions": 12,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_user_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "get_product_details",
+     "exchange_delivered_order_items",
+     "get_product_details",
+     "exchange_delivered_order_items",
+     "get_product_details",
+     "modify_pending_order_items"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "50",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 62.99133948981762,
+    "user_cost": 0.002142,
+    "n_messages": 6,
+    "n_tool_calls": 1,
+    "n_target_actions": 1,
+    "target_actions": [
+     "transfer_to_human_agents"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "44",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 132.0801395252347,
+    "user_cost": 0.004215999999999999,
+    "n_messages": 14,
+    "n_tool_calls": 4,
+    "n_target_actions": 5,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_order_details",
+     "get_product_details",
+     "calculate",
+     "modify_pending_order_items"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "21",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 666.259243035689,
+    "user_cost": 0.017679999999999998,
+    "n_messages": 36,
+    "n_tool_calls": 10,
+    "n_target_actions": 12,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_user_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "get_item_details",
+     "get_item_details",
+     "get_product_details",
+     "get_item_details",
+     "get_product_details",
+     "calculate",
+     "modify_pending_order_items"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 0.0
+    }
+   },
+   {
+    "task_id": "43",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 226.9272830542177,
+    "user_cost": 0.011256,
+    "n_messages": 20,
+    "n_tool_calls": 5,
+    "n_target_actions": 5,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_user_details",
+     "get_order_details",
+     "get_order_details",
+     "modify_user_address"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "28",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 501.40881931222975,
+    "user_cost": 0.017858,
+    "n_messages": 38,
+    "n_tool_calls": 9,
+    "n_target_actions": 11,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_user_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "return_delivered_order_items",
+     "return_delivered_order_items",
+     "return_delivered_order_items",
+     "get_order_details",
+     "calculate"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "3",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 751.2112220562994,
+    "user_cost": 0.010488,
+    "n_messages": 32,
+    "n_tool_calls": 10,
+    "n_target_actions": 12,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_product_details",
+     "get_product_details",
+     "get_user_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "get_product_details",
+     "get_user_details",
+     "modify_pending_order_items"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "52",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 165.20949029549956,
+    "user_cost": 0.00724,
+    "n_messages": 18,
+    "n_tool_calls": 5,
+    "n_target_actions": 5,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_user_details",
+     "get_order_details",
+     "get_product_details",
+     "exchange_delivered_order_items"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "54",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 123.48345637880266,
+    "user_cost": 0.005235999999999999,
+    "n_messages": 14,
+    "n_tool_calls": 3,
+    "n_target_actions": 12,
+    "target_actions": [
+     "find_user_id_by_email",
+     "find_user_id_by_email",
+     "get_user_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "cancel_pending_order",
+     "cancel_pending_order",
+     "return_delivered_order_items"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 0.0
+    }
+   },
+   {
+    "task_id": "48",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 227.16807491146028,
+    "user_cost": 0.011871999999999999,
+    "n_messages": 20,
+    "n_tool_calls": 4,
+    "n_target_actions": 6,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_user_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "return_delivered_order_items"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "51",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 213.5454676747322,
+    "user_cost": 0.008426,
+    "n_messages": 20,
+    "n_tool_calls": 5,
+    "n_target_actions": 6,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_order_details",
+     "get_product_details",
+     "get_user_details",
+     "get_order_details",
+     "return_delivered_order_items"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "41",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 299.8061945345253,
+    "user_cost": 0.008197999999999999,
+    "n_messages": 21,
+    "n_tool_calls": 7,
+    "n_target_actions": 10,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_user_details",
+     "get_order_details",
+     "get_order_details",
+     "modify_pending_order_address",
+     "modify_pending_order_address",
+     "modify_user_address",
+     "get_product_details",
+     "get_order_details",
+     "modify_pending_order_items"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "47",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 271.04091279767454,
+    "user_cost": 0.010865999999999999,
+    "n_messages": 20,
+    "n_tool_calls": 4,
+    "n_target_actions": 7,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "calculate",
+     "return_delivered_order_items",
+     "calculate"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "29",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 563.1270072665066,
+    "user_cost": 0.013458,
+    "n_messages": 32,
+    "n_tool_calls": 10,
+    "n_target_actions": 6,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_user_details",
+     "get_order_details",
+     "get_product_details",
+     "exchange_delivered_order_items",
+     "exchange_delivered_order_items"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "46",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 274.76527754217386,
+    "user_cost": 0.0085,
+    "n_messages": 20,
+    "n_tool_calls": 5,
+    "n_target_actions": 7,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "calculate",
+     "return_delivered_order_items",
+     "calculate"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 0.0
+    }
+   },
+   {
+    "task_id": "31",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 529.3656455744058,
+    "user_cost": 0.029174,
+    "n_messages": 46,
+    "n_tool_calls": 9,
+    "n_target_actions": 12,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_user_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "cancel_pending_order",
+     "get_order_details",
+     "get_order_details",
+     "return_delivered_order_items"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "53",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 239.1790659558028,
+    "user_cost": 0.009754,
+    "n_messages": 24,
+    "n_tool_calls": 6,
+    "n_target_actions": 6,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_user_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "return_delivered_order_items"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "35",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 502.58817745000124,
+    "user_cost": 0.016398,
+    "n_messages": 42,
+    "n_tool_calls": 14,
+    "n_target_actions": 7,
+    "target_actions": [
+     "find_user_id_by_email",
+     "find_user_id_by_email",
+     "get_user_details",
+     "get_order_details",
+     "get_product_details",
+     "return_delivered_order_items",
+     "modify_pending_order_items"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "32",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 546.9695868585259,
+    "user_cost": 0.01759,
+    "n_messages": 40,
+    "n_tool_calls": 11,
+    "n_target_actions": 13,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_user_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "cancel_pending_order",
+     "get_order_details",
+     "cancel_pending_order",
+     "get_order_details",
+     "return_delivered_order_items"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "67",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 56.58035970851779,
+    "user_cost": 0.0036299999999999995,
+    "n_messages": 10,
+    "n_tool_calls": 2,
+    "n_target_actions": 5,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "find_user_id_by_name_zip",
+     "find_user_id_by_name_zip",
+     "get_user_details",
+     "get_order_details"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 0.0
+    }
+   },
+   {
+    "task_id": "30",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 640.9032716974616,
+    "user_cost": 0.025554000000000004,
+    "n_messages": 50,
+    "n_tool_calls": 12,
+    "n_target_actions": 13,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_user_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "get_product_details",
+     "return_delivered_order_items",
+     "get_order_details",
+     "cancel_pending_order",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "return_delivered_order_items"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "42",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 442.7176175136119,
+    "user_cost": 0.012117999999999999,
+    "n_messages": 32,
+    "n_tool_calls": 9,
+    "n_target_actions": 10,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_user_details",
+     "get_order_details",
+     "get_order_details",
+     "modify_pending_order_address",
+     "modify_pending_order_address",
+     "modify_user_address",
+     "get_product_details",
+     "get_order_details",
+     "modify_pending_order_items"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "60",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 188.10958681441844,
+    "user_cost": 0.005422,
+    "n_messages": 14,
+    "n_tool_calls": 4,
+    "n_target_actions": 4,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_order_details",
+     "get_product_details",
+     "modify_pending_order_items"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "68",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 103.72572821006179,
+    "user_cost": 0.005398,
+    "n_messages": 16,
+    "n_tool_calls": 4,
+    "n_target_actions": 4,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "find_user_id_by_name_zip",
+     "get_user_details",
+     "get_order_details"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "59",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 235.92512266524136,
+    "user_cost": 0.009954,
+    "n_messages": 19,
+    "n_tool_calls": 6,
+    "n_target_actions": 5,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_order_details",
+     "get_order_details",
+     "cancel_pending_order",
+     "modify_pending_order_address"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "57",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 268.8845866881311,
+    "user_cost": 0.009172,
+    "n_messages": 20,
+    "n_tool_calls": 4,
+    "n_target_actions": 0,
+    "target_actions": [],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "33",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 667.386591007933,
+    "user_cost": 0.020318000000000003,
+    "n_messages": 32,
+    "n_tool_calls": 8,
+    "n_target_actions": 6,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_user_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "modify_user_address"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0
+    }
+   },
+   {
+    "task_id": "69",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 139.1459393966943,
+    "user_cost": 0.005613999999999999,
+    "n_messages": 16,
+    "n_tool_calls": 4,
+    "n_target_actions": 4,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_user_details",
+     "get_order_details",
+     "cancel_pending_order"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "61",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 250.38281216658652,
+    "user_cost": 0.0048059999999999995,
+    "n_messages": 14,
+    "n_tool_calls": 4,
+    "n_target_actions": 5,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_order_details",
+     "get_product_details",
+     "calculate",
+     "modify_pending_order_items"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "66",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 240.19183897785842,
+    "user_cost": 0.009496000000000001,
+    "n_messages": 20,
+    "n_tool_calls": 4,
+    "n_target_actions": 5,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_user_details",
+     "get_order_details",
+     "get_order_details",
+     "cancel_pending_order"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "64",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 249.81965051963925,
+    "user_cost": 0.007535999999999999,
+    "n_messages": 20,
+    "n_tool_calls": 5,
+    "n_target_actions": 8,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_user_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "get_product_details",
+     "exchange_delivered_order_items",
+     "modify_pending_order_items"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "73",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 141.67365422844887,
+    "user_cost": 0.003796,
+    "n_messages": 14,
+    "n_tool_calls": 4,
+    "n_target_actions": 1,
+    "target_actions": [
+     "return_delivered_order_items"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "55",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 449.1622671727091,
+    "user_cost": 0.012577999999999999,
+    "n_messages": 36,
+    "n_tool_calls": 13,
+    "n_target_actions": 13,
+    "target_actions": [
+     "find_user_id_by_email",
+     "find_user_id_by_email",
+     "get_user_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "cancel_pending_order",
+     "cancel_pending_order",
+     "return_delivered_order_items",
+     "return_delivered_order_items"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "45",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 579.6212183367461,
+    "user_cost": 0.016266000000000003,
+    "n_messages": 26,
+    "n_tool_calls": 6,
+    "n_target_actions": 5,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_order_details",
+     "get_product_details",
+     "calculate",
+     "exchange_delivered_order_items"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "49",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 592.6268549282104,
+    "user_cost": 0.018108,
+    "n_messages": 34,
+    "n_tool_calls": 8,
+    "n_target_actions": 10,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_user_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "get_product_details",
+     "calculate",
+     "exchange_delivered_order_items"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "70",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 302.5326714105904,
+    "user_cost": 0.009054,
+    "n_messages": 24,
+    "n_tool_calls": 7,
+    "n_target_actions": 1,
+    "target_actions": [
+     "exchange_delivered_order_items"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "37",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 824.8658213187009,
+    "user_cost": 0.017834000000000003,
+    "n_messages": 42,
+    "n_tool_calls": 12,
+    "n_target_actions": 4,
+    "target_actions": [
+     "find_user_id_by_email",
+     "find_user_id_by_name_zip",
+     "get_user_details",
+     "modify_pending_order_items"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "62",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 428.23553106561303,
+    "user_cost": 0.018860000000000002,
+    "n_messages": 30,
+    "n_tool_calls": 6,
+    "n_target_actions": 5,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_user_details",
+     "get_order_details",
+     "get_order_details",
+     "get_product_details"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "75",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 253.52952609583735,
+    "user_cost": 0.00903,
+    "n_messages": 22,
+    "n_tool_calls": 6,
+    "n_target_actions": 1,
+    "target_actions": [
+     "exchange_delivered_order_items"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "77",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 224.76588249765337,
+    "user_cost": 0.005748,
+    "n_messages": 18,
+    "n_tool_calls": 5,
+    "n_target_actions": 1,
+    "target_actions": [
+     "exchange_delivered_order_items"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "81",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 179.49115292355418,
+    "user_cost": 0.0053939999999999995,
+    "n_messages": 16,
+    "n_tool_calls": 4,
+    "n_target_actions": 2,
+    "target_actions": [
+     "cancel_pending_order",
+     "cancel_pending_order"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "63",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 470.80075065791607,
+    "user_cost": 0.016674,
+    "n_messages": 32,
+    "n_tool_calls": 8,
+    "n_target_actions": 7,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_user_details",
+     "get_order_details",
+     "get_order_details",
+     "get_product_details",
+     "calculate",
+     "modify_pending_order_items"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 0.0
+    }
+   },
+   {
+    "task_id": "82",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 200.89489272609353,
+    "user_cost": 0.007667999999999999,
+    "n_messages": 18,
+    "n_tool_calls": 4,
+    "n_target_actions": 1,
+    "target_actions": [
+     "return_delivered_order_items"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "83",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 187.82363252714276,
+    "user_cost": 0.008,
+    "n_messages": 18,
+    "n_tool_calls": 4,
+    "n_target_actions": 1,
+    "target_actions": [
+     "return_delivered_order_items"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "72",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 357.1576959080994,
+    "user_cost": 0.008,
+    "n_messages": 20,
+    "n_tool_calls": 6,
+    "n_target_actions": 2,
+    "target_actions": [
+     "modify_pending_order_address",
+     "modify_pending_order_items"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "65",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 493.74071225710213,
+    "user_cost": 0.012513999999999999,
+    "n_messages": 30,
+    "n_tool_calls": 8,
+    "n_target_actions": 3,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_user_details",
+     "get_order_details"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "74",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 357.77740163728595,
+    "user_cost": 0.012667999999999999,
+    "n_messages": 28,
+    "n_tool_calls": 8,
+    "n_target_actions": 2,
+    "target_actions": [
+     "cancel_pending_order",
+     "modify_pending_order_items"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "58",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 585.8222770951688,
+    "user_cost": 0.016216,
+    "n_messages": 32,
+    "n_tool_calls": 8,
+    "n_target_actions": 6,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_user_details",
+     "get_order_details",
+     "get_product_details",
+     "get_product_details",
+     "exchange_delivered_order_items"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "56",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 609.2848554905504,
+    "user_cost": 0.012410000000000001,
+    "n_messages": 30,
+    "n_tool_calls": 7,
+    "n_target_actions": 7,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_user_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "get_product_details",
+     "modify_pending_order_items"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "80",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 311.8342472072691,
+    "user_cost": 0.013401999999999999,
+    "n_messages": 24,
+    "n_tool_calls": 6,
+    "n_target_actions": 1,
+    "target_actions": [
+     "exchange_delivered_order_items"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "79",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 351.03914571367204,
+    "user_cost": 0.007527999999999999,
+    "n_messages": 22,
+    "n_tool_calls": 6,
+    "n_target_actions": 1,
+    "target_actions": [
+     "modify_pending_order_items"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "84",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 262.7880179733038,
+    "user_cost": 0.008636,
+    "n_messages": 24,
+    "n_tool_calls": 7,
+    "n_target_actions": 1,
+    "target_actions": [
+     "return_delivered_order_items"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "78",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 374.72899704799056,
+    "user_cost": 0.012769999999999998,
+    "n_messages": 30,
+    "n_tool_calls": 9,
+    "n_target_actions": 3,
+    "target_actions": [
+     "modify_pending_order_address",
+     "modify_pending_order_items",
+     "cancel_pending_order"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "36",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 1012.2725799325854,
+    "user_cost": 0.015016,
+    "n_messages": 40,
+    "n_tool_calls": 12,
+    "n_target_actions": 1,
+    "target_actions": [
+     "modify_pending_order_items"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "85",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 272.88494997285306,
+    "user_cost": 0.010078,
+    "n_messages": 26,
+    "n_tool_calls": 6,
+    "n_target_actions": 1,
+    "target_actions": [
+     "modify_pending_order_items"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "88",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 204.87898814491928,
+    "user_cost": 0.005986,
+    "n_messages": 18,
+    "n_tool_calls": 5,
+    "n_target_actions": 1,
+    "target_actions": [
+     "cancel_pending_order"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "89",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 207.36968095228076,
+    "user_cost": 0.009342,
+    "n_messages": 24,
+    "n_tool_calls": 6,
+    "n_target_actions": 1,
+    "target_actions": [
+     "return_delivered_order_items"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "76",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 461.0544823426753,
+    "user_cost": 0.009124,
+    "n_messages": 26,
+    "n_tool_calls": 8,
+    "n_target_actions": 2,
+    "target_actions": [
+     "cancel_pending_order",
+     "cancel_pending_order"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 0.0
+    }
+   },
+   {
+    "task_id": "71",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 587.939887188375,
+    "user_cost": 0.013906,
+    "n_messages": 30,
+    "n_tool_calls": 8,
+    "n_target_actions": 2,
+    "target_actions": [
+     "modify_pending_order_address",
+     "modify_pending_order_items"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "106",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 103.92011446878314,
+    "user_cost": 0.00746,
+    "n_messages": 14,
+    "n_tool_calls": 2,
+    "n_target_actions": 1,
+    "target_actions": [
+     "exchange_delivered_order_items"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "100",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 162.44465271383524,
+    "user_cost": 0.011944,
+    "n_messages": 18,
+    "n_tool_calls": 3,
+    "n_target_actions": 2,
+    "target_actions": [
+     "modify_pending_order_items",
+     "return_delivered_order_items"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "92",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 270.4367282669991,
+    "user_cost": 0.008128,
+    "n_messages": 22,
+    "n_tool_calls": 6,
+    "n_target_actions": 2,
+    "target_actions": [
+     "return_delivered_order_items",
+     "return_delivered_order_items"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "86",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 366.8904450237751,
+    "user_cost": 0.013611999999999999,
+    "n_messages": 32,
+    "n_tool_calls": 9,
+    "n_target_actions": 2,
+    "target_actions": [
+     "modify_pending_order_items",
+     "modify_user_address"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "94",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 269.2887889575213,
+    "user_cost": 0.009648,
+    "n_messages": 22,
+    "n_tool_calls": 6,
+    "n_target_actions": 1,
+    "target_actions": [
+     "exchange_delivered_order_items"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "90",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 317.3324467372149,
+    "user_cost": 0.01026,
+    "n_messages": 26,
+    "n_tool_calls": 7,
+    "n_target_actions": 1,
+    "target_actions": [
+     "cancel_pending_order"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "91",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 427.0656473636627,
+    "user_cost": 0.014883999999999998,
+    "n_messages": 28,
+    "n_tool_calls": 7,
+    "n_target_actions": 2,
+    "target_actions": [
+     "return_delivered_order_items",
+     "exchange_delivered_order_items"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "93",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 396.5422348100692,
+    "user_cost": 0.015969999999999998,
+    "n_messages": 30,
+    "n_tool_calls": 7,
+    "n_target_actions": 1,
+    "target_actions": [
+     "exchange_delivered_order_items"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "87",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 499.8048831727356,
+    "user_cost": 0.008450000000000001,
+    "n_messages": 32,
+    "n_tool_calls": 10,
+    "n_target_actions": 4,
+    "target_actions": [
+     "modify_pending_order_address",
+     "modify_pending_order_address",
+     "modify_pending_order_address",
+     "modify_user_address"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "108",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 291.97490420006216,
+    "user_cost": 0.009064,
+    "n_messages": 20,
+    "n_tool_calls": 4,
+    "n_target_actions": 1,
+    "target_actions": [
+     "return_delivered_order_items"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 0.0
+    }
+   },
+   {
+    "task_id": "97",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 429.1153362002224,
+    "user_cost": 0.007998,
+    "n_messages": 25,
+    "n_tool_calls": 8,
+    "n_target_actions": 2,
+    "target_actions": [
+     "modify_pending_order_address",
+     "modify_pending_order_items"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "113",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 231.35510202683508,
+    "user_cost": 0.0050799999999999994,
+    "n_messages": 24,
+    "n_tool_calls": 8,
+    "n_target_actions": 2,
+    "target_actions": [
+     "cancel_pending_order",
+     "cancel_pending_order"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "38",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 555.6616937723011,
+    "user_cost": 0.012915999999999999,
+    "n_messages": 28,
+    "n_tool_calls": 7,
+    "n_target_actions": 4,
+    "target_actions": [
+     "find_user_id_by_email",
+     "find_user_id_by_name_zip",
+     "calculate",
+     "cancel_pending_order"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "101",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 458.5317134857178,
+    "user_cost": 0.015776,
+    "n_messages": 34,
+    "n_tool_calls": 8,
+    "n_target_actions": 3,
+    "target_actions": [
+     "modify_pending_order_address",
+     "modify_pending_order_items",
+     "modify_pending_order_items"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "95",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 537.9636258315295,
+    "user_cost": 0.013986,
+    "n_messages": 32,
+    "n_tool_calls": 9,
+    "n_target_actions": 2,
+    "target_actions": [
+     "exchange_delivered_order_items",
+     "exchange_delivered_order_items"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "96",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 534.0577419698238,
+    "user_cost": 0.01311,
+    "n_messages": 33,
+    "n_tool_calls": 9,
+    "n_target_actions": 2,
+    "target_actions": [
+     "modify_pending_order_address",
+     "modify_pending_order_items"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "107",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 425.7584380172193,
+    "user_cost": 0.014912,
+    "n_messages": 30,
+    "n_tool_calls": 8,
+    "n_target_actions": 2,
+    "target_actions": [
+     "exchange_delivered_order_items",
+     "exchange_delivered_order_items"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "102",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 514.0415494497865,
+    "user_cost": 0.017717999999999998,
+    "n_messages": 35,
+    "n_tool_calls": 9,
+    "n_target_actions": 3,
+    "target_actions": [
+     "modify_pending_order_address",
+     "modify_pending_order_items",
+     "exchange_delivered_order_items"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "112",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 384.70868365839124,
+    "user_cost": 0.01603,
+    "n_messages": 32,
+    "n_tool_calls": 8,
+    "n_target_actions": 3,
+    "target_actions": [
+     "modify_pending_order_items",
+     "modify_pending_order_address",
+     "modify_pending_order_items"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "110",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 416.36484121903777,
+    "user_cost": 0.008234,
+    "n_messages": 28,
+    "n_tool_calls": 10,
+    "n_target_actions": 3,
+    "target_actions": [
+     "modify_pending_order_address",
+     "modify_user_address",
+     "modify_pending_order_items"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "109",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 427.05924177728593,
+    "user_cost": 0.011724,
+    "n_messages": 26,
+    "n_tool_calls": 8,
+    "n_target_actions": 3,
+    "target_actions": [
+     "modify_pending_order_address",
+     "modify_user_address",
+     "modify_pending_order_items"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "111",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 443.37544809281826,
+    "user_cost": 0.012596,
+    "n_messages": 26,
+    "n_tool_calls": 7,
+    "n_target_actions": 3,
+    "target_actions": [
+     "modify_pending_order_items",
+     "modify_pending_order_address",
+     "modify_pending_order_items"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "105",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 573.698086231947,
+    "user_cost": 0.02393,
+    "n_messages": 36,
+    "n_tool_calls": 8,
+    "n_target_actions": 1,
+    "target_actions": [
+     "exchange_delivered_order_items"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "99",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 676.9704058114439,
+    "user_cost": 0.010081999999999999,
+    "n_messages": 34,
+    "n_tool_calls": 12,
+    "n_target_actions": 2,
+    "target_actions": [
+     "exchange_delivered_order_items",
+     "exchange_delivered_order_items"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "104",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 676.938749987632,
+    "user_cost": 0.013323999999999997,
+    "n_messages": 38,
+    "n_tool_calls": 11,
+    "n_target_actions": 5,
+    "target_actions": [
+     "return_delivered_order_items",
+     "return_delivered_order_items",
+     "modify_pending_order_address",
+     "modify_pending_order_items",
+     "return_delivered_order_items"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "103",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 722.6442204024643,
+    "user_cost": 0.028387999999999997,
+    "n_messages": 54,
+    "n_tool_calls": 13,
+    "n_target_actions": 4,
+    "target_actions": [
+     "return_delivered_order_items",
+     "return_delivered_order_items",
+     "modify_pending_order_address",
+     "modify_pending_order_items"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 0.0
+    }
+   },
+   {
+    "task_id": "98",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 790.248475452885,
+    "user_cost": 0.017814,
+    "n_messages": 48,
+    "n_tool_calls": 16,
+    "n_target_actions": 3,
+    "target_actions": [
+     "exchange_delivered_order_items",
+     "exchange_delivered_order_items",
+     "cancel_pending_order"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   }
+  ]
+ },
+ "new": {
+  "rollouts_done": 114,
+  "rollouts_total": 114,
+  "passed": 55,
+  "pass1": 0.4824561403508772,
+  "pass1_se": 0.04700708033551043,
+  "running_pass1": [
+   0.0,
+   0.0,
+   0.3333333333333333,
+   0.5,
+   0.6,
+   0.6666666666666666,
+   0.5714285714285714,
+   0.625,
+   0.5555555555555556,
+   0.6,
+   0.6363636363636364,
+   0.6666666666666666,
+   0.6923076923076923,
+   0.7142857142857143,
+   0.7333333333333333,
+   0.75,
+   0.7058823529411765,
+   0.7222222222222222,
+   0.6842105263157895,
+   0.65,
+   0.6666666666666666,
+   0.6363636363636364,
+   0.6521739130434783,
+   0.6666666666666666,
+   0.64,
+   0.6538461538461539,
+   0.6666666666666666,
+   0.6785714285714286,
+   0.6551724137931034,
+   0.6666666666666666,
+   0.6451612903225806,
+   0.65625,
+   0.6363636363636364,
+   0.6176470588235294,
+   0.6285714285714286,
+   0.6111111111111112,
+   0.5945945945945946,
+   0.6052631578947368,
+   0.5897435897435898,
+   0.6,
+   0.6097560975609756,
+   0.5952380952380952,
+   0.6046511627906976,
+   0.6136363636363636,
+   0.6222222222222222,
+   0.6086956521739131,
+   0.5957446808510638,
+   0.6041666666666666,
+   0.5918367346938775,
+   0.58,
+   0.5686274509803921,
+   0.5769230769230769,
+   0.5849056603773585,
+   0.5740740740740741,
+   0.5818181818181818,
+   0.5892857142857143,
+   0.5964912280701754,
+   0.5862068965517241,
+   0.5932203389830508,
+   0.5833333333333334,
+   0.5901639344262295,
+   0.5806451612903226,
+   0.5873015873015873,
+   0.59375,
+   0.6,
+   0.5909090909090909,
+   0.582089552238806,
+   0.5882352941176471,
+   0.5942028985507246,
+   0.6,
+   0.6056338028169014,
+   0.5972222222222222,
+   0.589041095890411,
+   0.5945945945945946,
+   0.5866666666666667,
+   0.5921052631578947,
+   0.5844155844155844,
+   0.5897435897435898,
+   0.5822784810126582,
+   0.5875,
+   0.5925925925925926,
+   0.5853658536585366,
+   0.5903614457831325,
+   0.5952380952380952,
+   0.5882352941176471,
+   0.5813953488372093,
+   0.5747126436781609,
+   0.5681818181818182,
+   0.5617977528089888,
+   0.5555555555555556,
+   0.5494505494505495,
+   0.5434782608695652,
+   0.5483870967741935,
+   0.5425531914893617,
+   0.5368421052631579,
+   0.53125,
+   0.5257731958762887,
+   0.5204081632653061,
+   0.5151515151515151,
+   0.51,
+   0.504950495049505,
+   0.5,
+   0.5048543689320388,
+   0.5096153846153846,
+   0.5047619047619047,
+   0.5,
+   0.4953271028037383,
+   0.49074074074074076,
+   0.48623853211009177,
+   0.4818181818181818,
+   0.4864864864864865,
+   0.49107142857142855,
+   0.48672566371681414,
+   0.4824561403508772
+  ],
+  "finish_times": [
+   "2026-10-03T17:48:10+04:00",
+   "2026-10-03T17:49:44+04:00",
+   "2026-10-03T17:49:47+04:00",
+   "2026-10-03T17:50:02+04:00",
+   "2026-10-03T17:50:04+04:00",
+   "2026-10-03T17:50:23+04:00",
+   "2026-10-03T17:51:03+04:00",
+   "2026-10-03T17:51:12+04:00",
+   "2026-10-03T17:51:41+04:00",
+   "2026-10-03T17:51:49+04:00",
+   "2026-10-03T17:51:52+04:00",
+   "2026-10-03T17:51:54+04:00",
+   "2026-10-03T17:52:09+04:00",
+   "2026-10-03T17:52:12+04:00",
+   "2026-10-03T17:52:23+04:00",
+   "2026-10-03T17:52:28+04:00",
+   "2026-10-03T17:52:30+04:00",
+   "2026-10-03T17:52:55+04:00",
+   "2026-10-03T17:52:59+04:00",
+   "2026-10-03T17:53:28+04:00",
+   "2026-10-03T17:53:32+04:00",
+   "2026-10-03T17:53:34+04:00",
+   "2026-10-03T17:53:38+04:00",
+   "2026-10-03T17:54:16+04:00",
+   "2026-10-03T17:54:25+04:00",
+   "2026-10-03T17:54:35+04:00",
+   "2026-10-03T17:55:19+04:00",
+   "2026-10-03T17:55:20+04:00",
+   "2026-10-03T17:55:40+04:00",
+   "2026-10-03T17:55:55+04:00",
+   "2026-10-03T17:56:04+04:00",
+   "2026-10-03T17:56:11+04:00",
+   "2026-10-03T17:56:35+04:00",
+   "2026-10-03T17:56:59+04:00",
+   "2026-10-03T17:57:22+04:00",
+   "2026-10-03T17:57:28+04:00",
+   "2026-10-03T17:58:00+04:00",
+   "2026-10-03T17:58:03+04:00",
+   "2026-10-03T17:58:05+04:00",
+   "2026-10-03T17:58:12+04:00",
+   "2026-10-03T17:58:35+04:00",
+   "2026-10-03T17:58:59+04:00",
+   "2026-10-03T17:59:42+04:00",
+   "2026-10-03T18:00:03+04:00",
+   "2026-10-03T18:00:08+04:00",
+   "2026-10-03T18:00:20+04:00",
+   "2026-10-03T18:00:32+04:00",
+   "2026-10-03T18:00:44+04:00",
+   "2026-10-03T18:00:53+04:00",
+   "2026-10-03T18:01:00+04:00",
+   "2026-10-03T18:01:19+04:00",
+   "2026-10-03T18:01:23+04:00",
+   "2026-10-03T18:01:27+04:00",
+   "2026-10-03T18:01:54+04:00",
+   "2026-10-03T18:01:57+04:00",
+   "2026-10-03T18:01:59+04:00",
+   "2026-10-03T18:02:24+04:00",
+   "2026-10-03T18:02:35+04:00",
+   "2026-10-03T18:02:39+04:00",
+   "2026-10-03T18:03:20+04:00",
+   "2026-10-03T18:03:25+04:00",
+   "2026-10-03T18:03:41+04:00",
+   "2026-10-03T18:03:54+04:00",
+   "2026-10-03T18:03:57+04:00",
+   "2026-10-03T18:04:00+04:00",
+   "2026-10-03T18:04:01+04:00",
+   "2026-10-03T18:04:27+04:00",
+   "2026-10-03T18:04:42+04:00",
+   "2026-10-03T18:04:51+04:00",
+   "2026-10-03T18:05:01+04:00",
+   "2026-10-03T18:05:23+04:00",
+   "2026-10-03T18:05:39+04:00",
+   "2026-10-03T18:06:02+04:00",
+   "2026-10-03T18:06:06+04:00",
+   "2026-10-03T18:06:08+04:00",
+   "2026-10-03T18:06:21+04:00",
+   "2026-10-03T18:06:26+04:00",
+   "2026-10-03T18:06:47+04:00",
+   "2026-10-03T18:07:08+04:00",
+   "2026-10-03T18:07:32+04:00",
+   "2026-10-03T18:08:37+04:00",
+   "2026-10-03T18:08:54+04:00",
+   "2026-10-03T18:09:13+04:00",
+   "2026-10-03T18:09:14+04:00",
+   "2026-10-03T18:09:20+04:00",
+   "2026-10-03T18:09:25+04:00",
+   "2026-10-03T18:09:56+04:00",
+   "2026-10-03T18:10:29+04:00",
+   "2026-10-03T18:10:30+04:00",
+   "2026-10-03T18:11:20+04:00",
+   "2026-10-03T18:11:21+04:00",
+   "2026-10-03T18:11:32+04:00",
+   "2026-10-03T18:12:02+04:00",
+   "2026-10-03T18:12:18+04:00",
+   "2026-10-03T18:12:34+04:00",
+   "2026-10-03T18:13:42+04:00",
+   "2026-10-03T18:14:08+04:00",
+   "2026-10-03T18:15:01+04:00",
+   "2026-10-03T18:15:09+04:00",
+   "2026-10-03T18:15:23+04:00",
+   "2026-10-03T18:15:25+04:00",
+   "2026-10-03T18:15:27+04:00",
+   "2026-10-03T18:15:37+04:00",
+   "2026-10-03T18:15:55+04:00",
+   "2026-10-03T18:15:59+04:00",
+   "2026-10-03T18:17:17+04:00",
+   "2026-10-03T18:17:22+04:00",
+   "2026-10-03T18:17:30+04:00",
+   "2026-10-03T18:18:14+04:00",
+   "2026-10-03T18:18:40+04:00",
+   "2026-10-03T18:18:53+04:00",
+   "2026-10-03T18:19:30+04:00",
+   "2026-10-03T18:20:30+04:00",
+   "2026-10-03T18:20:51+04:00"
+  ],
+  "terminations": {
+   "user_stop": 113,
+   "timeout": 1
+  },
+  "breakdown_pass_rate": {
+   "DB": 0.5132743362831859,
+   "NL_ASSERTION": 0.9099099099099099
+  },
+  "agent_cost": 0,
+  "user_cost": 1.2880479999999999,
+  "avg_duration_s": 374.0379947812476,
+  "rollouts_per_min": 3.2860437526979367,
+  "agent_llm": "hosted_vllm/new",
+  "user_llm": "gpt-4.1",
+  "rows": [
+   {
+    "task_id": "14",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 118.75413266383111,
+    "user_cost": 0.005532,
+    "n_messages": 16,
+    "n_tool_calls": 4,
+    "n_target_actions": 6,
+    "target_actions": [
+     "find_user_id_by_email",
+     "get_user_details",
+     "get_order_details",
+     "get_order_details",
+     "return_delivered_order_items",
+     "return_delivered_order_items"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "5",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 212.7149007115513,
+    "user_cost": 0.010398,
+    "n_messages": 22,
+    "n_tool_calls": 5,
+    "n_target_actions": 5,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_user_details",
+     "get_order_details",
+     "get_product_details",
+     "return_delivered_order_items"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "13",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 215.60434762388468,
+    "user_cost": 0.0097,
+    "n_messages": 22,
+    "n_tool_calls": 5,
+    "n_target_actions": 5,
+    "target_actions": [
+     "find_user_id_by_email",
+     "get_user_details",
+     "get_order_details",
+     "get_order_details",
+     "return_delivered_order_items"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "17",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 230.45965920761228,
+    "user_cost": 0.008206,
+    "n_messages": 20,
+    "n_tool_calls": 4,
+    "n_target_actions": 6,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_user_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "modify_pending_order_address"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "9",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 233.40599737130105,
+    "user_cost": 0.01005,
+    "n_messages": 22,
+    "n_tool_calls": 5,
+    "n_target_actions": 6,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_user_details",
+     "get_order_details",
+     "get_product_details",
+     "get_product_details",
+     "exchange_delivered_order_items"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "18",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 251.2730673868209,
+    "user_cost": 0.012503999999999998,
+    "n_messages": 24,
+    "n_tool_calls": 5,
+    "n_target_actions": 5,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_user_details",
+     "get_order_details",
+     "get_product_details",
+     "exchange_delivered_order_items"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "16",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 291.9382393322885,
+    "user_cost": 0.007963999999999999,
+    "n_messages": 26,
+    "n_tool_calls": 8,
+    "n_target_actions": 9,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_user_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "calculate",
+     "cancel_pending_order",
+     "cancel_pending_order",
+     "return_delivered_order_items"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 0.0
+    }
+   },
+   {
+    "task_id": "12",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 300.6434497628361,
+    "user_cost": 0.009484000000000001,
+    "n_messages": 24,
+    "n_tool_calls": 6,
+    "n_target_actions": 5,
+    "target_actions": [
+     "find_user_id_by_email",
+     "get_user_details",
+     "get_order_details",
+     "get_order_details",
+     "transfer_to_human_agents"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "10",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 329.7819499839097,
+    "user_cost": 0.008579999999999999,
+    "n_messages": 28,
+    "n_tool_calls": 8,
+    "n_target_actions": 5,
+    "target_actions": [
+     "find_user_id_by_email",
+     "get_user_details",
+     "get_order_details",
+     "get_order_details",
+     "transfer_to_human_agents"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "22",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 336.9549792353064,
+    "user_cost": 0.012214,
+    "n_messages": 30,
+    "n_tool_calls": 8,
+    "n_target_actions": 7,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "modify_user_address",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "modify_pending_order_address",
+     "modify_user_address"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "7",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 340.98909565620124,
+    "user_cost": 0.01253,
+    "n_messages": 26,
+    "n_tool_calls": 6,
+    "n_target_actions": 6,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_user_details",
+     "get_order_details",
+     "get_product_details",
+     "get_product_details",
+     "exchange_delivered_order_items"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "6",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 343.6761855427176,
+    "user_cost": 0.013016,
+    "n_messages": 24,
+    "n_tool_calls": 6,
+    "n_target_actions": 6,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_user_details",
+     "get_order_details",
+     "get_product_details",
+     "get_product_details",
+     "exchange_delivered_order_items"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "25",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 144.63166572339833,
+    "user_cost": 0.005751999999999999,
+    "n_messages": 12,
+    "n_tool_calls": 2,
+    "n_target_actions": 6,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_user_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "0",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 361.82612414099276,
+    "user_cost": 0.009618,
+    "n_messages": 24,
+    "n_tool_calls": 7,
+    "n_target_actions": 5,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_order_details",
+     "get_product_details",
+     "get_product_details",
+     "exchange_delivered_order_items"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "24",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 252.6946102362126,
+    "user_cost": 0.015046,
+    "n_messages": 24,
+    "n_tool_calls": 5,
+    "n_target_actions": 0,
+    "target_actions": [],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "15",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 376.65404847823083,
+    "user_cost": 0.012034,
+    "n_messages": 26,
+    "n_tool_calls": 6,
+    "n_target_actions": 7,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_user_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "get_product_details",
+     "modify_pending_order_items"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "19",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 378.73110712505877,
+    "user_cost": 0.007779999999999999,
+    "n_messages": 28,
+    "n_tool_calls": 9,
+    "n_target_actions": 7,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_user_details",
+     "get_order_details",
+     "get_order_details",
+     "get_product_details",
+     "get_product_details",
+     "return_delivered_order_items"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 0.0
+    }
+   },
+   {
+    "task_id": "1",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 404.96834534034133,
+    "user_cost": 0.009868,
+    "n_messages": 24,
+    "n_tool_calls": 7,
+    "n_target_actions": 5,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_order_details",
+     "get_product_details",
+     "get_product_details",
+     "exchange_delivered_order_items"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "11",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 408.31655913591385,
+    "user_cost": 0.014144,
+    "n_messages": 28,
+    "n_tool_calls": 5,
+    "n_target_actions": 6,
+    "target_actions": [
+     "find_user_id_by_email",
+     "get_user_details",
+     "get_order_details",
+     "get_order_details",
+     "return_delivered_order_items",
+     "return_delivered_order_items"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "3",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 437.8221710510552,
+    "user_cost": 0.011018,
+    "n_messages": 26,
+    "n_tool_calls": 7,
+    "n_target_actions": 12,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_product_details",
+     "get_product_details",
+     "get_user_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "get_product_details",
+     "get_user_details",
+     "modify_pending_order_items"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "2",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 441.9435516204685,
+    "user_cost": 0.009753999999999999,
+    "n_messages": 34,
+    "n_tool_calls": 11,
+    "n_target_actions": 11,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_product_details",
+     "get_product_details",
+     "get_user_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "get_product_details",
+     "return_delivered_order_items"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "35",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 100.17970666848123,
+    "user_cost": 0.006182,
+    "n_messages": 12,
+    "n_tool_calls": 2,
+    "n_target_actions": 7,
+    "target_actions": [
+     "find_user_id_by_email",
+     "find_user_id_by_email",
+     "get_user_details",
+     "get_order_details",
+     "get_product_details",
+     "return_delivered_order_items",
+     "modify_pending_order_items"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "8",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 447.78893442451954,
+    "user_cost": 0.014004,
+    "n_messages": 30,
+    "n_tool_calls": 8,
+    "n_target_actions": 6,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_user_details",
+     "get_order_details",
+     "get_product_details",
+     "get_product_details",
+     "exchange_delivered_order_items"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "4",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 485.61552670784295,
+    "user_cost": 0.007758000000000001,
+    "n_messages": 32,
+    "n_tool_calls": 11,
+    "n_target_actions": 13,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_product_details",
+     "get_product_details",
+     "get_user_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "get_product_details",
+     "get_user_details",
+     "modify_pending_order_items",
+     "modify_pending_order_items"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "39",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 116.72092974558473,
+    "user_cost": 0.004756,
+    "n_messages": 12,
+    "n_tool_calls": 3,
+    "n_target_actions": 5,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "find_user_id_by_name_zip",
+     "get_user_details",
+     "get_order_details",
+     "modify_user_address"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 0.0
+    }
+   },
+   {
+    "task_id": "26",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 287.7403214164078,
+    "user_cost": 0.007736,
+    "n_messages": 24,
+    "n_tool_calls": 7,
+    "n_target_actions": 8,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_user_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "return_delivered_order_items",
+     "transfer_to_human_agents"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "33",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 209.69513374380767,
+    "user_cost": 0.010922000000000001,
+    "n_messages": 18,
+    "n_tool_calls": 4,
+    "n_target_actions": 6,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_user_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "modify_user_address"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0
+    }
+   },
+   {
+    "task_id": "40",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 167.5929828416556,
+    "user_cost": 0.006718,
+    "n_messages": 16,
+    "n_tool_calls": 4,
+    "n_target_actions": 4,
+    "target_actions": [
+     "find_user_id_by_email",
+     "get_user_details",
+     "get_order_details",
+     "modify_pending_order_payment"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "34",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 227.8818915169686,
+    "user_cost": 0.008938,
+    "n_messages": 18,
+    "n_tool_calls": 5,
+    "n_target_actions": 6,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_user_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "modify_pending_order_address"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0
+    }
+   },
+   {
+    "task_id": "50",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 35.91976230405271,
+    "user_cost": 0.002142,
+    "n_messages": 6,
+    "n_tool_calls": 1,
+    "n_target_actions": 1,
+    "target_actions": [
+     "transfer_to_human_agents"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "37",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 231.99898438714445,
+    "user_cost": 0.010074,
+    "n_messages": 22,
+    "n_tool_calls": 5,
+    "n_target_actions": 4,
+    "target_actions": [
+     "find_user_id_by_email",
+     "find_user_id_by_name_zip",
+     "get_user_details",
+     "modify_pending_order_items"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "23",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 598.7819609455764,
+    "user_cost": 0.012264,
+    "n_messages": 38,
+    "n_tool_calls": 12,
+    "n_target_actions": 12,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_user_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "get_product_details",
+     "exchange_delivered_order_items",
+     "get_product_details",
+     "exchange_delivered_order_items",
+     "get_product_details",
+     "modify_pending_order_items"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "20",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 622.3932547047734,
+    "user_cost": 0.011224,
+    "n_messages": 34,
+    "n_tool_calls": 10,
+    "n_target_actions": 10,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_user_details",
+     "get_order_details",
+     "get_order_details",
+     "get_product_details",
+     "get_product_details",
+     "get_product_details",
+     "get_product_details",
+     "modify_pending_order_items",
+     "get_order_details"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "27",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 417.01551913283765,
+    "user_cost": 0.010775999999999999,
+    "n_messages": 30,
+    "n_tool_calls": 9,
+    "n_target_actions": 6,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_user_details",
+     "get_order_details",
+     "get_order_details",
+     "get_product_details",
+     "exchange_delivered_order_items"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "44",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 228.62657400034368,
+    "user_cost": 0.008404,
+    "n_messages": 22,
+    "n_tool_calls": 5,
+    "n_target_actions": 5,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_order_details",
+     "get_product_details",
+     "calculate",
+     "modify_pending_order_items"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "21",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 675.4065139405429,
+    "user_cost": 0.022573999999999997,
+    "n_messages": 40,
+    "n_tool_calls": 10,
+    "n_target_actions": 12,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_user_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "get_item_details",
+     "get_item_details",
+     "get_product_details",
+     "get_item_details",
+     "get_product_details",
+     "calculate",
+     "modify_pending_order_items"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 0.0
+    }
+   },
+   {
+    "task_id": "54",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 114.08711679838598,
+    "user_cost": 0.005103999999999999,
+    "n_messages": 14,
+    "n_tool_calls": 3,
+    "n_target_actions": 12,
+    "target_actions": [
+     "find_user_id_by_email",
+     "find_user_id_by_email",
+     "get_user_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "cancel_pending_order",
+     "cancel_pending_order",
+     "return_delivered_order_items"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 0.0
+    }
+   },
+   {
+    "task_id": "47",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 225.6970879137516,
+    "user_cost": 0.010484,
+    "n_messages": 18,
+    "n_tool_calls": 4,
+    "n_target_actions": 7,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "calculate",
+     "return_delivered_order_items",
+     "calculate"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "36",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 356.02538810297847,
+    "user_cost": 0.014676,
+    "n_messages": 28,
+    "n_tool_calls": 5,
+    "n_target_actions": 1,
+    "target_actions": [
+     "modify_pending_order_items"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "43",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 282.17142857797444,
+    "user_cost": 0.011796,
+    "n_messages": 20,
+    "n_tool_calls": 5,
+    "n_target_actions": 5,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_user_details",
+     "get_order_details",
+     "get_order_details",
+     "modify_user_address"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "48",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 248.99380136281252,
+    "user_cost": 0.009942,
+    "n_messages": 24,
+    "n_tool_calls": 6,
+    "n_target_actions": 6,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_user_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "return_delivered_order_items"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "42",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 358.4070733822882,
+    "user_cost": 0.010828,
+    "n_messages": 28,
+    "n_tool_calls": 8,
+    "n_target_actions": 10,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_user_details",
+     "get_order_details",
+     "get_order_details",
+     "modify_pending_order_address",
+     "modify_pending_order_address",
+     "modify_user_address",
+     "get_product_details",
+     "get_order_details",
+     "modify_pending_order_items"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "51",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 260.50407136417925,
+    "user_cost": 0.013728,
+    "n_messages": 24,
+    "n_tool_calls": 5,
+    "n_target_actions": 6,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_order_details",
+     "get_product_details",
+     "get_user_details",
+     "get_order_details",
+     "return_delivered_order_items"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "46",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 384.7089331485331,
+    "user_cost": 0.01262,
+    "n_messages": 20,
+    "n_tool_calls": 4,
+    "n_target_actions": 7,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "calculate",
+     "return_delivered_order_items",
+     "calculate"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "53",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 252.6374514363706,
+    "user_cost": 0.008058,
+    "n_messages": 22,
+    "n_tool_calls": 6,
+    "n_target_actions": 6,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_user_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "return_delivered_order_items"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "38",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 475.0025078635663,
+    "user_cost": 0.008518,
+    "n_messages": 22,
+    "n_tool_calls": 6,
+    "n_target_actions": 4,
+    "target_actions": [
+     "find_user_id_by_email",
+     "find_user_id_by_name_zip",
+     "calculate",
+     "cancel_pending_order"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "32",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 531.646479556337,
+    "user_cost": 0.033263999999999995,
+    "n_messages": 48,
+    "n_tool_calls": 10,
+    "n_target_actions": 13,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_user_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "cancel_pending_order",
+     "get_order_details",
+     "cancel_pending_order",
+     "get_order_details",
+     "return_delivered_order_items"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "45",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 429.6326649785042,
+    "user_cost": 0.008318,
+    "n_messages": 20,
+    "n_tool_calls": 5,
+    "n_target_actions": 5,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_order_details",
+     "get_product_details",
+     "calculate",
+     "exchange_delivered_order_items"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "30",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 587.7120866831392,
+    "user_cost": 0.020842000000000003,
+    "n_messages": 44,
+    "n_tool_calls": 11,
+    "n_target_actions": 13,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_user_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "get_product_details",
+     "return_delivered_order_items",
+     "get_order_details",
+     "cancel_pending_order",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "return_delivered_order_items"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "31",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 588.4149723481387,
+    "user_cost": 0.019944,
+    "n_messages": 44,
+    "n_tool_calls": 12,
+    "n_target_actions": 12,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_user_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "cancel_pending_order",
+     "get_order_details",
+     "get_order_details",
+     "return_delivered_order_items"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "28",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 674.6608288455755,
+    "user_cost": 0.025312,
+    "n_messages": 50,
+    "n_tool_calls": 11,
+    "n_target_actions": 11,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_user_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "return_delivered_order_items",
+     "return_delivered_order_items",
+     "return_delivered_order_items",
+     "get_order_details",
+     "calculate"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 0.0
+    }
+   },
+   {
+    "task_id": "56",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 287.07770044729114,
+    "user_cost": 0.009744,
+    "n_messages": 24,
+    "n_tool_calls": 6,
+    "n_target_actions": 7,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_user_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "get_product_details",
+     "modify_pending_order_items"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "61",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 202.99657009914517,
+    "user_cost": 0.005431999999999999,
+    "n_messages": 14,
+    "n_tool_calls": 4,
+    "n_target_actions": 5,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_order_details",
+     "get_product_details",
+     "calculate",
+     "modify_pending_order_items"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "67",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 109.1301554273814,
+    "user_cost": 0.005018,
+    "n_messages": 14,
+    "n_tool_calls": 3,
+    "n_target_actions": 5,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "find_user_id_by_name_zip",
+     "find_user_id_by_name_zip",
+     "get_user_details",
+     "get_order_details"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 0.0
+    }
+   },
+   {
+    "task_id": "59",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 266.973012637347,
+    "user_cost": 0.009814,
+    "n_messages": 20,
+    "n_tool_calls": 6,
+    "n_target_actions": 5,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_order_details",
+     "get_order_details",
+     "cancel_pending_order",
+     "modify_pending_order_address"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "60",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 237.7754134144634,
+    "user_cost": 0.00752,
+    "n_messages": 18,
+    "n_tool_calls": 5,
+    "n_target_actions": 4,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_order_details",
+     "get_product_details",
+     "modify_pending_order_items"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "64",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 229.11373756453395,
+    "user_cost": 0.005554,
+    "n_messages": 18,
+    "n_tool_calls": 5,
+    "n_target_actions": 8,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_user_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "get_product_details",
+     "exchange_delivered_order_items",
+     "modify_pending_order_items"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "41",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 579.6649598814547,
+    "user_cost": 0.011307999999999999,
+    "n_messages": 32,
+    "n_tool_calls": 10,
+    "n_target_actions": 10,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_user_details",
+     "get_order_details",
+     "get_order_details",
+     "modify_pending_order_address",
+     "modify_pending_order_address",
+     "modify_user_address",
+     "get_product_details",
+     "get_order_details",
+     "modify_pending_order_items"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "49",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 483.13656406477094,
+    "user_cost": 0.00814,
+    "n_messages": 28,
+    "n_tool_calls": 9,
+    "n_target_actions": 10,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_user_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "get_product_details",
+     "calculate",
+     "exchange_delivered_order_items"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "57",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 379.9538317993283,
+    "user_cost": 0.0139,
+    "n_messages": 26,
+    "n_tool_calls": 5,
+    "n_target_actions": 0,
+    "target_actions": [],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "68",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 196.8893445506692,
+    "user_cost": 0.005232,
+    "n_messages": 16,
+    "n_tool_calls": 4,
+    "n_target_actions": 4,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "find_user_id_by_name_zip",
+     "get_user_details",
+     "get_order_details"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "55",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 449.7156649045646,
+    "user_cost": 0.012960000000000001,
+    "n_messages": 34,
+    "n_tool_calls": 12,
+    "n_target_actions": 13,
+    "target_actions": [
+     "find_user_id_by_email",
+     "find_user_id_by_email",
+     "get_user_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "get_order_details",
+     "cancel_pending_order",
+     "cancel_pending_order",
+     "return_delivered_order_items",
+     "return_delivered_order_items"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "73",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 173.08330996334553,
+    "user_cost": 0.005442,
+    "n_messages": 16,
+    "n_tool_calls": 4,
+    "n_target_actions": 1,
+    "target_actions": [
+     "return_delivered_order_items"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "62",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 350.37477170303464,
+    "user_cost": 0.011856,
+    "n_messages": 22,
+    "n_tool_calls": 5,
+    "n_target_actions": 5,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_user_details",
+     "get_order_details",
+     "get_order_details",
+     "get_product_details"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "58",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 396.3930481169373,
+    "user_cost": 0.012544,
+    "n_messages": 24,
+    "n_tool_calls": 6,
+    "n_target_actions": 6,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_user_details",
+     "get_order_details",
+     "get_product_details",
+     "get_product_details",
+     "exchange_delivered_order_items"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "52",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 500.60363485105336,
+    "user_cost": 0.010457999999999999,
+    "n_messages": 30,
+    "n_tool_calls": 9,
+    "n_target_actions": 5,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_user_details",
+     "get_order_details",
+     "get_product_details",
+     "exchange_delivered_order_items"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "80",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 122.19999826326966,
+    "user_cost": 0.004817999999999999,
+    "n_messages": 12,
+    "n_tool_calls": 3,
+    "n_target_actions": 1,
+    "target_actions": [
+     "exchange_delivered_order_items"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "65",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 342.4445719793439,
+    "user_cost": 0.00732,
+    "n_messages": 24,
+    "n_tool_calls": 7,
+    "n_target_actions": 3,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_user_details",
+     "get_order_details"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "77",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 175.76568946056068,
+    "user_cost": 0.0057079999999999995,
+    "n_messages": 18,
+    "n_tool_calls": 5,
+    "n_target_actions": 1,
+    "target_actions": [
+     "exchange_delivered_order_items"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "66",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 319.3015530779958,
+    "user_cost": 0.011709999999999998,
+    "n_messages": 24,
+    "n_tool_calls": 5,
+    "n_target_actions": 5,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_user_details",
+     "get_order_details",
+     "get_order_details",
+     "cancel_pending_order"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "75",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 240.0585681218654,
+    "user_cost": 0.008029999999999999,
+    "n_messages": 22,
+    "n_tool_calls": 6,
+    "n_target_actions": 1,
+    "target_actions": [
+     "exchange_delivered_order_items"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "63",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 444.8342397008091,
+    "user_cost": 0.014849999999999999,
+    "n_messages": 34,
+    "n_tool_calls": 9,
+    "n_target_actions": 7,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_user_details",
+     "get_order_details",
+     "get_order_details",
+     "get_product_details",
+     "calculate",
+     "modify_pending_order_items"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 0.0
+    }
+   },
+   {
+    "task_id": "81",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 206.9198894277215,
+    "user_cost": 0.005736,
+    "n_messages": 16,
+    "n_tool_calls": 4,
+    "n_target_actions": 2,
+    "target_actions": [
+     "cancel_pending_order",
+     "cancel_pending_order"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "69",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 343.8834993094206,
+    "user_cost": 0.01312,
+    "n_messages": 28,
+    "n_tool_calls": 7,
+    "n_target_actions": 4,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_user_details",
+     "get_order_details",
+     "cancel_pending_order"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "79",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 247.69606988690794,
+    "user_cost": 0.011242,
+    "n_messages": 22,
+    "n_tool_calls": 5,
+    "n_target_actions": 1,
+    "target_actions": [
+     "modify_pending_order_items"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "70",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 348.37426193989813,
+    "user_cost": 0.009784,
+    "n_messages": 28,
+    "n_tool_calls": 9,
+    "n_target_actions": 1,
+    "target_actions": [
+     "exchange_delivered_order_items"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "88",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 145.14984128065407,
+    "user_cost": 0.007632,
+    "n_messages": 16,
+    "n_tool_calls": 3,
+    "n_target_actions": 1,
+    "target_actions": [
+     "cancel_pending_order"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "83",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 206.29176156036556,
+    "user_cost": 0.006286,
+    "n_messages": 18,
+    "n_tool_calls": 5,
+    "n_target_actions": 1,
+    "target_actions": [
+     "return_delivered_order_items"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "74",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 347.0013494435698,
+    "user_cost": 0.011963999999999999,
+    "n_messages": 24,
+    "n_tool_calls": 6,
+    "n_target_actions": 2,
+    "target_actions": [
+     "cancel_pending_order",
+     "modify_pending_order_items"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "89",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 211.05455439537764,
+    "user_cost": 0.00531,
+    "n_messages": 22,
+    "n_tool_calls": 7,
+    "n_target_actions": 1,
+    "target_actions": [
+     "return_delivered_order_items"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "82",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 357.41256685741246,
+    "user_cost": 0.009132,
+    "n_messages": 24,
+    "n_tool_calls": 6,
+    "n_target_actions": 1,
+    "target_actions": [
+     "return_delivered_order_items"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "92",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 242.54907505773008,
+    "user_cost": 0.010657999999999997,
+    "n_messages": 20,
+    "n_tool_calls": 4,
+    "n_target_actions": 2,
+    "target_actions": [
+     "return_delivered_order_items",
+     "return_delivered_order_items"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "78",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 434.57755324430764,
+    "user_cost": 0.010306,
+    "n_messages": 28,
+    "n_tool_calls": 8,
+    "n_target_actions": 3,
+    "target_actions": [
+     "modify_pending_order_address",
+     "modify_pending_order_items",
+     "cancel_pending_order"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "85",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 332.3770146742463,
+    "user_cost": 0.010052,
+    "n_messages": 28,
+    "n_tool_calls": 7,
+    "n_target_actions": 1,
+    "target_actions": [
+     "modify_pending_order_items"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "93",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 257.1885232962668,
+    "user_cost": 0.009498,
+    "n_messages": 22,
+    "n_tool_calls": 6,
+    "n_target_actions": 1,
+    "target_actions": [
+     "exchange_delivered_order_items"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "94",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 241.14708957448602,
+    "user_cost": 0.006175999999999999,
+    "n_messages": 18,
+    "n_tool_calls": 5,
+    "n_target_actions": 1,
+    "target_actions": [
+     "exchange_delivered_order_items"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "76",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 508.84501957707107,
+    "user_cost": 0.015083999999999997,
+    "n_messages": 32,
+    "n_tool_calls": 9,
+    "n_target_actions": 2,
+    "target_actions": [
+     "cancel_pending_order",
+     "cancel_pending_order"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "90",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 361.30281109549105,
+    "user_cost": 0.014846000000000002,
+    "n_messages": 28,
+    "n_tool_calls": 7,
+    "n_target_actions": 1,
+    "target_actions": [
+     "cancel_pending_order"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "84",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 423.9261938408017,
+    "user_cost": 0.010377999999999998,
+    "n_messages": 26,
+    "n_tool_calls": 7,
+    "n_target_actions": 1,
+    "target_actions": [
+     "return_delivered_order_items"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "95",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 338.7934373151511,
+    "user_cost": 0.013588,
+    "n_messages": 26,
+    "n_tool_calls": 6,
+    "n_target_actions": 2,
+    "target_actions": [
+     "exchange_delivered_order_items",
+     "exchange_delivered_order_items"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 0.0
+    }
+   },
+   {
+    "task_id": "29",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "timeout",
+    "duration": 1257.9214287176728,
+    "user_cost": 0.016388,
+    "n_messages": 35,
+    "n_tool_calls": 10,
+    "n_target_actions": 6,
+    "target_actions": [
+     "find_user_id_by_name_zip",
+     "get_user_details",
+     "get_order_details",
+     "get_product_details",
+     "exchange_delivered_order_items",
+     "exchange_delivered_order_items"
+    ],
+    "db_match": null,
+    "breakdown": null
+   },
+   {
+    "task_id": "100",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 305.78858330100775,
+    "user_cost": 0.014830000000000001,
+    "n_messages": 26,
+    "n_tool_calls": 6,
+    "n_target_actions": 2,
+    "target_actions": [
+     "modify_pending_order_items",
+     "return_delivered_order_items"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "96",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 359.34511904604733,
+    "user_cost": 0.008419999999999999,
+    "n_messages": 26,
+    "n_tool_calls": 8,
+    "n_target_actions": 2,
+    "target_actions": [
+     "modify_pending_order_address",
+     "modify_pending_order_items"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "87",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 498.49899993650615,
+    "user_cost": 0.013446,
+    "n_messages": 30,
+    "n_tool_calls": 6,
+    "n_target_actions": 4,
+    "target_actions": [
+     "modify_pending_order_address",
+     "modify_pending_order_address",
+     "modify_pending_order_address",
+     "modify_user_address"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "97",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 387.86644022352993,
+    "user_cost": 0.008374,
+    "n_messages": 23,
+    "n_tool_calls": 7,
+    "n_target_actions": 2,
+    "target_actions": [
+     "modify_pending_order_address",
+     "modify_pending_order_items"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "71",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 775.9046511109918,
+    "user_cost": 0.015536,
+    "n_messages": 40,
+    "n_tool_calls": 12,
+    "n_target_actions": 2,
+    "target_actions": [
+     "modify_pending_order_address",
+     "modify_pending_order_items"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "91",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 565.7400107439607,
+    "user_cost": 0.018086,
+    "n_messages": 32,
+    "n_tool_calls": 8,
+    "n_target_actions": 2,
+    "target_actions": [
+     "return_delivered_order_items",
+     "exchange_delivered_order_items"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "72",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 847.8539219461381,
+    "user_cost": 0.009718,
+    "n_messages": 30,
+    "n_tool_calls": 10,
+    "n_target_actions": 2,
+    "target_actions": [
+     "modify_pending_order_address",
+     "modify_pending_order_items"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "102",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 480.940382912755,
+    "user_cost": 0.012204,
+    "n_messages": 32,
+    "n_tool_calls": 9,
+    "n_target_actions": 3,
+    "target_actions": [
+     "modify_pending_order_address",
+     "modify_pending_order_items",
+     "exchange_delivered_order_items"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "86",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 688.5304867532104,
+    "user_cost": 0.019615999999999998,
+    "n_messages": 38,
+    "n_tool_calls": 8,
+    "n_target_actions": 2,
+    "target_actions": [
+     "modify_pending_order_items",
+     "modify_user_address"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "101",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 517.1223150137812,
+    "user_cost": 0.015385999999999999,
+    "n_messages": 36,
+    "n_tool_calls": 10,
+    "n_target_actions": 3,
+    "target_actions": [
+     "modify_pending_order_address",
+     "modify_pending_order_items",
+     "modify_pending_order_items"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "106",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 372.5760454311967,
+    "user_cost": 0.013464,
+    "n_messages": 32,
+    "n_tool_calls": 8,
+    "n_target_actions": 1,
+    "target_actions": [
+     "exchange_delivered_order_items"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "113",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 256.3898194357753,
+    "user_cost": 0.00475,
+    "n_messages": 24,
+    "n_tool_calls": 8,
+    "n_target_actions": 2,
+    "target_actions": [
+     "cancel_pending_order",
+     "cancel_pending_order"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "108",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 394.73336962237954,
+    "user_cost": 0.012861999999999998,
+    "n_messages": 30,
+    "n_tool_calls": 7,
+    "n_target_actions": 1,
+    "target_actions": [
+     "return_delivered_order_items"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "105",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 424.35278429090977,
+    "user_cost": 0.0109,
+    "n_messages": 24,
+    "n_tool_calls": 6,
+    "n_target_actions": 1,
+    "target_actions": [
+     "exchange_delivered_order_items"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 0.0
+    }
+   },
+   {
+    "task_id": "98",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 668.6887499596924,
+    "user_cost": 0.013548000000000001,
+    "n_messages": 34,
+    "n_tool_calls": 11,
+    "n_target_actions": 3,
+    "target_actions": [
+     "exchange_delivered_order_items",
+     "exchange_delivered_order_items",
+     "cancel_pending_order"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "109",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 476.73544986732304,
+    "user_cost": 0.013939999999999998,
+    "n_messages": 30,
+    "n_tool_calls": 9,
+    "n_target_actions": 3,
+    "target_actions": [
+     "modify_pending_order_address",
+     "modify_user_address",
+     "modify_pending_order_items"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "99",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 667.4014384746552,
+    "user_cost": 0.022812,
+    "n_messages": 38,
+    "n_tool_calls": 11,
+    "n_target_actions": 2,
+    "target_actions": [
+     "exchange_delivered_order_items",
+     "exchange_delivered_order_items"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "110",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 496.1587377637625,
+    "user_cost": 0.01102,
+    "n_messages": 24,
+    "n_tool_calls": 7,
+    "n_target_actions": 3,
+    "target_actions": [
+     "modify_pending_order_address",
+     "modify_user_address",
+     "modify_pending_order_items"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "103",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 665.2997298520058,
+    "user_cost": 0.019444000000000003,
+    "n_messages": 46,
+    "n_tool_calls": 11,
+    "n_target_actions": 4,
+    "target_actions": [
+     "return_delivered_order_items",
+     "return_delivered_order_items",
+     "modify_pending_order_address",
+     "modify_pending_order_items"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "107",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 578.73495538719,
+    "user_cost": 0.019828,
+    "n_messages": 38,
+    "n_tool_calls": 10,
+    "n_target_actions": 2,
+    "target_actions": [
+     "exchange_delivered_order_items",
+     "exchange_delivered_order_items"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "104",
+    "trial": 0,
+    "reward": 1.0,
+    "term": "user_stop",
+    "duration": 652.8255653940141,
+    "user_cost": 0.024866,
+    "n_messages": 56,
+    "n_tool_calls": 16,
+    "n_target_actions": 5,
+    "target_actions": [
+     "return_delivered_order_items",
+     "return_delivered_order_items",
+     "modify_pending_order_address",
+     "modify_pending_order_items",
+     "return_delivered_order_items"
+    ],
+    "db_match": true,
+    "breakdown": {
+     "DB": 1.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "112",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 599.150043990463,
+    "user_cost": 0.013552000000000002,
+    "n_messages": 32,
+    "n_tool_calls": 9,
+    "n_target_actions": 3,
+    "target_actions": [
+     "modify_pending_order_items",
+     "modify_pending_order_address",
+     "modify_pending_order_items"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   },
+   {
+    "task_id": "111",
+    "trial": 0,
+    "reward": 0.0,
+    "term": "user_stop",
+    "duration": 622.3514479082078,
+    "user_cost": 0.01381,
+    "n_messages": 36,
+    "n_tool_calls": 11,
+    "n_target_actions": 3,
+    "target_actions": [
+     "modify_pending_order_items",
+     "modify_pending_order_address",
+     "modify_pending_order_items"
+    ],
+    "db_match": false,
+    "breakdown": {
+     "DB": 0.0,
+     "NL_ASSERTION": 1.0
+    }
+   }
+  ]
+ },
+ "paired": {
+  "n_common": 114,
+  "both_pass": [
+   "0",
+   "4",
+   "7",
+   "9",
+   "15",
+   "17",
+   "18",
+   "23",
+   "24",
+   "25",
+   "26",
+   "43",
+   "44",
+   "45",
+   "47",
+   "50",
+   "51",
+   "53",
+   "59",
+   "60",
+   "61",
+   "62",
+   "64",
+   "65",
+   "66",
+   "68",
+   "69",
+   "70",
+   "73",
+   "75",
+   "77",
+   "78",
+   "85",
+   "89",
+   "107",
+   "113"
+  ],
+  "only_new": [
+   "1",
+   "2",
+   "6",
+   "8",
+   "12",
+   "13",
+   "22",
+   "33",
+   "40",
+   "46",
+   "48",
+   "49",
+   "56",
+   "58",
+   "82",
+   "83",
+   "96",
+   "104",
+   "108"
+  ],
+  "only_old": [
+   "10",
+   "11",
+   "20",
+   "28",
+   "29",
+   "31",
+   "35",
+   "38",
+   "52",
+   "55",
+   "84",
+   "86",
+   "90",
+   "91",
+   "93",
+   "95",
+   "102"
+  ],
+  "neither": [
+   "3",
+   "5",
+   "14",
+   "16",
+   "19",
+   "21",
+   "27",
+   "30",
+   "32",
+   "34",
+   "36",
+   "37",
+   "39",
+   "41",
+   "42",
+   "54",
+   "57",
+   "63",
+   "67",
+   "71",
+   "72",
+   "74",
+   "76",
+   "79",
+   "80",
+   "81",
+   "87",
+   "88",
+   "92",
+   "94",
+   "97",
+   "98",
+   "99",
+   "100",
+   "101",
+   "103",
+   "105",
+   "106",
+   "109",
+   "110",
+   "111",
+   "112"
+  ],
+  "diff": 0.017543859649122806,
+  "sign_test_p": 0.8679394004284404
+ },
+ "plan": {
+  "steps": [
+   {
+    "step": "starting adapter (old)",
+    "remaining": 0,
+    "minutes": 0.0,
+    "done_in_min": 0.0,
+    "done_at": null
+   },
+   {
+    "step": "fine-tuned model (new)",
+    "remaining": 0,
+    "minutes": 0.0,
+    "done_in_min": 0.0,
+    "done_at": null
+   }
+  ],
+  "pace_used": 3.2215753959475157,
+  "total_min": 0.0,
+  "done_at": null
+ },
+ "events": [
+  {
+   "time": "2026-10-03T21:03:26+04:00",
+   "event": "setup: vllm venv"
+  },
+  {
+   "time": "2026-10-03T21:05:29+04:00",
+   "event": "setup: tau2-bench"
+  },
+  {
+   "time": "2026-10-03T21:05:40+04:00",
+   "event": "setup: model and adapters"
+  },
+  {
+   "time": "2026-10-03T21:06:01+04:00",
+   "event": "TAU3_SETUP_DONE"
+  },
+  {
+   "time": "2026-10-03T21:08:26+04:00",
+   "event": "tau3: starting vllm"
+  },
+  {
+   "time": "2026-10-03T21:10:37+04:00",
+   "event": "tau3: vllm ready"
+  },
+  {
+   "time": "2026-10-03T21:10:42+04:00",
+   "event": "tau3: adapters loaded: Success: LoRA adapter 'old' added successfully. | Success: LoRA adapter 'new' added successfully."
+  },
+  {
+   "time": "2026-10-03T21:10:42+04:00",
+   "event": "tau3: run tau3_old started"
+  },
+  {
+   "time": "2026-10-03T21:46:08+04:00",
+   "event": "tau3: run tau3_old finished (exit 0)"
+  },
+  {
+   "time": "2026-10-03T21:46:08+04:00",
+   "event": "tau3: run tau3_new started"
+  },
+  {
+   "time": "2026-10-03T22:20:54+04:00",
+   "event": "tau3: run tau3_new finished (exit 0)"
+  },
+  {
+   "time": "2026-10-03T22:20:54+04:00",
+   "event": "TAU3_DONE"
+  }
+ ]
+}

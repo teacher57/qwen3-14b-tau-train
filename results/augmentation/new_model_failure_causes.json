@@ -1,0 +1,250 @@
+{
+ "clusters": {
+  "1": "Wrong or incomplete order lookup (missed, mixed up or never opened the right order)",
+  "2": "Changed the database without an explicit yes, or before the facts were in",
+  "3": "Wrong or invented values, or said something different from what it did",
+  "4": "Cancelled a whole order for a one-item request",
+  "5": "Account lookup dead end: gave up, or invented details",
+  "6": "Simulated customer or scenario problem",
+  "7": "Did not state the required number",
+  "8": "Transferred to a human when the task was doable (old model only)"
+ },
+ "tasks": {
+  "3": [
+   1,
+   "Modified a pending order that holds an XXL shirt instead of finding the order with the small t-shirt the customer meant."
+  ],
+  "5": [
+   6,
+   "The scenario only reaches its target (return the water bottle) if the agent asks for confirmation twice; the agent asked once, exchanged the lamp, and the customer was satisfied."
+  ],
+  "10": [
+   6,
+   "The customer asked for the refund 'to the other card', which happens to be the original payment method, so the returns the agent made were legitimate. The scenario expected a refusal and a transfer."
+  ],
+  "11": [
+   6,
+   "The customer never asked to return the second order and ended with 'That's it'. Contributing agent slip: when asked to show recent orders it only showed one."
+  ],
+  "14": [
+   1,
+   "Returned the keyboard from the first order it opened and never opened the order with the gaming mouse."
+  ],
+  "16": [
+   7,
+   "All three actions were right, but it listed the three refund amounts and never stated the $8,276.23 total the customer asked for."
+  ],
+  "19": [
+   7,
+   "Returned the water bottle, but gave savings of $31.36 for the exchanges instead of the expected $41.64, so the required statement was missing."
+  ],
+  "20": [
+   3,
+   "Not the most expensive options: a size 8 shoe instead of the customer's size 9, a makeup kit $2.40 below the best one, and a false claim that an $86 gift card could not cover a $46.21 difference, so it charged PayPal."
+  ],
+  "21": [
+   2,
+   "Modified the first item right away, which locked the order, so the customer's second change and the gift card balance question could not be handled."
+  ],
+  "27": [
+   2,
+   "Returned the hose and backpack immediately; that locked the order, so the exchange the customer preferred became impossible and it transferred to a human."
+  ],
+  "28": [
+   4,
+   "The pending order has 5 items and the tool can only cancel a whole order, yet the agent cancelled it while telling the customer only the hose was cancelled and the refund was $95."
+  ],
+  "29": [
+   1,
+   "Never opened the order that contains the delivered garden hose, mixed up the pending item id with the delivered one, then looped on tool errors until the timeout."
+  ],
+  "30": [
+   1,
+   "Looked in the wrong order for the sneakers, then cancelled a whole pending order (hiking boots and kettle) instead of returning the sneakers from the delivered order."
+  ],
+  "31": [
+   2,
+   "The customer only asked whether a refund was possible, and the agent started a return of the tablet without asking."
+  ],
+  "32": [
+   6,
+   "The customer chose 'ordered by mistake' as the cancellation reason; the expected one was 'no longer needed', and the scenario never says which."
+  ],
+  "34": [
+   4,
+   "Cancelled the entire order, including the hiking gear the customer wanted to keep, without asking."
+  ],
+  "35": [
+   5,
+   "Two lookups failed (the customer gave a wrong first email and an invented zip), and the agent transferred to a human at once. The old model asked the customer to retry and got the right email."
+  ],
+  "36": [
+   4,
+   "Cancelled the entire order while telling the customer only the action camera was cancelled, and never tried the cheapest-options step that fits the budget."
+  ],
+  "37": [
+   4,
+   "Cancelled the entire order while telling the customer only the action camera was cancelled, and never tried the cheapest-options step."
+  ],
+  "38": [
+   2,
+   "Cancelled the order straight away, never checked whether the cheapest options would fit the budget, and picked the cancellation reason ('ordered by mistake') itself instead of asking."
+  ],
+  "39": [
+   5,
+   "The customer gave the new Phoenix zip, which does not match the account; the agent first made up an email and a name, then transferred."
+  ],
+  "41": [
+   3,
+   "Wrote a user address without finding the right one in the other order, and swapped the jigsaw for a 1500-piece puzzle instead of the one with the fewest pieces, which locked the order."
+  ],
+  "42": [
+   1,
+   "Updated the address on only one of two pending orders, then told the customer all orders were corrected."
+  ],
+  "52": [
+   2,
+   "Ran the exchange on the credit card without asking which payment method to use (the customer wanted PayPal), then could not undo it and transferred to a human."
+  ],
+  "54": [
+   5,
+   "Two failed lookups (wrong zip, then the first of two emails) and an immediate transfer without asking for another email."
+  ],
+  "55": [
+   1,
+   "Offered to check four remaining orders but only opened three, so one pending order (#W7342738) was never cancelled."
+  ],
+  "57": [
+   2,
+   "Cancelled the whole order before checking the customer's condition (refund to a gift card); the refund went to the credit card."
+  ],
+  "63": [
+   4,
+   "Cancelled the entire order to remove one speaker, then could not modify it and transferred."
+  ],
+  "67": [
+   5,
+   "The customer guessed two wrong zip codes; the agent transferred after the second and never gave the order total."
+  ],
+  "71": [
+   2,
+   "Applied the address change and both item changes at once, on the gift card, without asking; the customer's planned change (PayPal, backpack only) then could not be done."
+  ],
+  "72": [
+   1,
+   "Changed the address and an item on a different pending order than the one shipped to Washington DC, then repeated a failing payment change three times."
+  ],
+  "74": [
+   1,
+   "Said no pending order had five items after opening only two of the four orders, so the order to cancel was never found."
+  ],
+  "76": [
+   1,
+   "Never found the order that contains the skateboard, cancelled a different order, and said there was no skateboard."
+  ],
+  "79": [
+   1,
+   "Said the black bottle matched the colour of the customer's other 1-litre bottle without opening that order; that bottle is red."
+  ],
+  "80": [
+   5,
+   "Made up a zip code (12345) instead of asking for it, got 'not found', and transferred."
+  ],
+  "81": [
+   1,
+   "Cancelled an order that holds none of the items the customer listed (the right order is #W3289292); the customer just repeated the order id the agent gave."
+  ],
+  "84": [
+   2,
+   "Returned a tablet immediately with no confirmation step, so the customer's planned change of mind could not be honoured, then transferred to a human."
+  ],
+  "86": [
+   1,
+   "Opened 4 of the customer's 5 orders, missed the one with the Washington DC address, and said it had 'reviewed all' past orders. The customer also refused to type the address."
+  ],
+  "87": [
+   1,
+   "Only looked at pending orders and never opened the processed order with the Washington DC address; the customer refused to type it."
+  ],
+  "88": [
+   5,
+   "Made up lookups, could not find the account, and sent the customer to a made-up support email address."
+  ],
+  "90": [
+   2,
+   "Modified the camera to the 10x version before telling the customer the price (over $3000 meant cancel instead); the modify blocked the later cancel."
+  ],
+  "91": [
+   2,
+   "Returned the smart watch and the e-reader right away without confirming, never returned the two skateboards, and then told the customer the skateboard returns were started."
+  ],
+  "92": [
+   1,
+   "Returned the skateboards and watch but never searched the other orders for the e-reader, so the customer dropped it."
+  ],
+  "93": [
+   1,
+   "Never asked which laptop, opened only some orders, and exchanged the wrong laptop (the one in #W2905754 instead of #W4073673)."
+  ],
+  "94": [
+   1,
+   "Exchanged the laptop in the first order it found instead of the 15-inch 16GB laptop in the other order, and never asked which one."
+  ],
+  "95": [
+   1,
+   "Never opened the order holding the second laptop and told the customer there was only one laptop on the account, so it exchanged one of two."
+  ],
+  "97": [
+   3,
+   "Called a red speaker the 'cheapest green' one and exchanged to it."
+  ],
+  "98": [
+   2,
+   "Exchanged the camera on the wrong card without asking which card; the customer wanted the other one."
+  ],
+  "99": [
+   4,
+   "Cancelled the whole pending order for a single skateboard (refund $1058.79) when the scenario expected no cancellation."
+  ],
+  "100": [
+   1,
+   "Told the customer the luggage set and skateboard were in no order; they are in a pending order it never opened."
+  ],
+  "101": [
+   1,
+   "Exchanged the purifier in the delivered order that also had sneakers, not in the pending order with the purifier and speaker the customer described."
+  ],
+  "102": [
+   3,
+   "Asked the customer to confirm the new address, got a yes, never called the address change, and then reported the address as updated."
+  ],
+  "103": [
+   1,
+   "Accepted the customer's already-cancelled order id for the address change instead of listing the pending orders, so the address was never changed."
+  ],
+  "105": [
+   3,
+   "Picked a 2-litre stainless kettle for the 1.5-litre one the customer asked for, after first using a made-up payment method id."
+  ],
+  "106": [
+   3,
+   "Chose a red L t-shirt, told the customer it was black, and never offered the one-size-smaller XL."
+  ],
+  "109": [
+   1,
+   "Took the default address for the new home, so it changed the wrong order's address and never updated the default address."
+  ],
+  "110": [
+   1,
+   "Changed the address of the wrong order and never updated the default address."
+  ],
+  "111": [
+   3,
+   "Made up the New York address by changing only the city and state of the Houston address, on the wrong order."
+  ],
+  "112": [
+   3,
+   "Made up the New York address, tried to swap a bookshelf for a laptop, then cancelled the order."
+  ]
+ }
+}
