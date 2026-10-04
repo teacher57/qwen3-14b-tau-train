@@ -1,120 +1,0 @@
-W1001 17:41:09.047000 27905 torch/utils/_pytree.py:630] <enum 'KernelPreference'> is an Enum subclass and is now natively supported by torch.compile as an opaque value type. Calling register_constant() on Enum subclasses is deprecated and will be an error in a future release.
-W1001 17:41:09.079000 27905 torch/utils/_pytree.py:630] <enum 'ScaleCalculationMode'> is an Enum subclass and is now natively supported by torch.compile as an opaque value type. Calling register_constant() on Enum subclasses is deprecated and will be an error in a future release.
-/usr/local/lib/python3.12/dist-packages/unsloth/import_fixes.py:6122: FutureWarning: torch._dynamo.config.inline_inbuilt_nn_modules is deprecated and does not do anything, inline_inbuilt_nn_modules is always True. It will be removed in a future version of PyTorch.
-  original_setattr(self, name, value)
-🦥 Unsloth: Will patch your computer to enable 2x faster free finetuning.
-🦥 Unsloth Zoo will now patch everything to make training faster!
-loading trainer-side model (unsloth) for gradient updates...
-==((====))==  Unsloth 2026.9.12: Fast Qwen3 patching. Transformers: 5.5.0.
-   \\   /|    NVIDIA RTX A6000. Num GPUs = 1. Max memory: 44.422 GB. Platform: Linux.
-O^O/ \_/ \    Torch: 2.12.1+cu130. CUDA: 8.6. CUDA Toolkit: 13.0. Triton: 3.7.1
-\        /    Bfloat16 = TRUE. FA [Xformers = 0.0.35. FA2 = False]
- "-____-"     Free license: http://github.com/unslothai/unsloth
-Unsloth: Fast downloading is enabled - ignore downloading bars which are red colored!
-Loading weights:   0%|          | 0/443 [00:00<?, ?it/s]Loading weights:   0%|          | 1/443 [00:00<01:36,  4.60it/s]Loading weights:   5%|▍         | 20/443 [00:00<00:05, 78.05it/s]Loading weights:   8%|▊         | 35/443 [00:00<00:04, 101.29it/s]Loading weights:  13%|█▎        | 57/443 [00:00<00:02, 139.20it/s]Loading weights:  16%|█▋        | 73/443 [00:00<00:02, 134.75it/s]Loading weights:  20%|██        | 90/443 [00:00<00:02, 142.87it/s]Loading weights:  25%|██▍       | 109/443 [00:00<00:02, 156.40it/s]Loading weights:  28%|██▊       | 126/443 [00:00<00:02, 152.21it/s]Loading weights:  33%|███▎      | 148/443 [00:01<00:01, 165.09it/s]Loading weights:  38%|███▊      | 167/443 [00:01<00:01, 167.09it/s]Loading weights:  43%|████▎     | 189/443 [00:01<00:01, 177.88it/s]Loading weights:  47%|████▋     | 210/443 [00:01<00:01, 140.18it/s]Loading weights:  53%|█████▎    | 235/443 [00:01<00:01, 158.65it/s]Loading weights:  57%|█████▋    | 253/443 [00:01<00:01, 162.19it/s]Loading weights:  61%|██████    | 271/443 [00:01<00:01, 151.83it/s]Loading weights:  65%|██████▌   | 290/443 [00:02<00:00, 157.99it/s]Loading weights:  69%|██████▉   | 307/443 [00:02<00:00, 160.95it/s]Loading weights:  73%|███████▎  | 324/443 [00:02<00:00, 155.72it/s]Loading weights:  77%|███████▋  | 342/443 [00:02<00:00, 153.43it/s]Loading weights:  81%|████████  | 358/443 [00:02<00:00, 149.81it/s]Loading weights:  85%|████████▌ | 378/443 [00:02<00:00, 159.12it/s]Loading weights:  89%|████████▉ | 395/443 [00:02<00:00, 153.04it/s]Loading weights:  93%|█████████▎| 411/443 [00:02<00:00, 152.97it/s]Loading weights:  96%|█████████▋| 427/443 [00:02<00:00, 128.15it/s]Loading weights: 100%|██████████| 443/443 [00:03<00:00, 144.69it/s]
-Unsloth 2026.9.12 patched 40 layers with 40 QKV layers, 40 O layers and 40 MLP layers.
-loaded round-0 adapter weights; unexpected keys: 0
-registering initial LoRA adapter with vLLM before any rollouts...
-Unsloth: Restored added_tokens_decoder metadata in /root/grpo_lora/tokenizer_config.json.
-  lora reload -> 200 Success: LoRA adapter 'policy' added successfully.
-
-=== round 0 tasks=[365, 221, 111, 222] ===
-  task 365: rewards=[0.0, 1.0, 1.0, 1.0] mean=0.75
-  task 221: rewards=[1.0, 1.0, 1.0, 1.0] mean=1.00
-  task 111: rewards=[0.0, 1.0, 1.0, 0.0] mean=0.50
-  task 222: rewards=[0.0, 0.0, 0.0, 0.0] mean=0.00
-`use_return_dict` is deprecated! Use `return_dict` instead!
-Unsloth: Will smartly offload gradients to save VRAM!
-Unsloth: Double buffering enabled (parallel H2D + compute) for backward pass.
-  round 0: avg_reward=0.562 avg_loss=-0.0130 n_updated=8/16
-  lora reload -> 200 Success: LoRA adapter 'policy' added successfully.
-
-=== round 1 tasks=[198, 27, 380, 317] ===
-  task 198: rewards=[0.0, 1.0, 1.0, 0.0] mean=0.50
-  task 27: rewards=[0.0, 0.0, 1.0, 0.0] mean=0.25
-  task 380: rewards=[0.0, 0.0, 0.0, 0.0] mean=0.00
-  task 317: rewards=[1.0, 1.0, 1.0, 1.0] mean=1.00
-  round 1: avg_reward=0.438 avg_loss=0.0453 n_updated=8/16
-  lora reload -> 200 Success: LoRA adapter 'policy' added successfully.
-
-=== round 2 tasks=[443, 276, 433, 445] ===
-  task 443: rewards=[0.0, 1.0, 0.0, 0.0] mean=0.25
-  task 276: rewards=[1.0, 0.0, 0.0, 0.0] mean=0.25
-  task 433: rewards=[1.0, 1.0, 0.0, 1.0] mean=0.75
-  task 445: rewards=[0.0, 0.0, 0.0, 0.0] mean=0.00
-  round 2: avg_reward=0.312 avg_loss=-0.0528 n_updated=12/16
-  lora reload -> 200 Success: LoRA adapter 'policy' added successfully.
-
-=== round 3 tasks=[119, 424, 377, 339] ===
-  task 119: rewards=[0.0, 1.0, 0.0, 0.0] mean=0.25
-  task 424: rewards=[1.0, 0.0, 1.0, 0.0] mean=0.50
-  task 377: rewards=[1.0, 1.0, 1.0, 0.0] mean=0.75
-  task 339: rewards=[0.0, 1.0, 0.0, 1.0] mean=0.50
-  round 3: avg_reward=0.500 avg_loss=-0.0023 n_updated=16/16
-  lora reload -> 200 Success: LoRA adapter 'policy' added successfully.
-
-=== round 4 tasks=[36, 329, 99, 215] ===
-  task 36: rewards=[1.0, 0.0, 0.0, 1.0] mean=0.50
-  task 329: rewards=[0.0, 0.0, 0.0, 0.0] mean=0.00
-  task 99: rewards=[1.0, 0.0, 1.0, 0.0] mean=0.50
-  task 215: rewards=[1.0, 1.0, 1.0, 1.0] mean=1.00
-  round 4: avg_reward=0.500 avg_loss=0.0496 n_updated=8/16
-  lora reload -> 200 Success: LoRA adapter 'policy' added successfully.
-
-=== round 5 tasks=[398, 277, 154, 59] ===
-  task 398: rewards=[0.0, 0.0, 1.0, 0.0] mean=0.25
-  task 277: rewards=[0.0, 1.0, 0.0, 1.0] mean=0.50
-  task 154: rewards=[1.0, 0.0, 1.0, 1.0] mean=0.75
-  task 59: rewards=[0.0, 0.0, 0.0, 0.0] mean=0.00
-  round 5: avg_reward=0.375 avg_loss=-0.1851 n_updated=12/16
-  lora reload -> 200 Success: LoRA adapter 'policy' added successfully.
-
-=== round 6 tasks=[191, 3, 233, 360] ===
-  task 191: rewards=[1.0, 0.0, 0.0, 1.0] mean=0.50
-  task 3: rewards=[1.0, 1.0, 1.0, 1.0] mean=1.00
-  task 233: rewards=[1.0, 1.0, 1.0, 1.0] mean=1.00
-  task 360: rewards=[0.0, 0.0, 1.0, 1.0] mean=0.50
-  round 6: avg_reward=0.750 avg_loss=-0.0157 n_updated=8/16
-  lora reload -> 200 Success: LoRA adapter 'policy' added successfully.
-
-=== round 7 tasks=[374, 469, 491, 7] ===
-  task 374: rewards=[1.0, 0.0, 1.0, 0.0] mean=0.50
-  task 469: rewards=[1.0, 0.0, 1.0, 1.0] mean=0.75
-  task 491: rewards=[1.0, 1.0, 1.0, 0.0] mean=0.75
-  task 7: rewards=[1.0, 1.0, 1.0, 0.0] mean=0.75
-  round 7: avg_reward=0.688 avg_loss=-0.0285 n_updated=16/16
-  lora reload -> 200 Success: LoRA adapter 'policy' added successfully.
-
-=== round 8 tasks=[459, 348, 309, 76] ===
-  task 459: rewards=[1.0, 0.0, 1.0, 1.0] mean=0.75
-  task 348: rewards=[1.0, 1.0, 0.0, 0.0] mean=0.50
-  task 309: rewards=[0.0, 0.0, 1.0, 1.0] mean=0.50
-  task 76: rewards=[0.0, 1.0, 1.0, 1.0] mean=0.75
-  round 8: avg_reward=0.625 avg_loss=-0.0862 n_updated=16/16
-  lora reload -> 200 Success: LoRA adapter 'policy' added successfully.
-
-=== round 9 tasks=[166, 127, 434, 70] ===
-  task 166: rewards=[0.0, 0.0, 0.0, 1.0] mean=0.25
-  task 127: rewards=[0.0, 1.0, 0.0, 1.0] mean=0.50
-  task 434: rewards=[1.0, 1.0, 1.0, 1.0] mean=1.00
-  task 70: rewards=[0.0, 1.0, 0.0, 0.0] mean=0.25
-  round 9: avg_reward=0.500 avg_loss=-0.0093 n_updated=12/16
-  lora reload -> 200 Success: LoRA adapter 'policy' added successfully.
-
-=== round 10 tasks=[141, 150, 148, 470] ===
-  task 141: rewards=[0.0, 0.0, 1.0, 0.0] mean=0.25
-  task 150: rewards=[1.0, 0.0, 0.0, 0.0] mean=0.25
-  task 148: rewards=[0.0, 1.0, 1.0, 0.0] mean=0.50
-  task 470: rewards=[0.0, 1.0, 1.0, 1.0] mean=0.75
-  round 10: avg_reward=0.438 avg_loss=0.0545 n_updated=16/16
-  lora reload -> 200 Success: LoRA adapter 'policy' added successfully.
-
-=== round 11 tasks=[243, 231, 147, 190] ===
-  task 243: rewards=[1.0, 1.0, 0.0, 0.0] mean=0.50
-  task 231: rewards=[1.0, 0.0, 1.0, 1.0] mean=0.75
-  task 147: rewards=[1.0, 1.0, 0.0, 1.0] mean=0.75
-  task 190: rewards=[0.0, 0.0, 0.0, 0.0] mean=0.00
-  round 11: avg_reward=0.500 avg_loss=-0.0451 n_updated=12/16
-  lora reload -> 200 Success: LoRA adapter 'policy' added successfully.
-
-=== round 12 tasks=[319, 157, 205, 134] ===
