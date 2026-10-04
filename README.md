@@ -90,10 +90,12 @@ code/augmentation/                   build_augmented_sft.py (inserts lookups and
 code/tau3/                           τ³ helpers: JSON tracker, notebook builder, dialog renderer, pod scripts
 results/augmentation/                aug_sft_run.json (training curves and evaluation status), tau3_std_run.json, tau3_run.json,
                                      failure_causes_auto.json, new_model_failure_causes.json, old_model_failure_causes.json
-dataset/augmentation/                statistics of the augmented and habit-only datasets, per-rollout results of the augmented 4-trial test
+dataset/augmentation/                the augmented SFT dataset (178 conversations), the habit-only dataset, their statistics,
+                                     all 460 conversations of the augmented 4-trial τ-bench test (+ per-rollout results)
+dataset/tau3_eval/                   all τ³ conversations: default-settings run (baseline and augmented, 228 each) and the first run
 figures/                             the three charts above
 ```
 
-**Not in git (too large): on Hugging Face.** Datasets, all conversations (τ-bench 4 trials and τ³ default settings) and rendered pages: [teacher57/tau-retail-distillation](https://huggingface.co/datasets/teacher57/tau-retail-distillation) (folders `augmentation/`, `retail_eval_conversations/`, `tau3_eval/`, `renders/`). The adapter: [teacher57/qwen3-14b-tau-lookup-confirm-augmented](https://huggingface.co/teacher57/qwen3-14b-tau-lookup-confirm-augmented), intermediate checkpoints in [teacher57/qwen3-14b-tau-grpo-checkpoints](https://huggingface.co/teacher57/qwen3-14b-tau-grpo-checkpoints) as `aug-step-*`.
+**Also on Hugging Face** (same datasets and conversations, plus the rendered dialog pages): [teacher57/tau-retail-distillation](https://huggingface.co/datasets/teacher57/tau-retail-distillation) (folders `augmentation/`, `retail_eval_conversations/`, `tau3_eval/`, `renders/`). The adapter: [teacher57/qwen3-14b-tau-lookup-confirm-augmented](https://huggingface.co/teacher57/qwen3-14b-tau-lookup-confirm-augmented), intermediate checkpoints in [teacher57/qwen3-14b-tau-grpo-checkpoints](https://huggingface.co/teacher57/qwen3-14b-tau-grpo-checkpoints) as `aug-step-*`.
 
 The builders expect the project layout (`sft_aug/` next to `tau3/tau2-bench/`); the input conversations (`teacher32b_passed_sft_reasoning.json`) and the test tasks (`retail_test_tasks.json`) are in the same Hugging Face dataset under `teacher/`. API keys come from the environment and are never stored; pod addresses in the scripts are defaults for pods that no longer exist.

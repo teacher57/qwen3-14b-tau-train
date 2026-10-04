@@ -1,0 +1,10 @@
+2026-10-04T03:39:39Z setup: vllm env
+2026-10-04T03:41:03Z setup: tau2-bench
+Fetching 3 files:   0%|          | 0/3 [00:00<?, ?it/s]Fetching 3 files:  33%|███▎      | 1/3 [00:00<00:00,  9.90it/s]Fetching 3 files: 100%|██████████| 3/3 [00:01<00:00,  1.61it/s]Fetching 3 files: 100%|██████████| 3/3 [00:01<00:00,  1.61it/s]
+2026-10-04T03:41:15Z setup done; starting vllm
+2026-10-04T03:50:53Z vllm ready; adapters: Success: LoRA adapter 'base' added successfully. | Success: LoRA adapter 'aug' added successfully.
+2026-10-04T03:50:53Z tau3 run tau3std_base started
+2026-10-04T04:55:46Z tau3 run tau3std_base finished (exit 0)
+2026-10-04T04:55:46Z tau3 run tau3std_aug started
+2026-10-04T06:17:09Z tau3 run tau3std_aug finished (exit 0)
+2026-10-04T06:17:09Z TAU3_STD_DONE
