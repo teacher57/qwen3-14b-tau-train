@@ -418,6 +418,18 @@ The augmented model also uses more steps: it hit the 25-step limit in 27 of 460 
 
 Data (conversations, datasets, adapters) is on Hugging Face: [model](https://huggingface.co/teacher57/qwen3-14b-tau-lookup-confirm-augmented), [dataset](https://huggingface.co/datasets/teacher57/tau-retail-distillation) (folders `augmentation/` and `tau3_eval/`). The notebook `notebooks/aug_sft_experiment.ipynb` has the training curves, the evaluation, the behaviour measures and the τ³ run; `notebooks/tau3_retail_eval.ipynb` covers the first τ³ run.
 
+### 12. A newer base model: Qwen3.8-27B on τ³ retail, no fine-tuning
+
+The off-the-shelf `Qwen/Qwen3.8-27B` was run as a baseline: bf16, no LoRA, with thinking on (the template default, `reasoning_effort` xhigh). It used τ³ retail (tau2-bench `5bfa7e3`): all **114 tasks × 4 trials** (456 rollouts), agent temperature 0, GPT-4.1 as the simulated customer, the default 200 steps, a 1200 s timeout and 32 rollouts in parallel. It ran on one A100-SXM4-80GB with vLLM 0.30.0 (the `+cu129` wheel, because the pod's driver is CUDA 12.8; the `qwen3_coder` tool-call parser, because the chat template uses XML tool calls; `--max-num-seqs 32` because of the hybrid Gated-DeltaNet cache). The run took 1 h 43 min, and the GPT-4.1 customer cost $4.63.
+
+| pass^1 | pass^2 | pass^3 | pass^4 |
+|---|---|---|---|
+| **84.6%** (386/456) | 77.2% | 72.1% | 68.4% |
+
+By trial, it passed 99, 91, 97 and 99 of 114. 78 tasks passed all 4 trials, 5 failed all 4 (tasks 32, 82, 93, 98, 105) and 31 were mixed. 455 rollouts ended normally and 1 timed out (task 110, trial 2, after 2,308 s).
+
+The notebook `notebooks/tau3_q38_27b_eval_matplotlib.ipynb` has the run info, pass^1 overall and per trial, pass^1 to pass^4 with the per-task trial counts, the running pass rate, a task × trial grid, and how rollouts ended, with durations, messages and tool calls per trial. It reads `results/qwen3.8-27b/q38_run.json`. All 456 conversations are in `results/qwen3.8-27b/tau3_q38_27b_results.json`, and they can be browsed (filters, search, the agent's reasoning, and each task's hidden scenario and answer key) in `renders/qwen3.8_27b_tau3_retail_4trials.html`.
+
 ## Repo contents
 
 ```
@@ -446,6 +458,8 @@ results/
   augmentation/                     section 11: aug_sft_run.json (training curves and evaluation status), tau3_std_run.json (τ³ default-settings run), tau3_run.json (first τ³ run), failure_causes_auto.json (rule-based causes of every failed τ-bench rollout), new/old_model_failure_causes.json (hand-read causes of the failed τ³ tasks)
   passk_run.json                    section 9 pass^2 test: per-rollout results, pass^1/pass^2,
                                      paired comparison (conversations were lost with the pod)
+  qwen3.8-27b/                      section 12: q38_run.json (run summary the notebook reads), tau3_q38_27b_results.json
+                                     (tau2 results file, all 456 τ³ conversations of Qwen3.8-27B)
 dataset/
   qwen3_14b_retail_train_rollout_sft.json      the 422 genuine passing multi-turn
                                                 rollouts used for fine-tuning attempt #2
@@ -471,6 +485,7 @@ dataset/
                                      datasets and the per-rollout results of the augmented 4-trial test (the datasets and conversations are on Hugging Face)
 notebooks/
   aug_sft_experiment.ipynb, tau3_retail_eval.ipynb   section 11 and the τ³ runs (plotly)
+  tau3_q38_27b_eval_matplotlib.ipynb        section 12: Qwen3.8-27B τ³ retail baseline (matplotlib)
   qwen3_14b_training_and_rollouts.ipynb     all training-loss curves, rollout-generation
                                              progress, eval comparison chart, and the
                                              GRPO training + eval-probe charts
@@ -502,6 +517,8 @@ code/
                   train_sft_habits.py, classify_failures.py, trackers (update_*_json.py), checkpoint sync, pod scripts (pod/), notebook builder
   tau3/           τ³ run helpers: JSON tracker, notebook builder, dialog renderer, pod scripts
 renders/
+  qwen3.8_27b_tau3_retail_4trials.html   section 12: all 456 Qwen3.8-27B τ³ conversations, task × trial grid,
+                                      filters, search, reasoning, each task's hidden scenario and answer key
   retail_test_new_solves.html        tasks the distilled model solves that the control does not
   combo_task_comparison.html         the combo tasks of the test split, train split, passing
                                       rollouts and GRPO draws, with instruction + target tool calls
